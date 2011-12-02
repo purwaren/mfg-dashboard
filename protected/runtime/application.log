@@ -1,0 +1,2 @@
+2011/12/02 17:41:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'intermediary.item_distributions' doesn't exist. Statement SQL yang dijalankan adalah: SHOW COLUMNS FROM `item_distributions`.
+in C:\wamp\www\yii\app\intermediary\index.php (13)
