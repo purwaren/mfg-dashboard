@@ -11,45 +11,22 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->textField($model,'username',array('maxlength'=>128)); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'passwd'); ?>
-		<?php echo $form->passwordField($model,'passwd',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->passwordField($model,'passwd'); ?>
 		<?php echo $form->error($model,'passwd'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
+		<?php echo $form->dropDownList($model,'status',Users::getAllStatusOptions(),
+		array('prompt'=>'Pilih Status: ')); ?>
 		<?php echo $form->error($model,'status'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'created_time'); ?>
-		<?php echo $form->textField($model,'created_time'); ?>
-		<?php echo $form->error($model,'created_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'updated_time'); ?>
-		<?php echo $form->textField($model,'updated_time'); ?>
-		<?php echo $form->error($model,'updated_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'last_login_time'); ?>
-		<?php echo $form->textField($model,'last_login_time'); ?>
-		<?php echo $form->error($model,'last_login_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'login_status'); ?>
-		<?php echo $form->textField($model,'login_status'); ?>
-		<?php echo $form->error($model,'login_status'); ?>
-	</div>
+	</div>	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

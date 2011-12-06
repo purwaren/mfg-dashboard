@@ -2,35 +2,33 @@
 
 class SyncronizeKasirController extends Controller
 {
+	
+	public function beforeAction($action)
+	{
+		if(Yii::app()->request->isSecureConnection)
+		{
+			if($this->authenticate($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']))
+			{
+				return TRUE;
+			}
+			else
+			{
+				echo CJSON::encode(array(
+					'status' => 'error',
+					'message' => 'Authorization failed',
+				)),
+				Yii::app()->end();
+			}
+		}
+	}
+	
 	public function actionIndex()
 	{
 		$this->render('index');
 	}
 
-	// Uncomment the following methods and override them if needed
-	/*
-	public function filters()
+	public function actionTest()
 	{
-		// return the filter configuration for this controller, e.g.:
-		return array(
-			'inlineFilterName',
-			array(
-				'class'=>'path.to.FilterClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
+		$this->var_dump($_POST);
 	}
-
-	public function actions()
-	{
-		// return external action classes, e.g.:
-		return array(
-			'action1'=>'path.to.ActionClass',
-			'action2'=>array(
-				'class'=>'path.to.AnotherActionClass',
-				'propertyName'=>'propertyValue',
-			),
-		);
-	}
-	*/
 }

@@ -15,6 +15,11 @@
  */
 class Users extends CActiveRecord
 {
+	const STATUS_ACTIVE = 1;
+	const STATUS_INACTIVE = 0;
+	const STATUS_BLOCKED = 2;
+	const LOGGED_IN = 1;
+	const LOGGED_OUT = 0;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @return Users the static model class
@@ -40,13 +45,28 @@ class Users extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, passwd, created_time, updated_time, last_login_time', 'required'),
+			array('username, passwd, status', 'required'),
 			array('status, created_time, updated_time, last_login_time, login_status', 'numerical', 'integerOnly'=>true),
 			array('username, passwd', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, username, passwd, status, created_time, updated_time, last_login_time, login_status', 'safe', 'on'=>'search'),
 		);
+	}
+	
+	/**
+	 * Before save
+	 */
+	public function beforeSave()
+	{
+		if($this->isNewRecord)
+		{
+			$this->last_login_time = 0;
+			$this->created_time = time();
+			$this->updated_time = 0;
+			print_r($this->attributes);
+		}
+		return TRUE;
 	}
 
 	/**
@@ -100,5 +120,44 @@ class Users extends CActiveRecord
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,
 		));
+	}
+	
+	/**
+	 * Encrypt the password with sha1 hash
+	 * @return $str encrypted with sha1
+	 */
+	public static function encrypt($str) 
+	{
+		$sha = str_split(sha1($str),4);
+		$salt = str_split(Yii::app()->params['salt'],4);
+		for($i=1;$i<=8;$i++)
+		{
+			$sha[$i] = $sha[$i].$salt[$i-1];
+		}		
+		return sha1(implode($sha));
+	}
+	
+	/**
+	 * Verify current users password
+	 * @param $passwd
+	 */
+	public function verifyPassword($passwd)
+	{		
+		if($this->passwd == $this->encrypt($passwd))
+			return TRUE;
+		else
+			return FALSE;
+	}
+	
+	/**
+	 * Get all status options
+	 */
+	public static function getAllStatusOptions()
+	{
+		return array(
+			self::STATUS_ACTIVE =>'Aktif',
+			self::STATUS_INACTIVE =>'Tidak Aktif',
+			self::STATUS_BLOCKED => 'Diblokir'
+		);
 	}
 }

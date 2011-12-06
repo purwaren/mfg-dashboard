@@ -20,4 +20,28 @@ class Controller extends CController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
+	
+	/**
+	 * Dump variable
+	 */
+	public function var_dump($var)
+	{
+		echo '<pre>';
+		print_r($var);
+		echo '</pre>';
+	}
+	
+	/**
+	 * authenticate the users, if has access, return true
+	 */
+	protected function authenticate($user, $passwd)
+	{
+		$user = Users::model()->findByAttributes(array(
+			'username' =>$user,
+			'passwd' => Users::encrypt($passwd),
+		));
+		if($user && $user->status == Users::STATUS_ACTIVE)
+			return TRUE;
+		else return FALSE;		
+	}
 }

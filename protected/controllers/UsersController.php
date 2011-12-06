@@ -27,7 +27,7 @@ class UsersController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','create'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -69,10 +69,12 @@ class UsersController extends Controller
 		if(isset($_POST['Users']))
 		{
 			$model->attributes=$_POST['Users'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+			$model->passwd = !empty($model->passwd)?Users::encrypt($model->passwd):'';
+			
+				if($model->save())
+					$this->redirect(array('view','id'=>$model->id));							
 		}
-
+		$model->passwd = '';
 		$this->render('create',array(
 			'model'=>$model,
 		));

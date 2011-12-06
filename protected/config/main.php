@@ -79,9 +79,9 @@ return array(
 				),
 				// uncomment the following to show log messages on web pages
 				
-				array(
-					'class'=>'CWebLogRoute',
-				),
+				//array(
+				//	'class'=>'CWebLogRoute',
+				//),
 				
 			),
 		),
@@ -92,5 +92,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
+		'salt' => 'phubeThAspADReDRuRatreprEwUba2Hu'
 	),
 );

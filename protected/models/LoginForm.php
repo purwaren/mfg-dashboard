@@ -27,6 +27,8 @@ class LoginForm extends CFormModel
 			array('rememberMe', 'boolean'),
 			// password needs to be authenticated
 			array('password', 'authenticate'),
+			// username must be active
+			array('username', 'isActive')
 		);
 	}
 
@@ -50,9 +52,41 @@ class LoginForm extends CFormModel
 		{
 			$this->_identity=new UserIdentity($this->username,$this->password);
 			if(!$this->_identity->authenticate())
-				$this->addError('password','Incorrect username or password.');
+				$this->addError('password','Terjadi kesalahan username / password');
 		}
 	}
+	
+	/**
+    * Verify the user, whether user status is active (1) or not active (0)
+    * @return boolean status of the users
+    */
+    public function isActive($attribute,$params)
+    {
+        if(!$this->hasErrors())
+        {
+            $user = Users::model()->findByAttributes(array('username'=>$this->username));
+            if($user)
+            {
+                //check user status
+            	if($user->status == Users::STATUS_INACTIVE)
+                    $this->addError('username','Username is not active');
+                else if($user->status == Users::STATUS_BLOCKED)
+                    $this->addError('username','Username was blocked, please contact administrator');
+                
+                //check login status
+                if($user->login_status == Users::LOGGED_IN)
+                {
+                	$login_time = time() - $user->last_login_time;
+                	if($login_time < 3600)
+                		$this->addError('username','You have active session in another machine, please logout first');
+                }
+            }
+            else
+            {
+                $this->addError('username','Username was not found');
+            }
+        }
+    }
 
 	/**
 	 * Logs in the user using the given username and password in the model.
