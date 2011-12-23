@@ -97,7 +97,13 @@ class SiteController extends Controller
 	 */
 	public function actionLogout()
 	{
-		Yii::app()->user->logout();
-		$this->redirect(Yii::app()->homeUrl);
+		$user = Users::model()->findByPk(Yii::app()->user->getId());
+		$user->login_status = Users::LOGGED_OUT;			
+		if($user->save())
+		{
+			Yii::app()->user->logout();
+			$this->redirect(Yii::app()->homeUrl);
+		}
+		
 	}
 }

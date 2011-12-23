@@ -40,8 +40,7 @@ class Sales extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('store_code, sales_id, amount, disc, cc, teller_id, clerk_id', 'required'),
-			array('teller_id, clerk_id', 'numerical', 'integerOnly'=>true),
+			array('store_code, sales_id, amount, disc, teller_id', 'required'),			
 			array('store_code, amount, disc', 'length', 'max'=>11),
 			array('sales_id', 'length', 'max'=>128),
 			array('cc', 'length', 'max'=>16),

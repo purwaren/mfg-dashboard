@@ -4,10 +4,11 @@
  * This is the model class for table "item_lost".
  *
  * The followings are the available columns in table 'item_lost':
- * @property integer $store_code
- * @property integer $item_code
- * @property integer $date
- * @property integer $price
+ * @property integer $id
+ * @property string $store_code
+ * @property string $item_code
+ * @property string $date
+ * @property string $price
  * @property integer $qty
  */
 class ItemLost extends CActiveRecord
@@ -38,10 +39,11 @@ class ItemLost extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('store_code, item_code, date, price, qty', 'required'),
-			array('store_code, item_code, date, price, qty', 'numerical', 'integerOnly'=>true),
+			array('qty', 'numerical', 'integerOnly'=>true),
+			array('store_code, item_code, price', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('store_code, item_code, date, price, qty', 'safe', 'on'=>'search'),
+			array('id, store_code, item_code, date, price, qty', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,6 +64,7 @@ class ItemLost extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
+			'id' => 'ID',
 			'store_code' => 'Store Code',
 			'item_code' => 'Item Code',
 			'date' => 'Date',
@@ -81,10 +84,11 @@ class ItemLost extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('store_code',$this->store_code);
-		$criteria->compare('item_code',$this->item_code);
-		$criteria->compare('date',$this->date);
-		$criteria->compare('price',$this->price);
+		$criteria->compare('id',$this->id);
+		$criteria->compare('store_code',$this->store_code,true);
+		$criteria->compare('item_code',$this->item_code,true);
+		$criteria->compare('date',$this->date,true);
+		$criteria->compare('price',$this->price,true);
 		$criteria->compare('qty',$this->qty);
 
 		return new CActiveDataProvider(get_class($this), array(

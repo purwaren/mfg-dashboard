@@ -1,19 +1,21 @@
 <?php
 
 /**
- * This is the model class for table "sale_items".
+ * This is the model class for table "item_retur".
  *
- * The followings are the available columns in table 'sale_items':
- * @property string $sale_id
+ * The followings are the available columns in table 'item_retur':
+ * @property string $retur_id
+ * @property string $store_code
  * @property string $item_code
  * @property integer $qty
- * @property string $disc
+ * @property string $date
+ * @property integer $status
  */
-class SaleItems extends CActiveRecord
+class ItemRetur extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @return SaleItems the static model class
+	 * @return ItemRetur the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -25,7 +27,7 @@ class SaleItems extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'sale_items';
+		return 'item_retur';
 	}
 
 	/**
@@ -36,13 +38,13 @@ class SaleItems extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, item_code, qty, disc', 'required'),
-			array('qty,id', 'numerical', 'integerOnly'=>true),
-			array('item_code', 'length', 'max'=>128),
-			array('disc', 'length', 'max'=>11),
+			array('retur_id, store_code, item_code, qty, date, status', 'required'),
+			array('qty, status', 'numerical', 'integerOnly'=>true),
+			array('retur_id', 'length', 'max'=>32),
+			array('store_code, item_code', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, item_code, qty, disc', 'safe', 'on'=>'search'),
+			array('retur_id, store_code, item_code, qty, date, status', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -63,10 +65,12 @@ class SaleItems extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'Sale ID',
+			'retur_id' => 'Retur',
+			'store_code' => 'Store Code',
 			'item_code' => 'Item Code',
 			'qty' => 'Qty',
-			'disc' => 'Disc',
+			'date' => 'Date',
+			'status' => 'Status',
 		);
 	}
 
@@ -81,10 +85,12 @@ class SaleItems extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('sale_id',$this->sale_id,true);
+		$criteria->compare('retur_id',$this->retur_id,true);
+		$criteria->compare('store_code',$this->store_code,true);
 		$criteria->compare('item_code',$this->item_code,true);
 		$criteria->compare('qty',$this->qty);
-		$criteria->compare('disc',$this->disc,true);
+		$criteria->compare('date',$this->date,true);
+		$criteria->compare('status',$this->status);
 
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,

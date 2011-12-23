@@ -448,3 +448,423 @@ Stack trace:
 #1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
 #2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
 #3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:49:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:49:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:49:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:50:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:50:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:50:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:50:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:51:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:51:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:54:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:54:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:54:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:54:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:55:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:55:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:55:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:55:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:56:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:56:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:56:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:56:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:56:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:56:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:57:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 10:57:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 11:05:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/07 11:08:57 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionTest()
+#1 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#3 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#6 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#7 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/test
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (32)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/07 11:09:59 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionTest()
+#1 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#3 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#6 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#7 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/test
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (35)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/07 11:10:00 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionTest()
+#1 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#3 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#6 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#7 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/test
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (35)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/07 11:10:01 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionTest()
+#1 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#3 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#6 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#7 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/test
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (35)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/07 11:10:01 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionTest()
+#1 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#3 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#6 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#7 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/test
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (35)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/07 11:10:02 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionTest()
+#1 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#3 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#6 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#7 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/test
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (35)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/07 11:10:02 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionTest()
+#1 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#3 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#6 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#7 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/test
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (35)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/07 11:10:02 [error] [php] json_decode() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CJSON.php:327)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionTest()
+#1 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#3 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#4 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#5 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#6 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#7 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/test
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (35)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/12 09:42:14 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/syncStoreItems
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (10)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/12 09:42:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/12 09:42:20 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/syncStoreItems
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (10)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/12 09:42:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/12 09:42:20 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/syncStoreItems
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (10)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/12 09:42:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa me-resolve request "favicon.ico"' in C:\wamp\www\yii\framework\web\CWebApplication.php:332
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/favicon.ico
+2011/12/13 16:47:16 [error] [system.db.CDbCommand] CDbCommand::execute() gagal: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'clerk_id' cannot be null. Statement SQL yang dijalankan adalah: INSERT INTO `sales` (`store_code`, `kassa`, `sales_id`, `amount`, `disc`, `cc`, `teller_id`, `clerk_id`, `sync_time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (113)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/13 16:47:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'clerk_id' cannot be null. The SQL statement executed was: INSERT INTO `sales` (`store_code`, `kassa`, `sales_id`, `amount`, `disc`, `cc`, `teller_id`, `clerk_id`, `sync_time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in C:\wamp\www\yii\framework\db\CDbCommand.php:338
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1015): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(779): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php(113): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionSyncSales()
+#4 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(328): CController->run('syncSales')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('syncronizeKasir...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/syncronizeKasir/syncSales
+2011/12/13 16:48:54 [error] [system.db.CDbCommand] CDbCommand::execute() gagal: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'clerk_id' cannot be null. Statement SQL yang dijalankan adalah: INSERT INTO `sales` (`store_code`, `kassa`, `sales_id`, `amount`, `disc`, `cc`, `teller_id`, `clerk_id`, `sync_time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8).
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (113)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/13 16:48:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'clerk_id' cannot be null. The SQL statement executed was: INSERT INTO `sales` (`store_code`, `kassa`, `sales_id`, `amount`, `disc`, `cc`, `teller_id`, `clerk_id`, `sync_time`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8)' in C:\wamp\www\yii\framework\db\CDbCommand.php:338
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1015): CDbCommand->execute()
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(779): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php(113): CActiveRecord->save()
+#3 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionSyncSales()
+#4 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\yii\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework\web\CWebApplication.php(328): CController->run('syncSales')
+#8 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('syncronizeKasir...')
+#9 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#11 {main} REQUEST_URI=/syncronizeKasir/syncSales
+2011/12/14 16:37:40 [error] [php] Undefined property: stdClass::$attributes (C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php:179)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/syncRetur
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (179)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/14 16:37:41 [error] [php] Undefined property: stdClass::$attributes (C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php:179)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/syncRetur
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (179)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/14 16:37:54 [error] [php] Undefined property: stdClass::$attributes (C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php:179)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/syncRetur
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (179)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/14 16:37:55 [error] [php] Undefined property: stdClass::$attributes (C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php:179)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(278): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework\web\CController.php(257): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework\web\CWebApplication.php(328): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\intermediary\index.php(13): CWebApplication->run()
+REQUEST_URI=/syncronizeKasir/syncRetur
+in C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php (179)
+in C:\wamp\www\yii\app\intermediary\index.php (13)
+2011/12/14 16:39:24 [error] [exception.CDbException] exception 'CDbException' with message 'Nama kolom harus berupa string ataupun array' in C:\wamp\www\yii\framework\db\schema\CDbCommandBuilder.php:701
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\schema\CDbCommandBuilder.php(496): CDbCommandBuilder->createInCondition(Object(CMysqlTableSchema), NULL, Array, NULL)
+#1 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1649): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), NULL, '', Array)
+#2 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1062): CActiveRecord->updateByPk(NULL, Array)
+#3 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(779): CActiveRecord->update(NULL)
+#4 C:\wamp\www\yii\app\intermediary\protected\controllers\SyncronizeKasirController.php(178): CActiveRecord->save()
+#5 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SyncronizeKasirController->actionSyncRetur()
+#6 C:\wamp\www\yii\framework\web\CController.php(300): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework\web\CController.php(278): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework\web\CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\yii\framework\web\CWebApplication.php(328): CController->run('syncRetur')
+#10 C:\wamp\www\yii\framework\web\CWebApplication.php(121): CWebApplication->runController('syncronizeKasir...')
+#11 C:\wamp\www\yii\framework\base\CApplication.php(155): CWebApplication->processRequest()
+#12 C:\wamp\www\yii\app\intermediary\index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/syncronizeKasir/syncRetur
