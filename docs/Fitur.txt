@@ -1,0 +1,18 @@
+Fitur:
+0.1 Beta
+- Sinkronisasi mutasi masuk untuk sikasir. Tidak perlu lagi menggunakan flashdisk, tetapi langsung online.
+- Skenario:
+  + Sisgud push data item_distribution ke server intermediary ( ada interface menggunakan syncronizer )
+  + Sikasir pull data dari server intermediary, langsung dari sikasir saja. Dibuatkan fungsi khusus untuk pull data dari server,
+    nanti dimunculkan seperti ketika import barang. Kalau bisa dibuat perbon.
+
+Hal-hal yang perlu diperhatikan ketika melakukan sinkronisasi
+- Jangan sampai ada duplikasi data.
+- Keep track udah sampe record ke berapa yang disinkronisasi
+- Harus bisa resume ketika koneksi putus.
+
+Supaya memudahkan:
+- Upload data ke server intermediary dibuat perbon.
+- Tambah menu upload data di sisgud
+- Tampilkan daftar bon yang belum pernah diupload.
+- Untuk keeptrack, catat setiap bon yang diupload.
