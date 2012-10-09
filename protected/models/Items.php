@@ -43,7 +43,7 @@ class Items extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('code, name, hm, hp, hj, total, stock, cat, sup, sync_time', 'required'),
+			array('code, name, hm, hp, hj, total, cat, sup, sync_time', 'required'),
 			array('total, stock, sync_time', 'numerical', 'integerOnly'=>true),
 			array('code, name', 'length', 'max'=>128),
 			array('hm, hp, hj, cat, sup', 'length', 'max'=>11),

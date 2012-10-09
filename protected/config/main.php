@@ -7,19 +7,16 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Intermediary App',
+	'name'=>'Mode Fashion Group - Dashboard',
+	'language'=>'id',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
 
-	//message languange settings
-    'sourceLanguage' => 'en_us',
-    'language' => 'id',
-
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',
-		'application.components.*',
+		'application.components.*',		
 	),
 
 	'modules'=>array(
@@ -49,13 +46,11 @@ return array(
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
-			'showScriptName'=>FALSE,
-			'urlSuffix' => '.html',
 		),
 		
-		//'db'=>array(
-		//	'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		//),
+		'db'=>array(
+			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+		),
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
@@ -78,11 +73,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				
-				//array(
-				//	'class'=>'CWebLogRoute',
-				//),
-				
+				/*
+				array(
+					'class'=>'CWebLogRoute',
+				),
+				*/
 			),
 		),
 	),

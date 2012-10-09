@@ -43,8 +43,10 @@ body
 
 #logo
 {
-	padding: 10px 20px;
+	/*padding: 10px 50px;*/
 	font-size: 200%;
+	background: url(logo.png) top left no-repeat;
+	height: 100px;
 }
 
 #mainmenu
