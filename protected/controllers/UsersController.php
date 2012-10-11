@@ -31,7 +31,7 @@ class UsersController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','password'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -77,6 +77,32 @@ class UsersController extends Controller
 		$model->passwd = '';
 		$this->render('create',array(
 			'model'=>$model,
+		));
+	}
+	
+	/**
+	 * Update password
+	 */
+	public function actionPassword()
+	{
+		$model = new ChangePassword();
+		$pengguna = $this->loadModel(Yii::app()->user->getId());		
+		if(isset($_POST['ChangePassword']))
+		{
+			$model->attributes = $_POST['ChangePassword'];
+			if($model->validate())
+			{
+				$pengguna->passwd = Users::encrypt($model->password);
+				if($pengguna->save())
+				{
+					Yii::app()->user->setFlash('message','Penggantian password berhasil');
+					$model->unsetAttributes();
+				}
+			}
+		}
+		$model->username = $pengguna->username;
+		$this->render('password',array(
+			'model'=>$model
 		));
 	}
 

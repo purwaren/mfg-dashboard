@@ -4215,3 +4215,398 @@ Stack trace:
 REQUEST_URI=/yii/app/dashboard/index.php/users/admin
 HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/user
 ---
+2012/10/09 06:50:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('users/admin')
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/users/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/user
+---
+2012/10/09 07:46:23 [error] [php] Undefined index: store_code (C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php:100)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(134): StoreIpController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): StoreIpController->filterAccessControl()
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): StoreIpController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): StoreIpController->run()
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/create
+in C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php (100)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 07:51:12 [error] [php] Undefined index: store_code (C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php:100)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(134): StoreIpController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): StoreIpController->filterAccessControl()
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): StoreIpController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): StoreIpController->run()
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/create
+in C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php (100)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 07:52:57 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php:13)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(41): CFilterChain->run()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CAccessControlFilter->filter()
+#2 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): StoreIpController->filterAccessControl()
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#4 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): StoreIpController->runActionWithFilters()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): StoreIpController->run()
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/create
+in C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php (13)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 08:00:17 [error] [php] Undefined index: store_code (C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php:100)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(134): StoreIpController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): StoreIpController->filterAccessControl()
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): StoreIpController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): StoreIpController->run()
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/create
+in C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php (100)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 08:07:49 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php:13)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(41): CFilterChain->run()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CAccessControlFilter->filter()
+#2 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): StoreIpController->filterAccessControl()
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#4 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): StoreIpController->runActionWithFilters()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): StoreIpController->run()
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#8 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/create
+in C:\wamp\www\yii\app\dashboard\protected\controllers\StoreIpController.php (13)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 08:20:22 [error] [php] Undefined index: name (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:48)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (48)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 08:49:18 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (10)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 08:50:03 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (10)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 08:52:53 [error] [php] Undefined index: name (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:48)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (48)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 08:53:23 [error] [php] Undefined index: name (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:48)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (48)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 08:56:53 [error] [php] Undefined index: name (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:48)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (48)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 09:05:17 [error] [php] Undefined index: name (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:48)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (48)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 09:06:03 [error] [php] Undefined index: name (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:48)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (48)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 09:06:21 [error] [php] Undefined index: name (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:48)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncIp
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (48)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/09 09:14:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('storeIp/admin')
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2012/10/09 09:14:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('storeIp/admin')
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/storeIp/admin
+---
+2012/10/09 09:14:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('storeIp/admin')
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/storeIp/admin
+---
+2012/10/09 09:14:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('storeIp/admin')
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/storeIp/admin
+---
+2012/10/09 09:22:05 [error] [php] date_default_timezone_set() [<a href='function.date-default-timezone-set'>function.date-default-timezone-set</a>]: Timezone ID '' is invalid (C:\wamp\www\yii\app\dashboard\protected\components\Controller.php:37)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(134): StoreIpController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): StoreIpController->filterAccessControl()
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): StoreIpController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): StoreIpController->run()
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/storeIp/admin
+in C:\wamp\www\yii\app\dashboard\protected\components\Controller.php (37)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/10 13:05:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "user"' in C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user')
+#1 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/user
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/users/4
+---
+2012/10/11 10:27:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "user/password"' in C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/password')
+#1 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/user/password
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/storeIp/admin
+---
+2012/10/11 10:28:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "user/password"' in C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('user/password')
+#1 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/user/password
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/storeIp/admin
+---
+2012/10/11 10:28:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): CController->run('password')
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('users/password')
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/users/password
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/user/password
+---
+2012/10/11 10:29:18 [error] [php] Undefined variable: model (C:\wamp\www\yii\app\dashboard\protected\controllers\UsersController.php:90)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(134): UsersController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): UsersController->filterAccessControl()
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): UsersController->runActionWithFilters()
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): UsersController->run()
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/users/password
+in C:\wamp\www\yii\app\dashboard\protected\controllers\UsersController.php (90)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2012/10/11 10:35:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('users/admin')
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/users/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/users/password
+---
+2012/10/11 10:35:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.10\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.10\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.10\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.10\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.10\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.10\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.10\web\CWebApplication.php(135): CWebApplication->runController('users/admin')
+#9 C:\wamp\www\yii\framework-1.1.10\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/users/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/users/admin
+---
+2012/10/11 10:55:28 [error] [exception.CException] exception 'CException' with message 'Properti "ChangePassword.id" tidak didefinisikan.' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\yii\app\dashboard\protected\views\users\password.php(4): CComponent->__get('id')
+#1 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require('C:\wamp\www\yii...')
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): CController->renderPartial('password', Array, true)
+#5 C:\wamp\www\yii\app\dashboard\protected\controllers\UsersController.php(91): CController->render('password', Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): UsersController->actionPassword()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('password')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('users/password')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/users/password
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/users/password
+---

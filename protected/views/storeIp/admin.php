@@ -48,7 +48,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'current_ip',
 		array(
 			'name'=>'last_updated',
-			'value'=>'date("F d, Y h:i:s")'
+			'value'=>'date("F d, Y H:i:s",$data->last_updated)'
 		),
 		array(
 			'class'=>'CButtonColumn',

@@ -30,6 +30,14 @@ class Controller extends CController
 		print_r($var);
 		echo '</pre>';
 	}
+
+	public function beforeAction()
+	{
+		//set date default timezone
+		date_default_timezone_set(Yii::app()->params['timezone']);
+		return TRUE;
+	}
+	
 	
 	/**
 	 * authenticate the users, if has access, return true

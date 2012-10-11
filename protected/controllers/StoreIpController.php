@@ -72,21 +72,7 @@ class StoreIpController extends Controller
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
-		if(Yii::app()->request->isPostRequest)
-		{
-			$model = StoreIp::model()->findByAttributes(array(
-				'store_code'=>$_POST['store_code'],
-			));
-			if(empty($model))
-			{
-				$model = new StoreIp();
-			}
-			$model->store_code = $_POST['store_code'];
-			$model->name = $_POST['name'];
-			$model->current_ip = $_SERVER['REMOTE_ADDR'];
-			$model->last_updated = time();
-			$model->save();
-		}
+
 		$this->render('create',array(
 			'model'=>$model,
 		));

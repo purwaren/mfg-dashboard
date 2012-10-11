@@ -29,14 +29,19 @@
 	<div id="top_menu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Beranda', 'url'=>array('/site/index')),				
+				array('label'=>'Beranda', 'url'=>array('/site/index'),
+					'items'=>array(
+						array('label'=>'Ganti Password','url'=>array('/users/password')),
+					),
+				),				
 				array('label'=>'Pengguna', 'url'=>array('/user'),
 					'items'=>array(
 						array('label'=>'Tambah Pengguna','url'=>array('users/create')),
 						array('label'=>'Kelola Pengguna','url'=>array('users/admin')),
 					),
-					
+					'visible'=>!Yii::app()->user->isGuest,
 				),
+				array('label'=>'Daftar Sikasir', 'url'=>array('/storeIp/admin'),'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

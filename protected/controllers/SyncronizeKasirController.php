@@ -31,6 +31,38 @@ class SyncronizeKasirController extends Controller
 	{
 		$this->var_dump($_POST);
 	}
+
+	public function actionSyncIp()
+	{
+		if(Yii::app()->request->isPostRequest)
+		{
+			//print_r($_POST);exit;
+			$model = StoreIp::model()->findByAttributes(array(
+				'store_code'=>$_POST['store_code'],
+			));
+			if(empty($model))
+			{
+				$model = new StoreIp();
+			}
+			$model->store_code = $_POST['store_code'];
+			$model->name = $_POST['name'];
+			$model->current_ip = $_SERVER['REMOTE_ADDR'];
+			$model->last_updated = time();
+			if($model->save())
+			{
+				echo CJSON::encode(array(
+							'status'=>'OK'
+				));
+			}
+			else
+			{
+				echo CJSON::encode(array(
+							'status'=>'ERROR',
+							'message'=>$model->getErrors()
+				));
+			}
+		}
+	}
 	
 	/**
 	 * Receiving and saving store items data

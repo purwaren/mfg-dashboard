@@ -63,8 +63,7 @@ class Users extends CActiveRecord
 		{
 			$this->last_login_time = 0;
 			$this->created_time = time();
-			$this->updated_time = 0;
-			print_r($this->attributes);
+			$this->updated_time = 0;			
 		}
 		return TRUE;
 	}
