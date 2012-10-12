@@ -32,6 +32,9 @@ class SyncronizeKasirController extends Controller
 		$this->var_dump($_POST);
 	}
 
+	/**
+	 * Syncronize ip address from store
+	 */
 	public function actionSyncIp()
 	{
 		if(Yii::app()->request->isPostRequest)
@@ -59,6 +62,36 @@ class SyncronizeKasirController extends Controller
 				echo CJSON::encode(array(
 							'status'=>'ERROR',
 							'message'=>$model->getErrors()
+				));
+			}
+		}
+	}
+	
+	public function actionSyncRevenue()
+	{
+		if(Yii::app()->request->isPostRequest)
+		{
+			$model = StoreRevenue::model()->findByAttributes(array(
+				'store_code'=>$_POST['store_code'],
+				'date'=>$_POST['tanggal']
+			));
+			if(empty($model))
+			{
+				$model = new StoreRevenue();
+			}
+			$model->store_code = $_POST['store_code'];
+			$model->date = $_POST['tanggal'];
+			$model->last_updated = time();
+			$model->current_revenue = $_POST['revenue'];
+			if($model->save())
+			{
+				echo CJSON::encode(array('status'=>'OK'));
+			}
+			else
+			{
+				echo CJSON::encode(array(
+					'status'=>'ERROR',
+					'message'=>$model->getErrors(),
 				));
 			}
 		}
