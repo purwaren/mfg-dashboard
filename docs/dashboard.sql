@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 10, 2012 at 04:06 AM
+-- Generation Time: Oct 12, 2012 at 02:45 AM
 -- Server version: 5.5.16
 -- PHP Version: 5.3.8
 
@@ -260,7 +260,7 @@ CREATE TABLE IF NOT EXISTS `store_ip` (
 --
 
 INSERT INTO `store_ip` (`id`, `store_code`, `name`, `current_ip`, `last_updated`) VALUES
-(2, '17', 'Mode Fashion Perbaungan', '152.118.31.168', 1349776386);
+(2, '17', 'Mode Fashion Perbaungan', '127.0.0.1', 1349999603);
 
 -- --------------------------------------------------------
 
@@ -288,6 +288,29 @@ CREATE TABLE IF NOT EXISTS `store_items` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `store_revenue`
+--
+
+CREATE TABLE IF NOT EXISTS `store_revenue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `store_code` varchar(16) NOT NULL,
+  `date` date NOT NULL,
+  `current_revenue` double NOT NULL,
+  `last_updated` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `store_code` (`store_code`,`date`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `store_revenue`
+--
+
+INSERT INTO `store_revenue` (`id`, `store_code`, `date`, `current_revenue`, `last_updated`) VALUES
+(1, '17', '2012-10-12', 1019800, 1350008919);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -302,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `login_status` int(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `users`
@@ -310,8 +333,9 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 INSERT INTO `users` (`id`, `username`, `passwd`, `status`, `created_time`, `updated_time`, `last_login_time`, `login_status`) VALUES
 (1, 'admin', '7096da3e640c166554d4c422c1f58c96b643bb48', 0, 1323153616, 0, 1323229873, 0),
-(2, 'purwa', '7096da3e640c166554d4c422c1f58c96b643bb48', 1, 1323156186, 0, 1349774066, 1),
-(3, 'perbaungan', '02921880aaf8c133152f4b65335724b9b26f94d1', 1, 1323229808, 0, 1323230230, 0);
+(2, 'purwa', '8fba14fde039b2df733f55b3fd9d0adcb4c09570', 1, 1323156186, 0, 1350002503, 0),
+(3, 'perbaungan', '02921880aaf8c133152f4b65335724b9b26f94d1', 1, 1323229808, 0, 1323230230, 0),
+(4, 'rampah', 'cfee830d1293922a3cb3c98211c0c80da5afb88a', 1, 1349849107, 0, 0, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
