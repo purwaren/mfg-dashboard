@@ -15,3 +15,7 @@ stabat: jw3h133cSituUscZB5D6oHy39T4EB6
 modiest_stabat: Jy62yik7Dj0WEfBC44qX0j2vMQoYBU
 kotabaru: KdiFL7umCiuUuwesIhOARtj8febOKl
 nibung: 20Ep2X9q72MI8ru5z138V41GS55316
+
+syncronize:ymqygLDvGbMiNEptuX1sJnTSHOCDeN
+admin: 1a09e9e16f18746fadecdb04498c2cc1
+http://yii.googlecode.com/files/yii-1.1.12.b600af.zip
