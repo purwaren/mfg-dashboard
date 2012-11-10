@@ -95,4 +95,19 @@ class StoreIp extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	
+	/**
+	 * Retrieve All Store that has been connected to server
+	 * @return multitype:NULL
+	 */
+	public static function getAllStoreCode()
+	{
+		$model = StoreIp::model()->findAll();
+		$options = array();
+		foreach($model as $row)
+		{
+			$options[$row->store_code] = $row->name;
+		}
+		return $options;
+	}
 }

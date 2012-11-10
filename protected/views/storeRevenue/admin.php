@@ -3,8 +3,8 @@
 /* @var $model StoreRevenue */
 
 $this->breadcrumbs=array(
-	'Store Revenues'=>array('index'),
-	'Manage',
+	'Omset Toko'=>array('index'),
+	'Daftar',
 );
 
 $this->menu=array(
@@ -29,8 +29,8 @@ $('.search-form form').submit(function(){
 <h1>Daftar Omset Toko</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+Anda bisa menggunakan operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 </p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>

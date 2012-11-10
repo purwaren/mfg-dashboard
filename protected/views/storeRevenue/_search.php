@@ -11,30 +11,25 @@
 	'method'=>'get',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'store_code'); ?>
-		<?php echo $form->textField($model,'store_code',array('size'=>16,'maxlength'=>16)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'date'); ?>
-		<?php echo $form->textField($model,'date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'current_revenue'); ?>
-		<?php echo $form->textField($model,'current_revenue'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'last_updated'); ?>
-		<?php echo $form->textField($model,'last_updated'); ?>
-	</div>
+	<table>
+		<tr>
+			<td class="label-column"><?php echo $form->label($model,'store_code'); ?></td>
+			<td class="value-column"><?php echo $form->dropDownList($model,'store_code',StoreIp::getAllStoreCode(),
+					array('prompt'=>'Pilih Toko')); ?></td>
+		</tr>
+		<tr>
+			<td class="label-column"><?php echo $form->label($model,'date'); ?></td>
+			<td class="value-column"><?php $this->widget('zii.widgets.jui.CJuiDatePicker',array(
+					'name'=>'StoreRevenue[date]',
+					'options'=>array('showAnim'=>'fold','dateFormat'=>'yy-mm-dd'),
+					'value'=>$model->date
+			)); ?></td>
+		</tr>
+		<tr>
+			<td class="label-column"><?php echo $form->label($model,'current_revenue'); ?></td>
+			<td class="value-column"><?php echo $form->textField($model,'current_revenue'); ?></td>
+		</tr>
+	</table>	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
