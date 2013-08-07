@@ -138,6 +138,7 @@ class StoreRevenue extends CActiveRecord
 	 */
 	public function getTotalRevenue()
 	{
+		
 		if(!empty($this->date) && !empty($this->store_code))
 		{
 			if(!empty($this->date_to))
@@ -152,30 +153,41 @@ class StoreRevenue extends CActiveRecord
 			}
 			else
 			{
+				if(!empty($this->date_to))
+				{
+					$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue 
+							WHERE date >= :date AND date <= :date_to';
+					$query = self::model()->findBySql($sql,array(
+						':date'=>$this->date,
+						':date_to'=>$this->date_to,					
+					));
+				}
+				else
+				{
+					$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date = :date';
+					$query = self::model()->findBySql($sql,array(
+						':date'=>$this->date,					
+					));
+				}	
+			}			
+		}
+		else if(!empty($this->date))
+		{
 			if(!empty($this->date_to))
 			{
-				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue 
-						WHERE date >= :date AND date <= :date_to';
+				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date >= :date AND date <= :date_to';
 				$query = self::model()->findBySql($sql,array(
 					':date'=>$this->date,
-					':date_to'=>$this->date_to,					
+					':date_to'=>$this->date_to,
 				));
 			}
 			else
 			{
 				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date = :date';
 				$query = self::model()->findBySql($sql,array(
-					':date'=>$this->date,					
+					':date'=>$this->date
 				));
-			}	
-			}			
-		}
-		else if(!empty($this->date))
-		{
-			$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date = :date';
-			$query = self::model()->findBySql($sql,array(
-				':date'=>$this->date
-			));
+			}
 		}
 		else if(!empty($this->store_code))
 		{

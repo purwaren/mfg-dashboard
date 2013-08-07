@@ -19,6 +19,7 @@ nibung: 20Ep2X9q72MI8ru5z138V41GS55316
 syncronize: ymqygLDvGbMiNEptuX1sJnTSHOCDeN
 admin: 1a09e9e16f18746fadecdb04498c2cc1
 http://yii.googlecode.com/files/yii-1.1.12.b600af.zip
+modefash: pFl6gnP007
 
 
 Setting new server
