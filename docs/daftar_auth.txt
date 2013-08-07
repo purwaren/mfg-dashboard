@@ -11,11 +11,23 @@ kisaran: WvmobBOfVT7sKhc3YQWbELrOATllng
 binjai: 747e071tw362kfqUBntn37tr936F0l
 modiest_perbaungan: uJRUx7LPNfQ8o5wDF4eM0kB483H9jW
 tanjung_morawa: WN3dHJ5ib9WYQcfHfC9JrZPKU6x7zQ
-stabat: jw3h133cSituUscZB5D6oHy39T4EB6
+stabat:jw3h133cSituUscZB5D6oHy39T4EB6
 modiest_stabat: Jy62yik7Dj0WEfBC44qX0j2vMQoYBU
 kotabaru: KdiFL7umCiuUuwesIhOARtj8febOKl
 nibung: 20Ep2X9q72MI8ru5z138V41GS55316
 
-syncronize:ymqygLDvGbMiNEptuX1sJnTSHOCDeN
+syncronize: ymqygLDvGbMiNEptuX1sJnTSHOCDeN
 admin: 1a09e9e16f18746fadecdb04498c2cc1
 http://yii.googlecode.com/files/yii-1.1.12.b600af.zip
+
+
+Setting new server
+1. Pasang sync_ip.sh
+2. Pasang sync_omset.sh
+3. Pasang App Syncronizer
+	- install unzip
+	- download yii
+	- config yii
+	- install php5-curl
+4. Update sikasir ke repositori terbaru
+5. Clone repository untuk syncronizer

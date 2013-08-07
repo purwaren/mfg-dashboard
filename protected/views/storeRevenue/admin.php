@@ -56,12 +56,15 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		),
 		array(
 			'name'=>'date',
-			'value'=>'$data->getDate()'
+			'value'=>'$data->getDate()',
+			'footer'=>'TOTAL'
 		),
 		array(
 			'name'=>'current_revenue',
 			'value'=>'number_format($data->current_revenue)',
 			'htmlOptions'=>array('style'=>'text-align:right;font-weight:bold'),
+			'footer'=>number_format($model->getTotalRevenue()),
+			'footerHtmlOptions'=>array('style'=>'text-align:right;font-style:normal;font-weight:bold'),
 		),
 		array(
 			'name'=>'last_updated',

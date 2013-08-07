@@ -12,6 +12,8 @@
  */
 class StoreRevenue extends CActiveRecord
 {
+	public $total;
+	public $date_to;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -44,7 +46,7 @@ class StoreRevenue extends CActiveRecord
 			array('store_code', 'length', 'max'=>16),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, store_code, date, current_revenue, last_updated', 'safe', 'on'=>'search'),
+			array('id, store_code, date, current_revenue, last_updated, date_to', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -83,15 +85,29 @@ class StoreRevenue extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
-
+		if(!empty($this->date_to))
+		{
+			$criteria->condition='date >= :date AND date <= :date_to';
+			$criteria->params = array(
+				':date'=>$this->date,
+				':date_to'=>$this->date_to
+			);
+		}
+		else 
+		{
+			$criteria->compare('date',$this->date,true);
+		}
 		$criteria->compare('id',$this->id);
 		$criteria->compare('store_code',$this->store_code,true);
-		$criteria->compare('date',$this->date,true);
+		//$criteria->compare('date',$this->date,true);
 		$criteria->compare('current_revenue',$this->current_revenue);
-		$criteria->compare('last_updated',$this->last_updated);
-
+		$criteria->compare('last_updated',$this->last_updated);		
+		
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
+			'pagination'=>array(
+				'pageSize'=>20
+			),
 		));
 	}
 	
@@ -115,5 +131,67 @@ class StoreRevenue extends CActiveRecord
 		if($model)
 			return $model->name;
 		else return 'Unknown';
+	}
+	
+	/**
+	 * Get total store revenue
+	 */
+	public function getTotalRevenue()
+	{
+		if(!empty($this->date) && !empty($this->store_code))
+		{
+			if(!empty($this->date_to))
+			{
+				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue 
+						WHERE date >= :date AND date <= :date_to  AND store_code = :code';
+				$query = self::model()->findBySql($sql,array(
+					':date'=>$this->date,
+					':date_to'=>$this->date_to,
+					':code'=>$this->store_code
+				));
+			}
+			else
+			{
+			if(!empty($this->date_to))
+			{
+				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue 
+						WHERE date >= :date AND date <= :date_to';
+				$query = self::model()->findBySql($sql,array(
+					':date'=>$this->date,
+					':date_to'=>$this->date_to,					
+				));
+			}
+			else
+			{
+				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date = :date';
+				$query = self::model()->findBySql($sql,array(
+					':date'=>$this->date,					
+				));
+			}	
+			}			
+		}
+		else if(!empty($this->date))
+		{
+			$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date = :date';
+			$query = self::model()->findBySql($sql,array(
+				':date'=>$this->date
+			));
+		}
+		else if(!empty($this->store_code))
+		{
+			$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE store_code = :code';
+			$query = self::model()->findBySql($sql,array(
+				':code'=>$this->store_code
+			));
+		}
+		else 
+		{
+			$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue';
+			$query = self::model()->findBySql($sql);
+		}
+		
+		if(!empty($query))
+			return $query->total;
+		else return 0;
 	}
 }
