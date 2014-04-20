@@ -106,7 +106,7 @@ class Controller extends CController
 		}
 		else
 		{
-			echo 'kosong';
+			//echo 'kosong';
 			return FALSE;
 		}
 	}
