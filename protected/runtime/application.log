@@ -4941,3 +4941,19 @@ Stack trace:
 #29 {main}
 REQUEST_URI=/yii/app/dashboard/index.php/storeRevenue/admin?StoreRevenue%5Bstore_code%5D=17&StoreRevenue%5Bdate%5D=2013-08-07&StoreRevenue%5Bdate_to%5D=2013-08-07&StoreRevenue%5Bcurrent_revenue%5D=&ajax=store-revenue-grid
 ---
+2014/04/20 20:01:35 [error] [exception.CException] exception 'CException' with message 'SiteController dan behaviornya tidak memiliki method ataupun closure bernama "generateRandomString"' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\app\dashboard\protected\controllers\SiteController.php(129): CComponent->__call('generateRandomS...', Array)
+#1 C:\wamp\www\yii\app\dashboard\protected\controllers\SiteController.php(129): SiteController->generateRandomString(32)
+#2 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('login')
+#7 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('site/login')
+#8 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/site/login
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---

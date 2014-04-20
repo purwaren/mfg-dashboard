@@ -73,13 +73,7 @@ class LoginForm extends CFormModel
                 else if($user->status == Users::STATUS_BLOCKED)
                     $this->addError('username','Username was blocked, please contact administrator');
                 
-                //check login status
-                if($user->login_status == Users::LOGGED_IN)
-                {
-                	$login_time = time() - $user->last_login_time;
-                	if($login_time < 3600)
-                		$this->addError('username','You have active session in another machine, please logout first');
-                }
+                
             }
             else
             {
@@ -103,6 +97,16 @@ class LoginForm extends CFormModel
 		{
 			$duration=$this->rememberMe ? 3600*24*30 : 0; // 30 days
 			Yii::app()->user->login($this->_identity,$duration);
+			
+			//update login status and last login time
+			Users::model()->updateByPk($this->_identity->id, array(
+				'login_status'=>Users::STATUS_ACTIVE,
+				'last_login_time'=>time(),
+			));
+				
+			//set last activity
+			Yii::app()->user->setState('lastActivity', time());
+			
 			return true;
 		}
 		else

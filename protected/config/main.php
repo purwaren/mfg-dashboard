@@ -89,5 +89,6 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 		'salt' => 'phubeThAspADReDRuRatreprEwUba2Hu',
 		'timezone'=>'Asia/Jakarta',
+		'timeout'=>900,
 	),
 );

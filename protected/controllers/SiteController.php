@@ -85,9 +85,84 @@ class SiteController extends Controller
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+			if($model->validate())
+			{
+				//check if there is existing session
+				$exist = Session::model()->findByAttributes(array(
+					'userid'=>$model->username,					
+				));
+				
+				if($exist)
+				{					
+					if($exist->valid_until > time())
+					{
+						Yii::app()->user->setState('existing_key', $exist->session_key);
+						Yii::app()->user->setState('uname', $model->username);
+						$this->render('override',array(
+							'model'=>$exist,
+						));	
+						Yii::app()->end();
+					}
+					else 				
+					{
+						$exist->delete();
+						$model->login();
+						//create new session for this user
+						$session = new Session();
+						$session->userid = Yii::app()->user->getName();
+						$session->session_key = $this->generateRandomString(32);
+						$session->valid_until = time()+Yii::app()->params['timeout'];
+						$session->ip_address = $_SERVER['REMOTE_ADDR'];
+						if($session->save())
+						{
+							Yii::app()->user->setState('session_key', $session->session_key);
+							$this->redirect(Yii::app()->user->returnUrl);
+						}
+					}
+				}
+				else
+				{	
+					$model->login();
+					//create new session for this user					
+					$session = new Session();
+					$session->userid = Yii::app()->user->getName();
+					$session->session_key = $this->generateRandomString(32);
+					$session->valid_until = time()+Yii::app()->params['timeout'];
+					$session->ip_address = $_SERVER['REMOTE_ADDR'];
+					if($session->save())
+					{
+						Yii::app()->user->setState('session_key', $session->session_key);					
+						$this->redirect(Yii::app()->user->returnUrl);
+					}
+				}
+			}			
 		}
+		
+		if(isset($_POST['yes']))
+		{
+			$model = new LoginForm();
+			$model->username = Yii::app()->user->getState('uname');
+			$model->password = $_POST['password'];
+			if($model->validate() && $model->login())
+			{
+				$session = Session::model()->findByAttributes(array(
+						'userid'=> $model->username,
+						'session_key'=>Yii::app()->user->getState('existing_key')
+				));
+				$session->session_key=$this->generateRandomString(32);
+				$session->valid_until = time()+Yii::app()->params['timeout'];
+				if($session->save())
+				{
+					Yii::app()->user->setState('session_key', $session->session_key);
+					Yii::app()->user->setState('existing_key', '');
+					Yii::app()->user->setState('uname', '');
+					$this->redirect(Yii::app()->user->returnUrl);
+				}
+			}
+		}
+		$error = Yii::app()->user->getFlash('error');
+		if(!empty($error))
+			$model->addError('username', $error);
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}	

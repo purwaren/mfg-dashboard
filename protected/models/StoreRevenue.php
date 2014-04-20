@@ -86,7 +86,7 @@ class StoreRevenue extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 		if(!empty($this->date_to))
-		{
+		{			
 			$criteria->condition='date >= :date AND date <= :date_to';
 			$criteria->params = array(
 				':date'=>$this->date,
@@ -97,6 +97,9 @@ class StoreRevenue extends CActiveRecord
 		{
 			$criteria->compare('date',$this->date,true);
 		}
+		$criteria->select = 'id, store_code, date, sum(current_revenue) AS total,  sum(current_revenue) AS current_revenue, last_updated';
+		$criteria->group = 'store_code';
+		$criteria->order = 'total desc';
 		$criteria->compare('id',$this->id);
 		$criteria->compare('store_code',$this->store_code,true);
 		//$criteria->compare('date',$this->date,true);

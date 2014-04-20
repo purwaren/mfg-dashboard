@@ -31,23 +31,8 @@ class UserIdentity extends CUserIdentity
             }            
             else
             {
-                $this->_id = $user->id;                
-                if(null === $user->last_login_time)
-                {
-                    $lastLogin = time();
-                }
-                else
-                {
-                    $lastLogin = $user->last_login_time;
-                }
-                //set login status indicate that user is logged in
-                $user->login_status = Users::LOGGED_IN;       
-                $user->last_login_time = time();         
-                if($user->save())
-                {                
-	                $this->setState('lastLoginTime',$lastLogin);                       
-	                $this->errorCode = self::ERROR_NONE;
-                }
+                $this->_id = $user->id;                              
+	            $this->errorCode = self::ERROR_NONE;               
             }
         }
         return !$this->errorCode;
