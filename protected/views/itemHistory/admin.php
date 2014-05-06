@@ -66,15 +66,23 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 </div><!-- search-form -->
 
 <?php 
+	$count=Store::model()->count();
+	if($count <=2 )
+		$width='width: 475px;';
+	else 
+	{
+		$width = $count*200;
+		$width = 'width: '.$width.'px;';
+	}
 	//processing header
 	$h1='';$h2='';
 	foreach($store as $row)
 	{
 		$h1 .= '<th colspan="4">'.$row->name.'</th>';
-		$h2 .= '<th style="width: 30px;">M</th>
-				<th style="width: 30px;">J</th>
-				<th style="width: 30px;">S</th>
-				<th style="width: 30px;">P</th>';
+		$h2 .= '<th>M</th>
+				<th>J</th>
+				<th>S</th>
+				<th>P</th>';
 	}
 	$header_store = '<tr>'.$h1.'</tr><tr>'.$h2.'</tr>';
 	
@@ -135,7 +143,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 	</div>
 	
 	<div class="right">
-	<table class="items">
+	<table class="items" style="<?php echo $width?>">
 		<thead>
 		<?php echo $header_store?>
 		</thead>
