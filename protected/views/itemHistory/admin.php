@@ -94,16 +94,21 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 						<td style="text-align:right">'.number_format($row->price).'</td>
 						<td style="text-align:center">'.$date_in.'</td>
 					</tr>';
-		$hist = ItemHistory::model()->hist()->findAllByAttributes(array(
-			'item_code'=>$row->item_code
-		));
+		
 		$row_store .= '<tr>';
-		foreach($hist as $dhist)
+		foreach($store as $st)
 		{
-			$row_store .= '<td style="text-align:center">'.$dhist->qty_in.'</td>
-				<td style="text-align:center">'.$dhist->qty_sold.'</td>
-				<td style="text-align:center">'.$dhist->qty_stock.'</td>
-				<td style="text-align:center">'.$dhist->period.'</td>';
+			$dhist = ItemHistory::model()->hist()->findByAttributes(array(
+				'item_code'=>$row->item_code,
+				'store_code'=>$st->code
+			));
+			if(!empty($dhist))
+				$row_store .= '<td style="text-align:center">'.$dhist->qty_in.'</td>
+					<td style="text-align:center">'.$dhist->qty_sold.'</td>
+					<td style="text-align:center">'.$dhist->qty_stock.'</td>
+					<td style="text-align:center">'.$dhist->period.'</td>';
+			else 
+				$row_store .= '<td colspan="4"><i>Data tidak tersedia</i></td>';
 		}
 		$row_store .= '</tr>';
 	}
@@ -125,7 +130,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 			<th>Tgl Masuk</th>
 		</tr>
 		</thead>
-		<?php echo $row_data?>
+		<?php echo empty($row_data)?'<tr><td colspan="4"><i>Tidak ada hasil</i></td></tr>':$row_data?>
 	</table>
 	</div>
 	

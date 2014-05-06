@@ -34,15 +34,13 @@
 						array('label'=>'Ganti Password','url'=>array('/users/password')),
 					),
 				),				
-				/*array('label'=>'Pengguna', 'url'=>array('/user'),
-					'items'=>array(
-						array('label'=>'Tambah Pengguna','url'=>array('users/create')),
-						array('label'=>'Kelola Pengguna','url'=>array('users/admin')),
-					),
-					'visible'=>!Yii::app()->user->isGuest,
-				),*/
 				array('label'=>'Daftar Sikasir', 'url'=>array('/storeIp/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Omset Toko', 'url'=>array('/storeRevenue/admin'),'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Laporan','visible'=>!Yii::app()->user->isGuest,
+					'items'=>array(
+						array('label'=>'Omset Toko','url'=>array('/storeRevenue/admin')),
+						array('label'=>'Riwayat Barang','url'=>array('/itemHistory/admin')),
+					),
+				),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

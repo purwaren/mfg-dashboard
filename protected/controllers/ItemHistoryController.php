@@ -159,10 +159,13 @@ class ItemHistoryController extends Controller
 		
 		//set pagination
 		$count = $model->countUniqueItem();
+		
 		$pages = new CPagination($count);
 		$pages->pageSize = $model->size;
-		if($count-$start < 10)
-			$summary=$start.'-'.$count.' dari '.$count;
+		if($count==0)
+			$summary='0';
+		else if($count-$start < 10)
+			$summary=$start.'-'.$count.' dari '.$count;		 
 		else $summary=$start.'-'.$end.' dari '.$count;
 		//var_dump($pages);exit;
 		$this->render('admin',array(
