@@ -90,5 +90,8 @@ return array(
 		'salt' => 'phubeThAspADReDRuRatreprEwUba2Hu',
 		'timezone'=>'Asia/Jakarta',
 		'timeout'=>900,
+		'pagination'=>array(
+			'size'=>'10'
+		)
 	),
 );

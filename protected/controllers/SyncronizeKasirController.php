@@ -119,6 +119,7 @@ class SyncronizeKasirController extends Controller
 				//saving data
 				$item->store_code = $_POST['store_code'];
 				$item->item_code = $row['id_barang'];
+				$item->price = $row['harga'];
 				$item->total = $row['total_barang'];
 				$item->init_stock = $row['stok_awal'];
 				$item->stock = $row['stok_barang'];
@@ -142,18 +143,64 @@ class SyncronizeKasirController extends Controller
 		}
 	}
 	
+	public function actionSyncItemHistory()
+	{
+		if(Yii::app()->request->isPostRequest)
+		{
+			$data=CJSON::decode($_POST['data']);
+			$status=true;$saved=0;$error=array();
+			foreach($data as $row)
+			{
+				$item = ItemHistory::model()->findByAttributes(array(
+					'item_code'=>$row['id_barang'],
+					'store_code'=>$_POST['store_code']
+				));
+				if(empty($item))
+				{
+					$item = new ItemHistory();
+				}
+				
+				$item->item_code=$row['id_barang'];
+				$item->name=$row['nama'];
+				$item->price=$row['harga_jual'];
+				$item->date_in=$row['tgl_masuk'];
+				$item->qty_in=$row['masuk'];
+				$item->qty_sold=$row['jual'];
+				$item->qty_stock=$row['stok'];
+				$item->period=$row['periode'];
+				$item->store_code=$_POST['store_code'];
+				if($item->save())
+					$saved++;
+				else 
+				{
+					$status=false;
+					$error=$item->getErrors();
+				}
+			}
+			if($status)
+				echo CJSON::encode(array(
+					'status'=>'ok'
+				));
+			else echo CJSON::encode(array(
+					'status'=>'error',
+					'message'=>$error
+				));
+		}
+	}
 	/**
 	 * Receiving and saving sales data
 	 */
 	public function actionSyncSales()
 	{		
 		if(Yii::app()->request->isPostRequest)
-		{			
+		{	
 			$data = CJSON::decode($_POST['data']);
-			$status = 1;
+			$status=true;
+			$saved=array();$i=0;$error=array();
 			foreach($data as $row)
 			{
-				//$this->var_dump($row);
+				$i++;
+				
 				$sales = Sales::model()->findByAttributes(array(
 					'store_code'=>$_POST['store_code'],
 					'kassa'=>$row['kassa'],
@@ -174,11 +221,10 @@ class SyncronizeKasirController extends Controller
 				$sales->teller_id = $row['id_kasir'];
 				$sales->clerk_id = $row['id_pramuniaga'];
 				$sales->sync_time = $_POST['sync_time'];
-				//$this->var_dump($sales->attributes);
+				
 				if($sales->save())
 				{					
-					$status = $status*1;
-					//saving sales item
+					$saved[]=$sales->sales_id;
 					$count = SaleItems::model()->countByAttributes(array(
 						'id'=>$sales->id,
 					));
@@ -190,26 +236,43 @@ class SyncronizeKasirController extends Controller
 							$sale_items = new SaleItems();
 							$sale_items->id = $sales->id;
 							$sale_items->item_code = $item['id_barang'];
-							$sale_items->disc = $item['diskon'];
+							$disc = trim($item['diskon']);
+							$sale_items->disc = !empty($disc)?$item['diskon']:'0';
 							$sale_items->qty = $item['qty'];
-							if($sale_items->save())							
-								$status = $status*1;							
-							else 
-								$status = $status*0;
+							if(!$sale_items->save())							
+							{
+								$status = false;
+								$error[]=$sale_items->getErrors();						
+							}
+							
 						}
 					}
 				}
-				else $status = $status*0;
+				else $status=false;
 			}
-			//
-			if($status)
-				echo CJSON::encode(array(
+			
+ 			if($status)
+ 				echo CJSON::encode(array(
 					'status'=>'ok'
 				));
 			else
-				echo CJSON::encode(array(
-					'status'=>'error'
-				));
+			{
+				if(count($saved) < $i)
+				{
+					echo CJSON::encode(array(
+						'status'=>'error',
+						'message'=>'Tidak semua transaksi tersimpan'
+					));
+				}
+				else 
+				{
+					echo CJSON::encode(array(
+							'status'=>'error',
+							'message'=>'Tidak semua item transaksi tersimpan',
+							'error'=>$error
+					));
+				}
+			}				
 		}
 	}
 	/**

@@ -7,6 +7,7 @@
  * @property integer $id
  * @property string $store_code
  * @property string $item_code
+ * @property double $price
  * @property integer $total
  * @property integer $init_stock
  * @property integer $stock
@@ -44,7 +45,7 @@ class StoreItems extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('store_code, item_code, total, init_stock, stock, opname_stock, item_in, item_sold, disc, total_sold, sync_time', 'required'),
+			array('store_code, item_code, price, total, init_stock, stock, opname_stock, item_in, item_sold, disc, total_sold, sync_time', 'required'),
 			array('total, init_stock, stock, opname_stock, item_in, item_sold, total_sold, sync_time', 'numerical', 'integerOnly'=>true),
 			array('store_code, item_code, disc', 'length', 'max'=>11),
 			// The following rule is used by search().

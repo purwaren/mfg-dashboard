@@ -4957,3 +4957,1041 @@ Stack trace:
 REQUEST_URI=/yii/app/dashboard/index.php/site/login
 HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
 ---
+2014/04/24 23:33:01 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (10)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:33:42 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (10)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:34:44 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:38:02 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:38:11 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:38:33 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:38:37 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:38:38 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:39:38 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:40:01 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:153)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:48:09 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (10)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:49:49 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:152)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (152)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:51:17 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:152)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (152)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:52:17 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:152)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (152)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/04/24 23:52:38 [error] [php] Undefined index: data (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:152)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncSales
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (152)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/05 04:09:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.12\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#9 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistory
+---
+2014/05/05 11:19:27 [error] [exception.CException] exception 'CException' with message 'Alias "zii.widget.CGridView" tidak valid. Pastikan alias tersebut menunjuk ke file PHP yang ada' in C:\wamp\www\yii\framework-1.1.12\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CWidgetFactory.php(147): YiiBase::import('zii.widget.CGri...', true)
+#1 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(ItemHistoryController), 'zii.widget.CGri...', Array)
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(173): CBaseController->createWidget('zii.widget.CGri...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php(44): CBaseController->widget('zii.widget.CGri...')
+#4 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require('C:\wamp\www\yii...')
+#5 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#8 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(152): CController->render('admin', Array)
+#9 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#19 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#20 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/05 11:19:40 [error] [exception.CException] exception 'CException' with message 'Alias "zii.widgets.CGridView" tidak valid. Pastikan alias tersebut menunjuk ke file PHP yang ada' in C:\wamp\www\yii\framework-1.1.12\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CWidgetFactory.php(147): YiiBase::import('zii.widgets.CGr...', true)
+#1 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(ItemHistoryController), 'zii.widgets.CGr...', Array)
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CGr...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php(44): CBaseController->widget('zii.widgets.CGr...')
+#4 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require('C:\wamp\www\yii...')
+#5 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#8 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(152): CController->render('admin', Array)
+#9 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#19 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#20 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/05 11:20:13 [error] [exception.CException] exception 'CException' with message 'Properti "dataProvider" tidak boleh kosong' in C:\wamp\www\yii\framework-1.1.12\zii\widgets\CBaseListView.php:106
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\zii\widgets\grid\CGridView.php(289): CBaseListView->init()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(148): CGridView->init()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php(44): CBaseController->widget('zii.widgets.gri...')
+#4 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require('C:\wamp\www\yii...')
+#5 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#8 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(152): CController->render('admin', Array)
+#9 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#19 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#20 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/05 11:20:34 [error] [exception.CException] exception 'CException' with message 'Properti "dataProvider" tidak boleh kosong' in C:\wamp\www\yii\framework-1.1.12\zii\widgets\CBaseListView.php:106
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\zii\widgets\grid\CGridView.php(289): CBaseListView->init()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(148): CGridView->init()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php(46): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require('C:\wamp\www\yii...')
+#5 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#8 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(152): CController->render('admin', Array)
+#9 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#19 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#20 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/05 11:21:07 [error] [exception.CException] exception 'CException' with message 'Properti "CGridView.data" tidak didefinisikan.' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CWidgetFactory.php(162): CComponent->__set('data', Array)
+#1 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(ItemHistoryController), 'zii.widgets.gri...', Array)
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php(47): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require('C:\wamp\www\yii...')
+#5 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#8 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(152): CController->render('admin', Array)
+#9 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#19 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#20 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/05 11:21:21 [error] [exception.CException] exception 'CException' with message 'Properti "CGridView.data" tidak didefinisikan.' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CWidgetFactory.php(162): CComponent->__set('data', '')
+#1 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(ItemHistoryController), 'zii.widgets.gri...', Array)
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php(47): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require('C:\wamp\www\yii...')
+#5 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#8 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(152): CController->render('admin', Array)
+#9 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#19 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#20 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/05 14:47:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history ORDER BY item_code ASC LIMIT :start, :size.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (138)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (146)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/05 14:47:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history ORDER BY item_code ASC LIMIT :start, :size' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(138): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(146): ItemHistory->searchUniqueItem()
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#15 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/05/05 14:48:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history ORDER BY item_code ASC LIMIT :start, :size.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (138)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (146)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/05 14:48:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history ORDER BY item_code ASC LIMIT :start, :size' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(138): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(146): ItemHistory->searchUniqueItem()
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#15 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/05/05 16:06:00 [error] [php] Undefined variable: row_store (C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php:122)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): ItemHistoryController->renderFile()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): ItemHistoryController->renderPartial()
+#2 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(153): ItemHistoryController->render()
+#3 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryController->runAction()
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryController->filterAccessControl()
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryController->runActionWithFilters()
+#12 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryController->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#14 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+in C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php (122)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (153)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/05 22:50:12 [error] [exception.CException] exception 'CException' with message 'Properti "CPagination.count" tidak didefinisikan.' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(152): CComponent->__set('count', 10)
+#1 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#11 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#12 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/05/05 22:52:01 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() gagal: SQLSTATE[42000]: Syntax error or access violation: 1248 Every derived table must have its own alias. Statement SQL yang dijalankan: SELECT count(*) FROM (SELECT * FROM item_history GROUP BY item_code).
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (173)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (150)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/05 22:52:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[42000]: Syntax error or access violation: 1248 Every derived table must have its own alias. The SQL statement executed was: SELECT count(*) FROM (SELECT * FROM item_history GROUP BY item_code)' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1586): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(173): CActiveRecord->countBySql('SELECT count(*)...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(150): ItemHistory->countUniqueItem()
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): ItemHistoryController->actionAdmin()
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#15 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/05/05 22:57:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Request anda tidak valid' in C:\wamp\www\yii\framework-1.1.12\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#10 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistory/admin?page=3
+---
+2014/05/05 22:58:56 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history item_code LIKE :code AND store_code = :store GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (150)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/05 22:58:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history item_code LIKE :code AND store_code = :store GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(150): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin?ItemHistory%5Bitem_code%5D=0011201356&ItemHistory%5Bdate_in%5D=&yt0=Search
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistory/admin?page=10
+---
+2014/05/06 10:18:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history item_code LIKE :code AND store_code = :store GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:18:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history item_code LIKE :code AND store_code = :store GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:19:51 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_historyWHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:19:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_historyWHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:20:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:20:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:20:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:20:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 10, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:21:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:21:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:21:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:21:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:21:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:21:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:21:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:21:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:22:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:22:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:22:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :codeORDER BY item_code ASC GROUP BY item_code LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:22:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :codeORDER BY item_code ASC GROUP BY item_code LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:22:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code ORDER BY item_code ASC GROUP BY item_code LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:22:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code ORDER BY item_code ASC GROUP BY item_code LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:25:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:25:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:25:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (148)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:25:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(148): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:26:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (147)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:26:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(147): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(155): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:26:10 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT count(*) FROM (SELECT * FROM item_history item_code LIKE :code AND store_code = :store GROUP BY item_code) t1.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (172)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (158)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:26:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT count(*) FROM (SELECT * FROM item_history item_code LIKE :code AND store_code = :store GROUP BY item_code) t1' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1586): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(172): CActiveRecord->countBySql('SELECT count(*)...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(158): ItemHistory->countUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:26:47 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() gagal: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. Statement SQL yang dijalankan: SELECT count(*) FROM (SELECT * FROM item_history item_code LIKE :code AND store_code = :store GROUP BY item_code) t1.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (172)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (158)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:26:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT count(*) FROM (SELECT * FROM item_history item_code LIKE :code AND store_code = :store GROUP BY item_code) t1' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1586): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(172): CActiveRecord->countBySql('SELECT count(*)...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(158): ItemHistory->countUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:27:13 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() gagal: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. Statement SQL yang dijalankan: SELECT count(*) FROM (SELECT * FROM item_history WHERE item_code LIKE :code AND store_code = :store GROUP BY item_code) t1.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (172)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (158)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:27:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT count(*) FROM (SELECT * FROM item_history WHERE item_code LIKE :code AND store_code = :store GROUP BY item_code) t1' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1586): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(172): CActiveRecord->countBySql('SELECT count(*)...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(158): ItemHistory->countUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:27:31 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT count(*) FROM (SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code) t1.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (172)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (158)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/06 10:27:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT count(*) FROM (SELECT * FROM item_history WHERE item_code LIKE :code GROUP BY item_code) t1' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1586): CDbCommand->queryScalar()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(172): CActiveRecord->countBySql('SELECT count(*)...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(158): ItemHistory->countUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+---
+2014/05/06 10:31:40 [error] [php] Undefined variable: param (C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php:175)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryController->runAction()
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryController->filterAccessControl()
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryController->runActionWithFilters()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryController->run()
+#11 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#12 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin?page=9
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (175)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (158)
+in C:\wamp\www\yii\app\dashboard\index.php (13)

@@ -42,7 +42,7 @@ class Sales extends CActiveRecord
 		return array(
 			array('store_code, sales_id, amount, disc, teller_id', 'required'),			
 			array('store_code, amount, disc', 'length', 'max'=>11),
-			array('sales_id', 'length', 'max'=>128),
+			array('sales_id, clerk_id', 'length', 'max'=>128),
 			array('cc', 'length', 'max'=>16),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
