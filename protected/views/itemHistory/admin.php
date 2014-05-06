@@ -150,8 +150,9 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		<?php echo $row_store?>
 	</table>
 	</div>	
+	<div>
 	<?php $this->widget('CLinkPager', array(
 	    'pages' => $pages,
-	)) ?>
+	)) ?></div>
 </div>
 
