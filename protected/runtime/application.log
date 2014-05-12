@@ -6047,3 +6047,61 @@ REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
 in C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php (106)
 in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (178)
 in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/13 06:08:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' at line 1. Statement SQL yang dijalankan: SELECT * FROM item_history HAVING sum(stok)>0 GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (149)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (158)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/13 06:08:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' at line 1. The SQL statement executed was: SELECT * FROM item_history HAVING sum(stok)>0 GROUP BY item_code ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(149): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(158): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php
+---
+2014/05/13 06:09:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stok' in 'having clause'. Statement SQL yang dijalankan: SELECT * FROM item_history GROUP BY item_code HAVING sum(stok)>0 ORDER BY item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (149)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (158)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/13 06:09:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'stok' in 'having clause'. The SQL statement executed was: SELECT * FROM item_history GROUP BY item_code HAVING sum(stok)>0 ORDER BY item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(149): CActiveRecord->findAllBySql('SELECT * FROM i...', Array)
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(158): ItemHistory->searchUniqueItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php
+---

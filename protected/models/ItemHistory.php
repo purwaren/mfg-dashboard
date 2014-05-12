@@ -144,7 +144,7 @@ class ItemHistory extends CActiveRecord
 		if(!empty($condition))
 			$sql .= ' WHERE '.implode(' AND ', $condition);
 		
-		$sql .= ' GROUP BY item_code ORDER BY item_code ASC LIMIT '.$this->start.', '.$this->size;
+		$sql .= ' GROUP BY item_code HAVING sum(qty_stock)>0 ORDER BY item_code ASC LIMIT '.$this->start.', '.$this->size;
 		
 		return self::model()->findAllBySql($sql,$param);
 
