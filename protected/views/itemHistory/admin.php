@@ -33,7 +33,7 @@ Yii::app()->clientScript->registerCss('grid',"
 		
 	}
 	.items {
-		font-size: 12pt;
+		font-size: 12pt;		
 	}
 	.left {	
 		position: relative;	
@@ -164,8 +164,9 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		</thead>
 		<?php echo $row_store?>
 		<?php echo $row_total?>
-	</table>
-	</div>	
+	</table>	
+	</div>
+	&nbsp;<br />	
 	<div>
 	<?php $this->widget('CLinkPager', array(
 	    'pages' => $pages,
