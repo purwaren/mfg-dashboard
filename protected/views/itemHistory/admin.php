@@ -92,7 +92,8 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 	//processing row data
 	$row_data='';
 	$i=($page-1)*Yii::app()->params['pagination']['size'];
-	$row_store='';$total_q=0;
+	$row_store='';
+	$total_q=$model->countAllQ();
 	foreach($data as $row)
 	{
 		$i++;
@@ -104,7 +105,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 						<td style="text-align:right">'.number_format($row->price).'</td>
 						<td style="text-align:center">'.$row->total.'</td>
 					</tr>';
-		$total_q += $row->total;
+		
 		$row_store .= '<tr>';
 		foreach($store as $st)
 		{
@@ -153,7 +154,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		</thead>
 		<?php echo empty($row_data)?'<tr><td colspan="4"><i>Tidak ada hasil</i></td></tr>':$row_data?>
 		<tr><td colspan="3"><b>T O T A L</b></td>
-		<td style="text-align: center"><b><?php echo $total_q?></b></td></tr>
+		<td style="text-align: center"><b><?php echo $total_q->total?></b></td></tr>
 	</table>
 	</div>
 	

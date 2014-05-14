@@ -211,6 +211,30 @@ class ItemHistory extends CActiveRecord
 		return self::model()->findAllBySql($sql);
 	}
 	
+	public function countAllQ()
+	{
+		$criteria=new CDbCriteria;
+		$sql = 'SELECT sum(qty_stock) AS total FROM item_history';
+		$condition=array();
+		$param=array();
+		if(!empty($this->item_code))
+		{
+			$condition[]='item_code LIKE :code';
+			$param[':code']=$this->item_code.'%';
+		}
+		if(!empty($this->date_in))
+		{
+			$condition[]='date_in = :date';
+			$param[':date']=$this->date_in;
+		}
+		
+		
+		if(!empty($condition))
+			$sql .= ' WHERE '.implode(' AND ', $condition);
+		
+		return self::model()->findBySql($sql,$param);
+	}
+	
 	public static function getAllSortOptions()
 	{
 		return array(
