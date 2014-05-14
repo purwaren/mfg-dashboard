@@ -32,9 +32,12 @@ Yii::app()->clientScript->registerCss('grid',"
 		min-height: 150px;
 		
 	}
+	.items {
+		font-size: 12pt;
+	}
 	.left {	
 		position: relative;	
-		width: 50%;
+		width: 25%;
 		//border: 1px solid;	
 		display:inline-block;	
 		
@@ -43,7 +46,7 @@ Yii::app()->clientScript->registerCss('grid',"
 		position: relative;
 		display:inline-block;
 		text-align:left;		
-		width: 50%;	
+		width: 75%;	
 		overflow: auto;	
 	}
 		
@@ -67,8 +70,8 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 
 <?php 
 	$count=Store::model()->count();
-	if($count <=2 )
-		$width='width: 475px;';
+	if($count <=3 )
+		$width='width: 710px;';
 	else 
 	{
 		$width = $count*200;
@@ -89,7 +92,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 	//processing row data
 	$row_data='';
 	$i=($page-1)*Yii::app()->params['pagination']['size'];
-	$row_store='';
+	$row_store='';$total_q=0;
 	foreach($data as $row)
 	{
 		$i++;
@@ -97,12 +100,11 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		$date_in = $tmp[2].'/'.$tmp[1].'/'.$tmp[0];
 		$row_data .= '<tr>
 						<td>'.$i.'</td>
-						<td>'.$row->item_code.'</td>
-						<td>'.$row->name.'</td>
+						<td>'.CHtml::link($row->item_code,Yii::app()->createUrl('itemHistory/view',array('id'=>$row->item_code))).'</td>						
 						<td style="text-align:right">'.number_format($row->price).'</td>
-						<td style="text-align:center">'.$date_in.'</td>
+						<td style="text-align:center">'.$row->total.'</td>
 					</tr>';
-		
+		$total_q += $row->total;
 		$row_store .= '<tr>';
 		foreach($store as $st)
 		{
@@ -120,6 +122,18 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		}
 		$row_store .= '</tr>';
 	}
+	$row_total='';
+	
+	foreach($total as $row)
+	{
+		$row_total .= '<td style="text-align:center"><b>'.$row->qty_in.'</b></td>
+					<td  style="text-align:center"><b>'.$row->qty_sold.'</b></td>
+					<td  style="text-align:center"><b>'.$row->qty_stock.'</b></td>
+					<td></td>';
+//		var_dump($row->attributes);
+	}
+	$row_total = '<tr>'.$row_total.'</tr>';
+	//exit;
 ?>
 
 <div class="grid-view">
@@ -132,13 +146,14 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 			<th colspan="4">Info Barang</th>			
 		</tr>
 		<tr>
-			<th>Kode</th>
-			<th>Nama</th>
+			<th>Kode</th>			
 			<th>Harga</th>
-			<th>Tgl Masuk</th>
+			<th>Q</th>
 		</tr>
 		</thead>
 		<?php echo empty($row_data)?'<tr><td colspan="4"><i>Tidak ada hasil</i></td></tr>':$row_data?>
+		<tr><td colspan="3"><b>T O T A L</b></td>
+		<td style="text-align: center"><b><?php echo $total_q?></b></td></tr>
 	</table>
 	</div>
 	
@@ -148,6 +163,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		<?php echo $header_store?>
 		</thead>
 		<?php echo $row_store?>
+		<?php echo $row_total?>
 	</table>
 	</div>	
 	<div>

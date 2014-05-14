@@ -29,6 +29,18 @@
 		    
 		));?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->label($model,'sortBy'); ?>
+		<?php echo $form->dropDownList($model,'sortBy',ItemHistory::getAllSortOptions(),
+				array('prompt'=>'Pilih')); ?>
+	</div>
+	
+	<div class="row">
+		<?php echo $form->label($model,'sortType'); ?>
+		<?php echo $form->dropDownList($model,'sortType',ItemHistory::getAllSortTypeOptions(),
+				array('prompt'=>'Pilih')); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>

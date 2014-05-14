@@ -51,8 +51,15 @@ class ItemHistoryController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$model = ItemHistory::model()->findByAttributes(array(
+			'item_code'=>$id
+		));
+		$models = ItemHistory::model()->hist()->findAllByAttributes(array(
+			'item_code'=>$id
+		));
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=>$model,
+			'models'=>$models
 		));
 	}
 
@@ -135,11 +142,14 @@ class ItemHistoryController extends Controller
 	{
 		$this->layout='//layouts/column1';
 		
+		Yii::app()->user->setReturnUrl(Yii::app()->request->requestUri);
 		$model=new ItemHistory('search');
 		$model->unsetAttributes();  // clear any default values		
 		
+		
+		
 		if(isset($_POST['ItemHistory']))
-		{
+		{			
 			Yii::app()->user->setState('ItemHistory',$_POST['ItemHistory']);
 		}
 		
@@ -174,7 +184,8 @@ class ItemHistoryController extends Controller
 			'store'=>$store,
 			'pages'=>$pages,
 			'page'=>$page,
-			'summary'=>$summary
+			'summary'=>$summary,
+			'total'=>$model->summaryAllItem()
 		));
 	}
 

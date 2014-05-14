@@ -19,6 +19,9 @@ class ItemHistory extends CActiveRecord
 {
 	public $start=0;
 	public $size=10;
+	public $sortBy='item_code';
+	public $sortType = 'ASC';
+	public $total;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -53,7 +56,7 @@ class ItemHistory extends CActiveRecord
 			array('store_code', 'length', 'max'=>8),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, item_code, name, price, date_in, qty_in, qty_sold, qty_stock, period, store_code', 'safe', 'on'=>'search'),
+			array('id, item_code, name, price, date_in, qty_in, qty_sold, qty_stock, period, store_code, sortBy, sortType', 'safe', 'on'=>'search'),
 		);
 	}
 	
@@ -74,6 +77,7 @@ class ItemHistory extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'store'=>array(self::BELONGS_TO,'Store','store_code')
 		);
 	}
 
@@ -93,6 +97,8 @@ class ItemHistory extends CActiveRecord
 			'qty_stock' => 'Stok',
 			'period' => 'Periode',
 			'store_code' => 'Toko',
+			'sortBy'=>'Urut Berdasarkan',
+			'sortType'=>'Urutkan Dari'
 		);
 	}
 
@@ -126,7 +132,7 @@ class ItemHistory extends CActiveRecord
 	public function searchUniqueItem()
 	{
 		$criteria=new CDbCriteria;		
-		$sql = 'SELECT * FROM item_history';
+		$sql = 'SELECT  item_code, name, date_in, price, sum(qty_stock) AS total FROM item_history';
 		$condition=array();
 		$param=array();
 		if(!empty($this->item_code))
@@ -144,7 +150,10 @@ class ItemHistory extends CActiveRecord
 		if(!empty($condition))
 			$sql .= ' WHERE '.implode(' AND ', $condition);
 		
-		$sql .= ' GROUP BY item_code HAVING sum(qty_stock)>0 ORDER BY item_code ASC LIMIT '.$this->start.', '.$this->size;
+		$sql .= ' GROUP BY item_code HAVING sum(qty_stock)>0 
+				ORDER BY '.$this->sortBy.' '.$this->sortType.' 
+				LIMIT '.$this->start.', '.$this->size;
+		//var_dump($sql);
 		
 		return self::model()->findAllBySql($sql,$param);
 
@@ -173,5 +182,59 @@ class ItemHistory extends CActiveRecord
 		$sql .= ' GROUP BY item_code) t1';
 
 		return self::model()->countBySql($sql,$param);
+	}
+	
+	public function summaryAllItem()
+	{
+		$sql='SELECT s.code AS store_code, SUM(i.qty_in) AS qty_in, SUM(i.qty_sold) AS qty_sold, 
+			SUM(i.qty_stock) AS qty_stock FROM store s LEFT JOIN item_history i 
+			ON s.code = i.store_code';
+		
+		$param=array();
+		$condition=array();
+		if(!empty($this->item_code))
+		{
+			$condition[]='i.item_code LIKE :code';
+			$param[':code']=$this->item_code.'%';
+		}
+		if(!empty($this->date_in))
+		{
+			$condition[]='i.date_in = :date';
+			$param[':date']=$this->date_in;
+		}
+		
+		if(!empty($condition))
+			$sql .= ' WHERE '.implode(' AND ', $condition);
+		
+		$sql .= ' GROUP BY s.code ORDER BY s.code';
+		
+		return self::model()->findAllBySql($sql);
+	}
+	
+	public static function getAllSortOptions()
+	{
+		return array(
+			'item_code'=>'Kode Barang',
+			'total'=>'Quantity',
+			'price'=>'Harga',			
+		);
+	}
+	
+	public static function getAllSortTypeOptions()
+	{
+		return array(
+			'ASC'=>'Kecil ke Besar',
+			'DESC'=>'Besar ke Kecil'
+		);
+	}
+	
+	public function getTanggalMasuk()
+	{
+		$month = array('','Januari','Februari','Maret','April','Mei','Juni','Juli',
+		'Agustus','September','Oktober','November','Desember');
+		$tmp = explode('-',$this->date_in);
+		
+		
+		return $tmp[2].' '.$month[intval($tmp[1])].' '.$tmp[0];
 	}
 }
