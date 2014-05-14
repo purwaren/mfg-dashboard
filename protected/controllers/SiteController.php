@@ -176,6 +176,7 @@ class SiteController extends Controller
 		$user->login_status = Users::LOGGED_OUT;			
 		if($user->save())
 		{
+			Session::model()->deleteAllByAttributes(array('userid'=>$user->username));
 			Yii::app()->user->logout();
 			$this->redirect(Yii::app()->homeUrl);
 		}
