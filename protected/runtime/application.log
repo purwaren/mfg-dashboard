@@ -6504,3 +6504,36 @@ REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin?page=5
 in C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\admin.php (129)
 in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (189)
 in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/14 15:48:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. Statement SQL yang dijalankan: SELECT s.code AS store_code, SUM(i.qty_in) AS qty_in, SUM(i.qty_sold) AS qty_sold, 
+			SUM(i.qty_stock) AS qty_stock FROM store s LEFT JOIN item_history i 
+			ON s.code = i.store_code WHERE i.item_code LIKE :code GROUP BY s.code ORDER BY s.code.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php (211)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (188)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/05/14 15:48:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound. The SQL statement executed was: SELECT s.code AS store_code, SUM(i.qty_in) AS qty_in, SUM(i.qty_sold) AS qty_sold, 
+			SUM(i.qty_stock) AS qty_stock FROM store s LEFT JOIN item_history i 
+			ON s.code = i.store_code WHERE i.item_code LIKE :code GROUP BY s.code ORDER BY s.code' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1521): CDbCommand->queryAll()
+#2 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistory.php(211): CActiveRecord->findAllBySql('SELECT s.code A...')
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(188): ItemHistory->summaryAllItem()
+#4 [internal function]: ItemHistoryController->actionAdmin(1)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistory/admin
+---

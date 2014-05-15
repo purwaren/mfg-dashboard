@@ -208,7 +208,7 @@ class ItemHistory extends CActiveRecord
 		
 		$sql .= ' GROUP BY s.code ORDER BY s.code';
 		
-		return self::model()->findAllBySql($sql);
+		return self::model()->findAllBySql($sql,$param);
 	}
 	
 	public function countAllQ()
@@ -217,11 +217,13 @@ class ItemHistory extends CActiveRecord
 		$sql = 'SELECT sum(qty_stock) AS total FROM item_history';
 		$condition=array();
 		$param=array();
+		
 		if(!empty($this->item_code))
 		{
 			$condition[]='item_code LIKE :code';
 			$param[':code']=$this->item_code.'%';
 		}
+		
 		if(!empty($this->date_in))
 		{
 			$condition[]='date_in = :date';

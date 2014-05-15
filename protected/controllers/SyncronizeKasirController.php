@@ -162,7 +162,8 @@ class SyncronizeKasirController extends Controller
 				
 				$item->item_code=$row['id_barang'];
 				$item->name=$row['nama'];
-				$item->price=$row['harga_jual'];
+				$hj=trim($row['harga_jual']);
+				$item->price=is_numeric($hj)?$hj:0;
 				$item->date_in=$row['tgl_masuk'];
 				$item->qty_in=$row['masuk'];
 				$item->qty_sold=$row['jual'];
@@ -174,7 +175,7 @@ class SyncronizeKasirController extends Controller
 				else 
 				{
 					$status=false;
-					$error=$item->getErrors();
+					$error[]=$item->getErrors();
 				}
 			}
 			if($status)
