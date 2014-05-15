@@ -179,8 +179,8 @@ class ItemHistory extends CActiveRecord
 		
 		if(!empty($condition))
 			$sql .= ' WHERE '.implode(' AND ', $condition);	
-		$sql .= ' GROUP BY item_code) t1';
-
+		$sql .= ' GROUP BY item_code HAVING sum(qty_stock>0)) t1';
+		//var_dump($sql);
 		return self::model()->countBySql($sql,$param);
 	}
 	

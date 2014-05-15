@@ -176,6 +176,7 @@ class SyncronizeKasirController extends Controller
 				{
 					$status=false;
 					$error[]=$item->getErrors();
+					$error[]=$item->attributes;
 				}
 			}
 			if($status)
