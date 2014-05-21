@@ -60,7 +60,7 @@ Anda bisa menggunakan operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=
 atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 </p>
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
+<?php echo CHtml::link('Kriteria Pencarian','#',array('class'=>'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search',array(
 	'model'=>$model,
@@ -68,7 +68,9 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 
 </div><!-- search-form -->
 
-<?php 
+<?php
+if(isset($itemHist))
+{ 
 	$count=Store::model()->count();
 	if($count <=3 )
 		$width='width: 710px;';
@@ -78,16 +80,13 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		$width = 'width: '.$width.'px;';
 	}
 	//processing header
-	$h1='';$h2='';
+	$h1='';$h2='';$t=0;
 	foreach($store as $row)
-	{
-		$h1 .= '<th colspan="4">'.$row->name.'</th>';
-		$h2 .= '<th>M</th>
-				<th>J</th>
-				<th>S</th>
-				<th>P</th>';
+	{		
+		$t++;
+		$h2 .= '<th>'.$row->alias.'</th>';
 	}
-	$header_store = '<tr>'.$h1.'</tr><tr>'.$h2.'</tr>';
+	$header_store = '<tr><th colspan="'.$t.'">STOCK READY</th></tr><tr>'.$h2.'</tr>';
 	
 	//processing row data
 	$row_data='';
@@ -114,12 +113,9 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 				'store_code'=>$st->code
 			));
 			if(!empty($dhist))
-				$row_store .= '<td style="text-align:center">'.$dhist->qty_in.'</td>
-					<td style="text-align:center">'.$dhist->qty_sold.'</td>
-					<td style="text-align:center">'.$dhist->qty_stock.'</td>
-					<td style="text-align:center">'.$dhist->period.'</td>';
+				$row_store .= '<td style="text-align:center">'.$dhist->qty_stock.'</td>';
 			else 
-				$row_store .= '<td colspan="4"><i>Data tidak tersedia</i></td>';
+				$row_store .= '<td style="text-align:center">0</td>';
 		}
 		$row_store .= '</tr>';
 	}
@@ -127,10 +123,8 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 	
 	foreach($total as $row)
 	{
-		$row_total .= '<td style="text-align:center"><b>'.$row->qty_in.'</b></td>
-					<td  style="text-align:center"><b>'.$row->qty_sold.'</b></td>
-					<td  style="text-align:center"><b>'.$row->qty_stock.'</b></td>
-					<td></td>';
+		$total_s=empty($row->qty_stock)?0:$row->qty_stock;
+		$row_total .= '<td  style="text-align:center"><b>'.$total_s.'</b></td>';
 //		var_dump($row->attributes);
 	}
 	$row_total = '<tr>'.$row_total.'</tr>';
@@ -173,4 +167,4 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 	    'pages' => $pages,
 	)) ?></div>
 </div>
-
+<?php }?>

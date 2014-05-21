@@ -146,37 +146,40 @@ class ItemHistoryController extends Controller
 		$model=new ItemHistory('search');
 		$model->unsetAttributes();  // clear any default values		
 		
-		
-		
 		if(isset($_POST['ItemHistory']))
 		{			
 			Yii::app()->user->setState('ItemHistory',$_POST['ItemHistory']);
 		}
-		
-		$model->attributes=Yii::app()->user->getState('ItemHistory');
-		//var_dump($model->attributes);exit;
-		//setting page size
-		$model->size = Yii::app()->params['pagination']['size'];
-		$model->start = $model->size*($page-1);
-		$start = $model->size*($page-1)+1;
-		$end=$model->size*$page;
-		
-		//get all store
-		$store=Store::model()->findAllBySql('SELECT * FROM store ORDER BY code');
-		
-		//get all item
-		$data=$model->searchUniqueItem();
-		
-		//set pagination
-		$count = $model->countUniqueItem();
-		
-		$pages = new CPagination($count);
-		$pages->pageSize = $model->size;
-		if($count==0)
-			$summary='0';
-		else if($count-$start < 10)
-			$summary=$start.'-'.$count.' dari '.$count;		 
-		else $summary=$start.'-'.$end.' dari '.$count;
+			
+		$itemHist=Yii::app()->user->getState('ItemHistory');
+		$data='';$store='';$pages='';$summary='';$total='';
+		if(isset($itemHist))
+		{	
+			$model->attributes=$itemHist;	
+			//setting page size
+			$model->size = Yii::app()->params['pagination']['size'];
+			$model->start = $model->size*($page-1);
+			$start = $model->size*($page-1)+1;
+			$end=$model->size*$page;
+			
+			//get all store
+			$store=Store::model()->findAllBySql('SELECT * FROM store ORDER BY code');
+			
+			//get all item
+			$data=$model->searchUniqueItem();
+			
+			//set pagination
+			$count = $model->countUniqueItem();
+			
+			$pages = new CPagination($count);
+			$pages->pageSize = $model->size;
+			if($count==0)
+				$summary='0';
+			else if($count-$start < 10)
+				$summary=$start.'-'.$count.' dari '.$count;		 
+			else $summary=$start.'-'.$end.' dari '.$count;
+			$total=$model->summaryAllItem();
+		}
 		//var_dump($pages);exit;
 		$this->render('admin',array(
 			'model'=>$model,
@@ -185,7 +188,8 @@ class ItemHistoryController extends Controller
 			'pages'=>$pages,
 			'page'=>$page,
 			'summary'=>$summary,
-			'total'=>$model->summaryAllItem()
+			'total'=>$total,
+			'itemHist'=>$itemHist
 		));
 	}
 

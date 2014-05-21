@@ -45,6 +45,7 @@ $this->menu=array(
 				<th>Masuk</th>
 				<th>Jual</th>
 				<th>Stok</th>
+				<th>Periode</th>
 			</tr>
 		</thead>
 		<?php 
@@ -57,6 +58,7 @@ $this->menu=array(
 						<td style="text-align:right">'.$row->qty_in.'</td>
 						<td style="text-align:right">'.$row->qty_sold.'</td>
 						<td style="text-align:right">'.$row->qty_stock.'</td>
+						<td style="text-align:right">'.$row->period.'</td>
 					</tr>';
 			$m += $row->qty_in;
 			$j += $row->qty_sold;
