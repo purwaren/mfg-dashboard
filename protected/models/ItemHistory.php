@@ -208,7 +208,12 @@ class ItemHistory extends CActiveRecord
 		
 		$sql .= ' GROUP BY s.code ORDER BY s.code';
 		
-		return self::model()->findAllBySql($sql,$param);
+		$model = self::model()->findAllBySql($sql,$param);
+		foreach($model as $row)
+		{
+			$options[$row->store_code]=$row->qty_stock;
+		}
+		return $options;
 	}
 	
 	public function countAllQ()

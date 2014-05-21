@@ -72,11 +72,11 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 if(isset($itemHist))
 { 
 	$count=Store::model()->count();
-	if($count <=3 )
+	if($count <=11 )
 		$width='width: 710px;';
 	else 
 	{
-		$width = $count*200;
+		$width = $count*65;
 		$width = 'width: '.$width.'px;';
 	}
 	//processing header
@@ -84,7 +84,9 @@ if(isset($itemHist))
 	foreach($store as $row)
 	{		
 		$t++;
-		$h2 .= '<th>'.$row->alias.'</th>';
+		if($t%2==1)
+			$h2 .= '<td style="color:#555;background-color:#ddd;text-align:bold;font-weight:bold;text-align:center;">'.$row->alias.'</td>';
+		else $h2 .= '<td style="color:#555;background-color:#fff;text-align:bold;font-weight:bold;text-align:center;">'.$row->alias.'</td>';
 	}
 	$header_store = '<tr><th colspan="'.$t.'">STOCK READY</th></tr><tr>'.$h2.'</tr>';
 	
@@ -106,26 +108,50 @@ if(isset($itemHist))
 					</tr>';
 		
 		$row_store .= '<tr>';
+		$t=0;
 		foreach($store as $st)
 		{
+			$t++;
 			$dhist = ItemHistory::model()->hist()->findByAttributes(array(
 				'item_code'=>$row->item_code,
 				'store_code'=>$st->code
 			));
-			if(!empty($dhist))
-				$row_store .= '<td style="text-align:center">'.$dhist->qty_stock.'</td>';
-			else 
-				$row_store .= '<td style="text-align:center">0</td>';
+			if($t%2==1)
+			{
+				if(!empty($dhist))
+					$row_store .= '<td style="text-align:center;background-color:#ddd">'.$dhist->qty_stock.'</td>';
+				else 
+					$row_store .= '<td style="text-align:center;background-color:#ddd">0</td>';
+			}
+			else
+			{
+				if(!empty($dhist))
+					$row_store .= '<td style="text-align:center;">'.$dhist->qty_stock.'</td>';
+				else
+					$row_store .= '<td style="text-align:center">0</td>';
+			}
 		}
 		$row_store .= '</tr>';
 	}
 	$row_total='';
-	
-	foreach($total as $row)
+	$t=0;
+	foreach($store as $row)
 	{
-		$total_s=empty($row->qty_stock)?0:$row->qty_stock;
-		$row_total .= '<td  style="text-align:center"><b>'.$total_s.'</b></td>';
-//		var_dump($row->attributes);
+		$t++;
+		if($t%2==1)
+		{
+			if(isset($total[$row->code]))
+				$row_total .= '<td  style="text-align:center;background-color:#ddd"><b>'.$total[$row->code].'</b></td>';
+			else 
+				$row_total .= '<td style="text-align:center;background-color:#ddd"><b>0</b></td>';
+		}
+		else 
+		{
+			if(isset($total[$row->code]))
+				$row_total .= '<td  style="text-align:center"><b>'.$total[$row->code].'</b></td>';
+			else
+				$row_total .= '<td style="text-align:center"><b>0</b></td>';
+		}
 	}
 	$row_total = '<tr>'.$row_total.'</tr>';
 	//exit;
