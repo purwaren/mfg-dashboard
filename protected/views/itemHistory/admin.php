@@ -121,14 +121,14 @@ if(isset($itemHist))
 				if(!empty($dhist))
 					$row_store .= '<td style="text-align:center;background-color:#ddd">'.$dhist->qty_stock.'</td>';
 				else 
-					$row_store .= '<td style="text-align:center;background-color:#ddd">0</td>';
+					$row_store .= '<td style="text-align:center;background-color:#ddd">-</td>';
 			}
 			else
 			{
 				if(!empty($dhist))
 					$row_store .= '<td style="text-align:center;">'.$dhist->qty_stock.'</td>';
 				else
-					$row_store .= '<td style="text-align:center">0</td>';
+					$row_store .= '<td style="text-align:center">-</td>';
 			}
 		}
 		$row_store .= '</tr>';
@@ -141,16 +141,16 @@ if(isset($itemHist))
 		if($t%2==1)
 		{
 			if(isset($total[$row->code]))
-				$row_total .= '<td  style="text-align:center;background-color:#ddd"><b>'.$total[$row->code].'</b></td>';
+				$row_total .= '<td  style="text-align:center;background-color:#ddd"><b></b></td>';
 			else 
-				$row_total .= '<td style="text-align:center;background-color:#ddd"><b>0</b></td>';
+				$row_total .= '<td style="text-align:center;background-color:#ddd"><b></b></td>';
 		}
 		else 
 		{
 			if(isset($total[$row->code]))
-				$row_total .= '<td  style="text-align:center"><b>'.$total[$row->code].'</b></td>';
+				$row_total .= '<td  style="text-align:center"><b></b></td>';
 			else
-				$row_total .= '<td style="text-align:center"><b>0</b></td>';
+				$row_total .= '<td style="text-align:center"><b>-</b></td>';
 		}
 	}
 	$row_total = '<tr>'.$row_total.'</tr>';
