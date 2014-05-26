@@ -1,15 +1,18 @@
 <?php
+/* @var $this AuthitemController */
+/* @var $model Authitem */
+
 $this->breadcrumbs=array(
-	'Authitems'=>array('index'),
-	'Create',
+	'Hak Akses'=>array('index'),
+	'Pendaftaran Akses / Peran',
 );
 
 $this->menu=array(
-	array('label'=>'List Authitem', 'url'=>array('index')),
-	array('label'=>'Manage Authitem', 'url'=>array('admin')),
+	array('label'=>'Pengaturan Akses', 'url'=>array('index')),
+	array('label'=>'Pengaturan Peran', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Create Authitem</h1>
+<h1>Pendaftaran Akses / Peran</h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

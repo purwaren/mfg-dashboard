@@ -159,4 +159,28 @@ class Users extends CActiveRecord
 			self::STATUS_BLOCKED => 'Diblokir'
 		);
 	}
+	
+	public function getStatus()
+	{
+		if($this->status == self::STATUS_ACTIVE)
+			return 'Aktif';
+		else if($this->status == self::STATUS_INACTIVE)
+			return 'Tidak Aktif';
+	}
+	
+	public function getLoginStatus()
+	{
+		if($this->login_status == self::STATUS_ACTIVE)
+			return 'Aktif';
+		else if($this->login_status == self::STATUS_INACTIVE)
+			return 'Tidak Aktif';
+	}
+	
+	public function getDeleteStatus()
+	{
+		if($this->flag_delete == self::STATUS_ACTIVE)
+			return 'Aktif';
+		else if($this->flag_delete == self::STATUS_INACTIVE)
+			return 'Tidak Aktif';
+	}
 }

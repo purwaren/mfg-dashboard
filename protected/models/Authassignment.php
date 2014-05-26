@@ -1,27 +1,20 @@
 <?php
 
 /**
- * This is the model class for table "authitem".
+ * This is the model class for table "authassignment".
  *
- * The followings are the available columns in table 'authitem':
- * @property integer $id
- * @property string $name
- * @property integer $type
- * @property string $description
+ * The followings are the available columns in table 'authassignment':
+ * @property integer $userid
+ * @property string $itemname
  * @property string $bizrule
  * @property string $data
- *
- * The followings are the available model relations:
- * @property Users[] $users
- * @property Authitemchild[] $authitemchildren
- * @property Authitemchild[] $authitemchildren1
  */
-class Authitem extends CActiveRecord
+class Authassignment extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return Authitem the static model class
+	 * @return Authassignment the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -33,7 +26,7 @@ class Authitem extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'authitem';
+		return 'authassignment';
 	}
 
 	/**
@@ -44,13 +37,13 @@ class Authitem extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, type, description', 'required'),
-			array('type', 'numerical', 'integerOnly'=>true),
-			array('name', 'length', 'max'=>128),
-			array('description, bizrule, data', 'length', 'max'=>512),
+			array('userid, itemname', 'required'),
+			array('userid', 'numerical', 'integerOnly'=>true),
+			array('itemname', 'length', 'max'=>128),
+			array('bizrule, data', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, type, description, bizrule, data', 'safe', 'on'=>'search'),
+			array('userid, itemname, bizrule, data', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,9 +55,6 @@ class Authitem extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'users' => array(self::MANY_MANY, 'Users', 'authassignment(itemname, userid)'),
-			'authitemchildren' => array(self::HAS_MANY, 'Authitemchild', 'child'),
-			'authitemchildren1' => array(self::HAS_MANY, 'Authitemchild', 'parent'),
 		);
 	}
 
@@ -74,10 +64,8 @@ class Authitem extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name' => 'Alias',
-			'type' => 'Tipe',
-			'description' => 'Nama',
+			'userid' => 'Userid',
+			'itemname' => 'Itemname',
 			'bizrule' => 'Bizrule',
 			'data' => 'Data',
 		);
@@ -94,32 +82,13 @@ class Authitem extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('type',$this->type);
-		$criteria->compare('description',$this->description,true);
+		$criteria->compare('userid',$this->userid);
+		$criteria->compare('itemname',$this->itemname,true);
 		$criteria->compare('bizrule',$this->bizrule,true);
 		$criteria->compare('data',$this->data,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
-	}
-	
-	public static function getAllTypeOptions()
-	{
-		return array(
-			CAuthItem::TYPE_OPERATION => 'Akses',
-			CAuthItem::TYPE_ROLE => 'Peran'
-		);
-	}
-	
-	public function getType()
-	{
-		$options = array(
-			CAuthItem::TYPE_OPERATION => 'Akses',
-			CAuthItem::TYPE_ROLE => 'Peran'
-		);
-		return $options[$this->type];
 	}
 }

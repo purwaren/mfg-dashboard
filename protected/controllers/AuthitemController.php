@@ -15,6 +15,7 @@ class AuthitemController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
 
@@ -25,19 +26,14 @@ class AuthitemController extends Controller
 	 */
 	public function accessRules()
 	{
-		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+		//$action = $this->generateAuthRule();
+		$action=array('create','update','delete','admin','assign','role','view');
+		//var_dump($action);
+		return array(			
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions				
+				'actions'=>$action,
 				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-			),
+			),			
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -53,6 +49,23 @@ class AuthitemController extends Controller
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
+	}
+	
+	public function actionRefresh()
+	{
+		$this->render('refresh',array(
+		));
+	}
+	
+	public function actionGetAllController()
+	{
+		if(Yii::app()->request->isAjaxRequest && Yii::app()->request->isPostRequest)
+		{
+			$sql = 'SELECT name FROM all_controller GROUP BY name';
+			$model = AllController::model()->findAllBySql($sql);
+			
+			echo CJSON::encode($model);
+		}		
 	}
 
 	/**
@@ -71,6 +84,20 @@ class AuthitemController extends Controller
 			$model->attributes=$_POST['Authitem'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
+		}
+		
+		if(Yii::app()->request->isAjaxRequest)
+		{
+			if($_POST['type']==CAuthItem::TYPE_OPERATION)
+			{
+				echo CHtml::dropDownList('Authitem[name]','',AllController::getAllOptions(),
+				array('prompt'=>'Pilih Akses ','class'=>'chzn-select normal-text'));
+			}
+			else
+			{
+				echo CHtml::textField('Authitem[name]','');
+			}
+			Yii::app()->end();
 		}
 
 		$this->render('create',array(
@@ -109,17 +136,11 @@ class AuthitemController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		if(Yii::app()->request->isPostRequest)
-		{
-			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+		$this->loadModel($id)->delete();
 
-			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-			if(!isset($_GET['ajax']))
-				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
-		}
-		else
-			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
+		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
+		if(!isset($_GET['ajax']))
+			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
 	}
 
 	/**
@@ -136,26 +157,97 @@ class AuthitemController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
-	{
+	public function actionAdmin($type=CAuthItem::TYPE_OPERATION)
+	{		
 		$model=new Authitem('search');
 		$model->unsetAttributes();  // clear any default values
+		$model->type = $type;
 		if(isset($_GET['Authitem']))
 			$model->attributes=$_GET['Authitem'];
 
 		$this->render('admin',array(
 			'model'=>$model,
+			'type'=>$type
+		));
+	}
+	
+	/**
+	 * Konfigurasi Peran
+	 */
+	public function actionRole($id)
+	{
+		$model=$this->loadModel($id);
+		$auth = Yii::app()->authManager;
+		$parent = $auth->getAuthItem($model->name);
+		$message='';
+		if(isset($_POST['Save']))	
+		{			
+			//revoke all access first
+			Authitemchild::model()->deleteAll('parent = :parent',array(
+				':parent'=>$model->name
+			));
+			$authitem = $_POST['authitem'];
+			$added='';
+			foreach($authitem as $row)
+			{
+				if($parent->addChild($row))
+				{
+					$added .= $row.', ';
+				}
+			}
+			$message='Hak akses : '.$added.' telah ditambahkan';
+		}	
+		
+		$sql='SELECT name FROM all_controller GROUP BY name';
+		$class = AllController::model()->findAllBySql($sql);
+		$this->render('role',array(
+			'model'=>$model,
+			'class'=>$class,
+			'message'=>$message,
+			'auth'=>$auth,
+			'parent'=>$parent
+		));
+	}
+	
+	public function actionAssign($id)
+	{
+		$auth = Yii::app()->authManager;
+		$roles = Authitem::model()->findAllByAttributes(array(
+			'type'=>CAuthItem::TYPE_ROLE
+		));
+		$model = Users::model()->findByPk($id);
+		$message = '';
+		if(isset($_POST['Save']))
+		{
+			Authassignment::model()->deleteAll('userid = :id',array(':id'=>$model->id));
+			$items = $_POST['roles'];
+			$added = '';
+			foreach($items as $row)
+			{
+				if($auth->assign($row, $model->id))
+				{
+					$added .= $row.', ';
+				}
+			}
+			$message = 'Peran '.$added.' sudah diberikan kepada pengguna';
+		}
+		$this->render('assign',array(
+			'roles'=>$roles,
+			'model'=>$model,
+			'auth'=>$auth
 		));
 	}
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer the ID of the model to be loaded
+	 * @param integer $id the ID of the model to be loaded
+	 * @return Authitem the loaded model
+	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Authitem::model()->findByPk((int)$id);
+		$model=Authitem::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -163,7 +255,7 @@ class AuthitemController extends Controller
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param CModel the model to be validated
+	 * @param Authitem $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{

@@ -1,4 +1,7 @@
 <?php
+/* @var $this AuthitemController */
+/* @var $dataProvider CActiveDataProvider */
+
 $this->breadcrumbs=array(
 	'Authitems',
 );

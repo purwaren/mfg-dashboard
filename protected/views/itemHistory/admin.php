@@ -141,16 +141,16 @@ if(isset($itemHist))
 		if($t%2==1)
 		{
 			if(isset($total[$row->code]))
-				$row_total .= '<td  style="text-align:center;background-color:#ddd"><b></b></td>';
+				$row_total .= '<td  style="text-align:center;background-color:#ddd"><b>&nbsp;</b></td>';
 			else 
-				$row_total .= '<td style="text-align:center;background-color:#ddd"><b></b></td>';
+				$row_total .= '<td style="text-align:center;background-color:#ddd"><b>&nbsp;</b></td>';
 		}
 		else 
 		{
 			if(isset($total[$row->code]))
-				$row_total .= '<td  style="text-align:center"><b></b></td>';
+				$row_total .= '<td  style="text-align:center"><b>&nbsp;</b></td>';
 			else
-				$row_total .= '<td style="text-align:center"><b>-</b></td>';
+				$row_total .= '<td style="text-align:center"><b>&nbsp;</b></td>';
 		}
 	}
 	$row_total = '<tr>'.$row_total.'</tr>';

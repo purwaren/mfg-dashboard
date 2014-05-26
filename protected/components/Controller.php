@@ -111,6 +111,49 @@ class Controller extends CController
 		}
 	}
 	
+	/**
+	 * Reload all controller and method list
+	 */
+	public function actionReload()
+	{
+		if(Yii::app()->request->isAjaxRequest && Yii::app()->request->isPostRequest)
+		{
+			$methods = get_class_methods(ucfirst($this->getId()).'Controller');
+			foreach($methods as $row)
+			{
+				if(substr($row, 0, 6)=='action' && substr($row, 0, 7) != 'actions')
+				{
+					$tes = AllController::model()->findByAttributes(array(
+							'name'=>strtolower($this->getId()),
+							'method'=>strtolower(substr($row,6)),
+					));
+						
+					if(empty($tes))
+					{
+						$myaction = new AllController();
+						$myaction->name=$this->getId();
+						$myaction->method=strtolower(substr($row,6));
+						$myaction->save();
+					}
+				}
+			}
+		}
+		else
+			echo CJSON::encode(array(
+					'error'=>'Akses ditolak'
+			));
+	}
+	
+	protected function generateAuthRule()
+	{
+		$authItem = $this->getId().'_'.$this->getAction()->getId();
+		$action = array('index','view','reload');
+		if(Yii::app()->user->checkAccess($authItem))
+			$action[] = $this->getAction()->getId();
+			
+		return $action;
+	}
+	
 	
 	/**
 	 * authenticate the users, if has access, return true

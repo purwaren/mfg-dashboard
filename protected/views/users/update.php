@@ -1,18 +1,20 @@
 <?php
+/* @var $this UsersController */
+/* @var $model Users */
+
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->id=>array('view','id'=>$model->id),
-	'Update',
+	'Pengguna'=>array('index'),
+	$model->name=>array('view','id'=>$model->id),
+	'Ubah',
 );
 
-$this->menu=array(
-	array('label'=>'List Users', 'url'=>array('index')),
-	array('label'=>'Create Users', 'url'=>array('create')),
-	array('label'=>'View Users', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Users', 'url'=>array('admin')),
+$this->menu=array(	
+	array('label'=>'Tambah Pengguna', 'url'=>array('create')),
+	array('label'=>'Detil Pengguna', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Kelola Pengguna', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Update Users <?php echo $model->id; ?></h1>
+<h1>Ubah Pengguna : <?php echo $model->id; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>

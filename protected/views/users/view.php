@@ -1,30 +1,51 @@
 <?php
+/* @var $this UsersController */
+/* @var $model Users */
+
 $this->breadcrumbs=array(
-	'Users'=>array('index'),
-	$model->id,
+	'Pengguna'=>array('index'),
+	$model->name,
 );
 
-$this->menu=array(
-	array('label'=>'List Users', 'url'=>array('index')),
-	array('label'=>'Create Users', 'url'=>array('create')),
-	array('label'=>'Update Users', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Users', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Users', 'url'=>array('admin')),
+$this->menu=array(	
+	array('label'=>'Tambah Pengguna', 'url'=>array('create')),
+	array('label'=>'Ubah Pengguna', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Hapus Pengguna', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Apakah anda yakin menghapus item ini?')),
+	array('label'=>'Kelola Pengguna', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Users #<?php echo $model->id; ?></h1>
+<h1>Detil Pengguna : <?php echo $model->id; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'id',
-		'username',
-		'passwd',
-		'status',
-		'created_time',
-		'updated_time',
-		'last_login_time',
-		'login_status',
+		'name',
+		'username',		
+		array(
+			'name'=>'status',
+			'value'=>$model->getStatus(),
+		),
+		array(
+			'name'=>'created_time',
+			'value'=>date('d F Y h:i:s', $model->created_time),
+		),
+		array(
+			'name'=>'updated_time',
+			'value'=>($model->updated_time)?date('d F Y h:i:s', $model->updated_time):'Tidak Pernah',
+		),
+		array(
+			'name'=>'last_login_time',
+			'value'=>($model->last_login_time)?date('d F Y h:i:s', $model->last_login_time):'Tidak Pernah',
+		),		
+		array(
+			'name'=>'login_status',
+			'value'=>$model->getLoginStatus(),
+		),
+		array(
+			'name'=>'flag_delete',
+			'value'=>$model->getDeleteStatus(),
+		),
 	),
 )); ?>

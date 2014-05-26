@@ -1,3 +1,8 @@
+<?php
+/* @var $this AuthitemController */
+/* @var $data Authitem */
+?>
+
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>

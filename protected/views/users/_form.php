@@ -1,3 +1,9 @@
+<?php
+/* @var $this UsersController */
+/* @var $model Users */
+/* @var $form CActiveForm */
+?>
+
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -5,31 +11,34 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Isian bertanda<span class="required">*</span> tidak bole dikosongkan.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username',array('maxlength'=>128)); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'passwd'); ?>
-		<?php echo $form->passwordField($model,'passwd'); ?>
-		<?php echo $form->error($model,'passwd'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',Users::getAllStatusOptions(),
-		array('prompt'=>'Pilih Status: ')); ?>
-		<?php echo $form->error($model,'status'); ?>
-	</div>	
+	
+	<table>
+		<tr>
+			<td class="label-column"><?php echo $form->labelEx($model,'name'); ?></td>
+			<td class="value-column"><?php echo $form->textField($model,'name',array('class'=>'medium-text','maxlength'=>128)); ?></td>
+		</tr>
+		<tr>
+			<td class="label-column"><?php echo $form->labelEx($model,'username'); ?></td>
+			<td class="value-column"><?php echo $form->textField($model,'username',array('class'=>'medium-text','maxlength'=>16)); ?></td>
+		</tr>
+		<?php if($model->isNewRecord) { ?>
+		<tr>
+			<td class="label-column"><?php echo $form->labelEx($model,'passwd'); ?></td>
+			<td class="value-column"><?php echo $form->passwordField($model,'passwd',array('class'=>'medium-text','maxlength'=>32)); ?></td>
+		</tr>
+		<?php } ?>
+		<tr>
+			<td class="label-column"><?php echo $form->labelEx($model,'status'); ?></td>
+			<td class="value-column"><?php echo $form->dropDownList($model,'status', Users::getAllStatusOptions(),
+			array('prompt'=>'Pilih Status')); ?></td>
+		</tr>		
+	</table>	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton('Simpan'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

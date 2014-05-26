@@ -31,12 +31,18 @@
 			'items'=>array(
 				array('label'=>'Beranda', 'url'=>array('/site/index'),
 					'items'=>array(
-						array('label'=>'Ganti Password','url'=>array('/users/password')),
+						array('label'=>'Ganti Password','url'=>array('/users/password'),'visible'=>!Yii::app()->user->isGuest),
+					),
+				),
+				array('label'=>'Manajemen Pengguna', 'visible'=>Yii::app()->user->checkAccess('superadmin'),
+					'items'=>array(
+							array('label'=>'Tambah Pengguna','url'=>array('/users/create')),
+							array('label'=>'Pendaftaran Akses','url'=>array('/authitem/create'))
 					),
 				),				
-				array('label'=>'Daftar Sikasir', 'url'=>array('/storeIp/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Daftar Omset', 'url'=>array('/storeRevenue/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Riwayat Barang', 'url'=>array('/itemHistory/admin'),'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Daftar Sikasir', 'url'=>array('/storeIp/admin'),'visible'=>Yii::app()->user->checkAccess('superadmin')),
+				array('label'=>'Daftar Omset', 'url'=>array('/storeRevenue/admin'),'visible'=>Yii::app()->user->checkAccess('direktur')),
+				array('label'=>'Riwayat Barang', 'url'=>array('/itemHistory/admin'),'visible'=>Yii::app()->user->checkAccess('manajer')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

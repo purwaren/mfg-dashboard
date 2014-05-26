@@ -1,7 +1,16 @@
+<?php
+/* @var $this UsersController */
+/* @var $data Users */
+?>
+
 <div class="view">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('name')); ?>:</b>
+	<?php echo CHtml::encode($data->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('username')); ?>:</b>
@@ -24,13 +33,17 @@
 	<?php echo CHtml::encode($data->updated_time); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('last_login_time')); ?>:</b>
 	<?php echo CHtml::encode($data->last_login_time); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('login_status')); ?>:</b>
 	<?php echo CHtml::encode($data->login_status); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('flag_delete')); ?>:</b>
+	<?php echo CHtml::encode($data->flag_delete); ?>
 	<br />
 
 	*/ ?>
