@@ -72,11 +72,11 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 if(isset($itemHist))
 { 
 	$count=Store::model()->count();
-	if($count <=11 )
+	if($count <=15 )
 		$width='width: 710px;';
 	else 
 	{
-		$width = $count*65;
+		$width = $count*50;
 		$width = 'width: '.$width.'px;';
 	}
 	//processing header

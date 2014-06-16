@@ -1,20 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "item_distribution".
+ * This is the model class for table "supplier".
  *
- * The followings are the available columns in table 'item_distribution':
+ * The followings are the available columns in table 'supplier':
  * @property integer $id
- * @property string $item_code
- * @property string $shop_code
- * @property integer $qty_total
+ * @property string $sup_code
+ * @property string $sup_name
+ * @property string $sup_address
+ * @property string $sup_phone
+ * @property string $sup_type
+ * @property integer $op_code
+ * @property string $entry_date
  */
-class ItemDistribution extends CActiveRecord
+class Supplier extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return ItemDistribution the static model class
+	 * @return Supplier the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -26,7 +30,7 @@ class ItemDistribution extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'item_distribution';
+		return 'supplier';
 	}
 
 	/**
@@ -37,13 +41,13 @@ class ItemDistribution extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('item_code, shop_code, qty_total', 'required'),
-			array('qty_total', 'numerical', 'integerOnly'=>true),
-			array('item_code', 'length', 'max'=>10),
-			array('shop_code', 'length', 'max'=>2),
+			array('sup_code, sup_name, sup_address, sup_phone, sup_type, op_code, entry_date', 'required'),
+			array('op_code', 'numerical', 'integerOnly'=>true),
+			array('sup_code, sup_name, sup_address, sup_phone', 'length', 'max'=>128),
+			array('sup_type', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, item_code, shop_code, qty_total', 'safe', 'on'=>'search'),
+			array('id, sup_code, sup_name, sup_address, sup_phone, sup_type, op_code, entry_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -65,9 +69,13 @@ class ItemDistribution extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'item_code' => 'Item Code',
-			'shop_code' => 'Shop Code',
-			'qty_total' => 'Qty Total',
+			'sup_code' => 'Sup Code',
+			'sup_name' => 'Sup Name',
+			'sup_address' => 'Sup Address',
+			'sup_phone' => 'Sup Phone',
+			'sup_type' => 'Sup Type',
+			'op_code' => 'Op Code',
+			'entry_date' => 'Entry Date',
 		);
 	}
 
@@ -83,9 +91,13 @@ class ItemDistribution extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('item_code',$this->item_code,true);
-		$criteria->compare('shop_code',$this->shop_code,true);
-		$criteria->compare('qty_total',$this->qty_total);
+		$criteria->compare('sup_code',$this->sup_code,true);
+		$criteria->compare('sup_name',$this->sup_name,true);
+		$criteria->compare('sup_address',$this->sup_address,true);
+		$criteria->compare('sup_phone',$this->sup_phone,true);
+		$criteria->compare('sup_type',$this->sup_type,true);
+		$criteria->compare('op_code',$this->op_code);
+		$criteria->compare('entry_date',$this->entry_date,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

@@ -7019,3 +7019,596 @@ Stack trace:
 REQUEST_URI=/yii/app/dashboard/index.php/authitem/1
 HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/authitem/create
 ---
+2014/06/13 14:36:50 [error] [php] Undefined index: id_barang (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php:155)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): SyncronizeKasirController->runAction()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeKasirController->runActionWithFilters()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeKasirController->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#4 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeKasir/syncItemHistory
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeKasirController.php (155)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/13 22:20:53 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in C:\wamp\www\yii\framework-1.1.12\web\auth\CAccessControlFilter.php:170
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\auth\CAccessControlFilter.php(133): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistoryGuda...')
+#9 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistoryGudang
+---
+2014/06/14 21:17:34 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (139)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/14 21:17:34 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (139)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:01:11 [error] [php] Undefined variable: data (C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php:171)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryGudangController->runAction()
+#3 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryGudangController->filterAccessControl()
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryGudangController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryGudangController->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/admin
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (171)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:01:31 [error] [php] Undefined variable: data (C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php:171)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryGudangController->runAction()
+#3 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryGudangController->filterAccessControl()
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryGudangController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryGudangController->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/admin
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (171)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:03:48 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:03:48 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:03:48 [error] [exception.CException] exception 'CException' with message 'ItemHistoryGudang dan behaviornya tidak memiliki method ataupun closure bernama "countUniqueItem"' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(226): CComponent->__call('countUniqueItem', Array)
+#1 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php(159): CActiveRecord->__call('countUniqueItem', Array)
+#2 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php(159): ItemHistoryGudang->countUniqueItem()
+#3 [internal function]: ItemHistoryGudangController->actionAdmin(1)
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryGudangController), Array)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryGudangController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('admin')
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistoryGuda...')
+#16 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/admin
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistoryGudang/admin
+---
+2014/06/15 17:04:02 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:04:02 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:04:15 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:04:15 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:04:40 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:04:40 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:05:30 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:05:30 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:06:00 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:06:00 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:06:49 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:06:49 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:07:11 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:07:11 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:08:33 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:08:33 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:09:31 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:09:31 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:09:31 [error] [php] number_format() expects parameter 1 to be double, string given (C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\admin.php:75)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): ItemHistoryGudangController->renderInternal()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): ItemHistoryGudangController->renderFile()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): ItemHistoryGudangController->renderPartial()
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php(177): ItemHistoryGudangController->render()
+#4 unknown(0): ItemHistoryGudangController->actionAdmin()
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryGudangController->runAction()
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryGudangController->filterAccessControl()
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryGudangController->runActionWithFilters()
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryGudangController->run()
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/admin
+in C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\admin.php (75)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (177)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:10:02 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:10:02 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:10:02 [error] [php] number_format() expects parameter 1 to be double, string given (C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\admin.php:75)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): ItemHistoryGudangController->renderInternal()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): ItemHistoryGudangController->renderFile()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): ItemHistoryGudangController->renderPartial()
+#3 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php(177): ItemHistoryGudangController->render()
+#4 unknown(0): ItemHistoryGudangController->actionAdmin()
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#6 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryGudangController->runAction()
+#9 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryGudangController->filterAccessControl()
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryGudangController->runActionWithFilters()
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryGudangController->run()
+#16 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#17 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/admin
+in C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\admin.php (75)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (177)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:11:01 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:11:01 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:29:55 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:29:55 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:36 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:36 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:40 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:40 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:42 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:42 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:44 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:44 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:46 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:46 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:48 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 17:31:48 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:05:49 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:05:49 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:07:22 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:07:22 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:07:26 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:07:26 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:07:28 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:07:28 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:07:30 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:07:30 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:08:01 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:08:01 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:09:49 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:09:49 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:17:34 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:17:34 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:17:45 [warning] [application] Gagal mengeset atribut unsafe "sortBy" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:17:45 [warning] [application] Gagal mengeset atribut unsafe "sortType" dari kelas "ItemHistoryGudang".
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (148)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/15 18:51:22 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Request anda tidak valid' in C:\wamp\www\yii\framework-1.1.12\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('view')
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistoryGuda...')
+#10 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011100136
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistoryGudang/admin?page=14
+---
+2014/06/15 20:03:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Request anda tidak valid' in C:\wamp\www\yii\framework-1.1.12\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('view')
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistoryGuda...')
+#10 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011100010
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/06/15 20:30:06 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Request anda tidak valid' in C:\wamp\www\yii\framework-1.1.12\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('view')
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistoryGuda...')
+#10 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011100010
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/06/15 20:35:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Request anda tidak valid' in C:\wamp\www\yii\framework-1.1.12\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('view')
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistoryGuda...')
+#10 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011100010
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/06/15 20:36:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Request anda tidak valid' in C:\wamp\www\yii\framework-1.1.12\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('view')
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistoryGuda...')
+#10 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011100010
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/06/16 09:01:27 [error] [php] Undefined variable: id (C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php:55)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryGudangController->runAction()
+#3 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryGudangController->filterAccessControl()
+#6 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryGudangController->runActionWithFilters()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryGudangController->run()
+#10 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#11 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011100010
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (55)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/16 03:20:01 [error] [exception.CException] exception 'CException' with message 'Properti "ItemHistoryGudang.shop_code" tidak didefinisikan.' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(160): CComponent->__set('shop_code', '14')
+#1 C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeGudangController.php(58): CActiveRecord->__set('shop_code', '14')
+#2 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): SyncronizeGudangController->actionSyncItemDistribution()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('syncItemDistrib...')
+#7 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('syncronizeGudan...')
+#8 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeGudang/syncItemDistribution
+---
+2014/06/16 03:20:23 [error] [exception.CException] exception 'CException' with message 'Properti "ItemHistoryGudang.shop_code" tidak didefinisikan.' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(160): CComponent->__set('shop_code', '14')
+#1 C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeGudangController.php(58): CActiveRecord->__set('shop_code', '14')
+#2 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): SyncronizeGudangController->actionSyncItemDistribution()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('syncItemDistrib...')
+#7 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('syncronizeGudan...')
+#8 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeGudang/syncItemDistribution
+---
+2014/06/16 03:22:30 [error] [php] Undefined index: PHP_AUTH_USER (C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeGudangController.php:10)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): SyncronizeGudangController->runActionWithFilters()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): SyncronizeGudangController->run()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#3 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeGudang/syncItemDistribution
+in C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeGudangController.php (10)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/16 03:23:26 [error] [exception.CException] exception 'CException' with message 'Properti "ItemHistoryGudang.shop_code" tidak didefinisikan.' in C:\wamp\www\yii\framework-1.1.12\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(160): CComponent->__set('shop_code', '14')
+#1 C:\wamp\www\yii\app\dashboard\protected\controllers\SyncronizeGudangController.php(58): CActiveRecord->__set('shop_code', '14')
+#2 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(50): SyncronizeGudangController->actionSyncItemDistribution()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('syncItemDistrib...')
+#7 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('syncronizeGudan...')
+#8 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/syncronizeGudang/syncItemDistribution
+---
+2014/06/16 14:19:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Request anda tidak valid' in C:\wamp\www\yii\framework-1.1.12\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('view')
+#9 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('supplier/view')
+#10 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/supplier/view?kode=Z001
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistoryGudang/admin
+---
+2014/06/16 18:56:29 [error] [php] Undefined variable: dist (C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\view.php:51)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): ItemHistoryGudangController->renderFile()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): ItemHistoryGudangController->renderPartial()
+#2 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php(61): ItemHistoryGudangController->render()
+#3 unknown(0): ItemHistoryGudangController->actionView()
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryGudangController->runAction()
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryGudangController->filterAccessControl()
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryGudangController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryGudangController->run()
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011000001
+in C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\view.php (51)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (61)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/16 18:56:40 [error] [php] Trying to get property of non-object (C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\view.php:55)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): ItemHistoryGudangController->renderFile()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): ItemHistoryGudangController->renderPartial()
+#2 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php(61): ItemHistoryGudangController->render()
+#3 unknown(0): ItemHistoryGudangController->actionView()
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryGudangController->runAction()
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryGudangController->filterAccessControl()
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryGudangController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryGudangController->run()
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011000001
+in C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\view.php (55)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (61)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/06/16 18:59:45 [error] [exception.CDbException] exception 'CDbException' with message 'Table "store" tidak memiliki kolom bernama "store_code".' in C:\wamp\www\yii\framework-1.1.12\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\ar\CActiveRecord.php(1458): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\view.php(54): CActiveRecord->findByAttributes(Array)
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require('C:\wamp\www\yii...')
+#3 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\yii...', Array, true)
+#4 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\yii...', Array, true)
+#5 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php(61): CController->render('view', Array)
+#7 [internal function]: ItemHistoryGudangController->actionView('0011000001')
+#8 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryGudangController), Array)
+#9 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryGudangController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('view')
+#19 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistoryGuda...')
+#20 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011000001
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2014/06/16 19:01:05 [error] [php] Trying to get property of non-object (C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\view.php:57)
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): ItemHistoryGudangController->renderFile()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): ItemHistoryGudangController->renderPartial()
+#2 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php(61): ItemHistoryGudangController->render()
+#3 unknown(0): ItemHistoryGudangController->actionView()
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryGudangController->runAction()
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryGudangController->filterAccessControl()
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryGudangController->runActionWithFilters()
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryGudangController->run()
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#16 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistoryGudang/view?kode=0011000001
+in C:\wamp\www\yii\app\dashboard\protected\views\itemHistoryGudang\view.php (57)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryGudangController.php (61)
+in C:\wamp\www\yii\app\dashboard\index.php (13)

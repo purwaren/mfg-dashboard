@@ -41,8 +41,9 @@
 					),
 				),				
 				array('label'=>'Daftar Sikasir', 'url'=>array('/storeIp/admin'),'visible'=>Yii::app()->user->checkAccess('superadmin')),
-				array('label'=>'Daftar Omset', 'url'=>array('/storeRevenue/admin'),'visible'=>Yii::app()->user->checkAccess('direktur')),
+				array('label'=>'Daftar Omset', 'url'=>array('/storeRevenue/admin'),'visible'=>Yii::app()->user->checkAccess('manajer')),
 				array('label'=>'Riwayat Barang', 'url'=>array('/itemHistory/admin'),'visible'=>Yii::app()->user->checkAccess('manajer')),
+				array('label'=>'Riwayat Barang Gudang', 'url'=>array('/itemHistoryGudang/admin'),'visible'=>Yii::app()->user->checkAccess('direktur')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
