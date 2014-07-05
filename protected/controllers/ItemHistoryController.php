@@ -32,7 +32,7 @@ class ItemHistoryController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin'),
+				'actions'=>array('create','update','admin','adminJakarta','viewJakarta'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -54,12 +54,39 @@ class ItemHistoryController extends Controller
 		$model = ItemHistory::model()->findByAttributes(array(
 			'item_code'=>$id
 		));
+		if($model===null)
+			throw new CHttpException(404,'Halaman yang ada minta tidak tersedia');
 		$models = ItemHistory::model()->hist()->findAllByAttributes(array(
 			'item_code'=>$id
 		));
 		$this->render('view',array(
 			'model'=>$model,
 			'models'=>$models
+		));
+	}
+	
+	/**
+	 * Displays a particular model.
+	 * @param integer $id the ID of the model to be displayed
+	 */
+	public function actionViewJakarta($id)
+	{
+		$this->layout='//layouts/column1';
+		$model = ItemHistoryGudang::model()->findByAttributes(array(
+				'item_code'=>$id
+		));
+		
+		if($model===null)
+			throw new CHttpException(404,'Halaman yang ada minta tidak tersedia');
+		
+		$supplier = Supplier::model()->findByAttributes(array('sup_code'=>$model->supplier));
+		$models = ItemHistory::model()->hist()->findAllByAttributes(array(
+				'item_code'=>$id
+		));
+		$this->render('viewJakarta',array(
+			'model'=>$model,
+			'models'=>$models,
+			'supplier'=>$supplier
 		));
 	}
 
@@ -138,20 +165,20 @@ class ItemHistoryController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin($page=1)
+	public function actionAdminJakarta($page=1)
 	{
 		$this->layout='//layouts/column1';
 		
 		Yii::app()->user->setReturnUrl(Yii::app()->request->requestUri);
-		$model=new ItemHistory('search');
+		$model=new ItemHistoryJakarta('search');
 		$model->unsetAttributes();  // clear any default values		
 		
-		if(isset($_POST['ItemHistory']))
+		if(isset($_POST['ItemHistoryJakarta']))
 		{			
-			Yii::app()->user->setState('ItemHistory',$_POST['ItemHistory']);
+			Yii::app()->user->setState('ItemHistoryJakarta',$_POST['ItemHistoryJakarta']);
 		}
 			
-		$itemHist=Yii::app()->user->getState('ItemHistory');
+		$itemHist=Yii::app()->user->getState('ItemHistoryJakarta');
 		$data='';$store='';$pages='';$summary='';$total='';
 		if(isset($itemHist))
 		{	
@@ -178,18 +205,72 @@ class ItemHistoryController extends Controller
 			else if($count-$start < 10)
 				$summary=$start.'-'.$count.' dari '.$count;		 
 			else $summary=$start.'-'.$end.' dari '.$count;
-			$total=$model->summaryAllItem();
+			
 		}
-		//var_dump($pages);exit;
-		$this->render('admin',array(
+		//var_dump($data);exit;
+		$this->render('adminJakarta',array(
 			'model'=>$model,
 			'data'=>$data,
 			'store'=>$store,
 			'pages'=>$pages,
 			'page'=>$page,
-			'summary'=>$summary,
-			'total'=>$total,
+			'summary'=>$summary,			
 			'itemHist'=>$itemHist
+		));
+	}
+	
+	public function actionAdmin($page=1)
+	{
+		$this->layout='//layouts/column1';
+	
+		Yii::app()->user->setReturnUrl(Yii::app()->request->requestUri);
+		$model=new ItemHistory('search');
+		$model->unsetAttributes();  // clear any default values
+	
+		if(isset($_POST['ItemHistory']))
+		{
+			Yii::app()->user->setState('ItemHistory',$_POST['ItemHistory']);
+		}
+			
+		$itemHist=Yii::app()->user->getState('ItemHistory');
+		$data='';$store='';$pages='';$summary='';$total='';
+		if(isset($itemHist))
+		{
+			$model->attributes=$itemHist;
+			//setting page size
+			$model->size = Yii::app()->params['pagination']['size'];
+			$model->start = $model->size*($page-1);
+			$start = $model->size*($page-1)+1;
+			$end=$model->size*$page;
+				
+			//get all store
+			$store=Store::model()->findAllBySql('SELECT * FROM store ORDER BY code');
+				
+			//get all item
+			$data=$model->searchUniqueItem();
+				
+			//set pagination
+			$count = $model->countUniqueItem();
+				
+			$pages = new CPagination($count);
+			$pages->pageSize = $model->size;
+			if($count==0)
+				$summary='0';
+			else if($count-$start < 10)
+				$summary=$start.'-'.$count.' dari '.$count;
+			else $summary=$start.'-'.$end.' dari '.$count;
+			$total=$model->summaryAllItem();
+		}
+		//var_dump($pages);exit;
+		$this->render('admin',array(
+				'model'=>$model,
+				'data'=>$data,
+				'store'=>$store,
+				'pages'=>$pages,
+				'page'=>$page,
+				'summary'=>$summary,
+				'total'=>$total,
+				'itemHist'=>$itemHist
 		));
 	}
 

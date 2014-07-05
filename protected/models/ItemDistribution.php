@@ -70,6 +70,15 @@ class ItemDistribution extends CActiveRecord
 			'qty_total' => 'Qty Total',
 		);
 	}
+	
+	public function scopes()
+	{
+		return array(
+			'shop_desc'=>array(
+				'order'=>'shop_code ASC',					
+			),
+		);
+	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
