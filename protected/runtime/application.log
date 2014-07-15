@@ -8314,3 +8314,118 @@ REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/adminJakarta
 in C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\adminJakarta.php (84)
 in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (219)
 in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/07/15 22:42:52 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\yii\framework-1.1.12\web\helpers\CHtml.php:1960)
+Stack trace:
+#0 C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\_searchJakarta.php(22): CActiveForm->dropDownList()
+#1 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require()
+#2 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): ItemHistoryController->renderInternal()
+#3 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): ItemHistoryController->renderFile()
+#4 C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\adminJakarta.php(67): ItemHistoryController->renderPartial()
+#5 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(127): require()
+#6 C:\wamp\www\yii\framework-1.1.12\web\CBaseController.php(96): ItemHistoryController->renderInternal()
+#7 C:\wamp\www\yii\framework-1.1.12\web\CController.php(870): ItemHistoryController->renderFile()
+#8 C:\wamp\www\yii\framework-1.1.12\web\CController.php(783): ItemHistoryController->renderPartial()
+#9 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(219): ItemHistoryController->render()
+#10 unknown(0): ItemHistoryController->actionAdminJakarta()
+#11 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#12 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): ItemHistoryController->runAction()
+#15 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): ItemHistoryController->filterAccessControl()
+#18 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): ItemHistoryController->runActionWithFilters()
+#21 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): ItemHistoryController->run()
+#22 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController()
+#23 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\yii\app\dashboard\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/adminJakarta?page=9
+in C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\_searchJakarta.php (22)
+in C:\wamp\www\yii\app\dashboard\protected\views\itemHistory\adminJakarta.php (67)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (219)
+2014/07/15 23:03:22 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() gagal: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. Statement SQL yang dijalankan: SELECT count(*) as total FROM item_history_gudang g WHERE month(g.date_in) = :month.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistoryJakarta.php (124)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (199)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/07/15 23:03:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT count(*) as total FROM item_history_gudang g WHERE month(g.date_in) = :month' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistoryJakarta.php(124): CDbCommand->queryScalar(Array)
+#2 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(199): ItemHistoryJakarta->countUniqueItem()
+#3 [internal function]: ItemHistoryController->actionAdminJakarta(1)
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('adminJakarta')
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#16 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/adminJakarta
+---
+2014/07/15 23:03:40 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() gagal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gud.date_in' in 'where clause'. Statement SQL yang dijalankan: SELECT count(*) as total FROM item_history_gudang g WHERE month(g.date_in) = :month AND year(gud.date_in) = :year.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistoryJakarta.php (124)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (199)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/07/15 23:03:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gud.date_in' in 'where clause'. The SQL statement executed was: SELECT count(*) as total FROM item_history_gudang g WHERE month(g.date_in) = :month AND year(gud.date_in) = :year' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistoryJakarta.php(124): CDbCommand->queryScalar(Array)
+#2 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(199): ItemHistoryJakarta->countUniqueItem()
+#3 [internal function]: ItemHistoryController->actionAdminJakarta(1)
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('adminJakarta')
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#16 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/adminJakarta
+---
+2014/07/15 23:06:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gud.item_code' in 'where clause'. Statement SQL yang dijalankan: SELECT g.item_code, g.name, g.supplier, g.offer_price, t.qty_stock as stok_toko, t.period, g.qty_in, g.qty_stock as stok_gudang, (CASE (t.qty_stock+g.qty_stock) WHEN 0 THEN t.period + g.period ELSE DATEDIFF(NOW(),g.date_in) END) as periode
+				FROM (SELECT gud.item_code, gud.name, gud.offer_price, (CASE WHEN s.sup_name IS NULL THEN gud.supplier ELSE s.sup_name END) AS supplier, gud.qty_in, gud.qty_stock, gud.date_in, DATEDIFF(gud.date_out, gud.date_in) AS period FROM item_history_gudang gud LEFT JOIN supplier s ON gud.supplier=s.sup_code WHERE gud.item_code LIKE :code AND month(gud.date_in) = :month AND year(gud.date_in) = :year) g LEFT JOIN (SELECT item_code, sum(qty_stock) AS qty_stock, period FROM item_history WHERE gud.item_code LIKE :code GROUP BY item_code) t on t.item_code=g.item_code ORDER BY g.item_code ASC LIMIT 0, 10.
+in C:\wamp\www\yii\app\dashboard\protected\models\ItemHistoryJakarta.php (91)
+in C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php (196)
+in C:\wamp\www\yii\app\dashboard\index.php (13)
+2014/07/15 23:06:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'gud.item_code' in 'where clause'. The SQL statement executed was: SELECT g.item_code, g.name, g.supplier, g.offer_price, t.qty_stock as stok_toko, t.period, g.qty_in, g.qty_stock as stok_gudang, (CASE (t.qty_stock+g.qty_stock) WHEN 0 THEN t.period + g.period ELSE DATEDIFF(NOW(),g.date_in) END) as periode
+				FROM (SELECT gud.item_code, gud.name, gud.offer_price, (CASE WHEN s.sup_name IS NULL THEN gud.supplier ELSE s.sup_name END) AS supplier, gud.qty_in, gud.qty_stock, gud.date_in, DATEDIFF(gud.date_out, gud.date_in) AS period FROM item_history_gudang gud LEFT JOIN supplier s ON gud.supplier=s.sup_code WHERE gud.item_code LIKE :code AND month(gud.date_in) = :month AND year(gud.date_in) = :year) g LEFT JOIN (SELECT item_code, sum(qty_stock) AS qty_stock, period FROM item_history WHERE gud.item_code LIKE :code GROUP BY item_code) t on t.item_code=g.item_code ORDER BY g.item_code ASC LIMIT 0, 10' in C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\yii\framework-1.1.12\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\yii\app\dashboard\protected\models\ItemHistoryJakarta.php(91): CDbCommand->queryAll(true, Array)
+#2 C:\wamp\www\yii\app\dashboard\protected\controllers\ItemHistoryController.php(196): ItemHistoryJakarta->searchUniqueItem()
+#3 [internal function]: ItemHistoryController->actionAdminJakarta(1)
+#4 C:\wamp\www\yii\framework-1.1.12\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ItemHistoryController), Array)
+#5 C:\wamp\www\yii\framework-1.1.12\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ItemHistoryController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\yii\framework-1.1.12\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\yii\framework-1.1.12\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\yii\framework-1.1.12\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework-1.1.12\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework-1.1.12\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\yii\framework-1.1.12\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(283): CController->run('adminJakarta')
+#15 C:\wamp\www\yii\framework-1.1.12\web\CWebApplication.php(142): CWebApplication->runController('itemHistory/adm...')
+#16 C:\wamp\www\yii\framework-1.1.12\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\yii\app\dashboard\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/itemHistory/adminJakarta
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/itemHistory/adminJakarta
+---

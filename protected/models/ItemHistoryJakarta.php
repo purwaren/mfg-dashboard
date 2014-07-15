@@ -3,6 +3,7 @@ class ItemHistoryJakarta extends CFormModel
 {
 	public $sup_code;
 	public $month;
+	public $year;
 	public $item_code;
 	public $sortBy='item_code';
 	public $sortType='ASC';
@@ -13,7 +14,7 @@ class ItemHistoryJakarta extends CFormModel
 	{
 		return array(
 			array('sortBy, sortType','required'),
-			array('sup_code, month, item_code, sortBy','safe'),
+			array('sup_code, month, item_code, sortBy, year','safe'),
 		);		
 	}
 	
@@ -55,7 +56,7 @@ class ItemHistoryJakarta extends CFormModel
 		if(!empty($this->item_code))
 		{
 			$conditionGudang[]='gud.item_code LIKE :code';
-			$conditionToko[]='gud.item_code LIKE :code';
+			$conditionToko[]='item_code LIKE :code';
 			$param[':code']=$this->item_code.'%';
 		}
 		if(!empty($this->sup_code))
@@ -67,6 +68,11 @@ class ItemHistoryJakarta extends CFormModel
 		{
 			$conditionGudang[]='month(gud.date_in) = :month';
 			$param[':month']=$this->month;
+		}
+		if(!empty($this->year))
+		{
+			$conditionGudang[]='year(gud.date_in) = :year';
+			$param[':year']=$this->year;
 		}
 		
 		if(!empty($conditionGudang))
@@ -105,6 +111,11 @@ class ItemHistoryJakarta extends CFormModel
 			$condition[]='month(g.date_in) = :month';
 			$param[':month']=$this->month;
 		}
+		if(!empty($this->year))
+		{
+			$condition[]='year(g.date_in) = :year';
+			$param[':year']=$this->year;
+		}		
 		
 		if(!empty($condition))
 			$sql .= ' WHERE '.implode(' AND ', $condition);
@@ -116,5 +127,36 @@ class ItemHistoryJakarta extends CFormModel
 	public function summaryAllItem()
 	{
 		
+	}
+	
+	public static function getAllMonthOptions()
+	{
+		return array(
+			'1'=>'Januari',
+			'2'=>'Februari',
+			'3'=>'Maret',
+			'4'=>'April',
+			'5'=>'Mei',
+			'6'=>'Juni',
+			'7'=>'Juli',
+			'8'=>'Agustus',
+			'9'=>'September',
+			'10'=>'Oktober',
+			'11'=>'November',
+			'12'=>'Desember',
+		);
+	}
+	
+	public static function getAllYearOptions()
+	{
+		$sql = 'SELECT YEAR(date_in) AS year FROM item_history_gudang GROUP BY year';
+		$cmd = Yii::app()->db->createCommand($sql);
+		$data = $cmd->queryAll();
+		$options= array();
+		foreach($data as $row)
+		{
+			$options[$row['year']]=$row['year'];
+		}
+		return $options;
 	}
 }

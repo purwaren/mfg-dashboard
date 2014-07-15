@@ -78,6 +78,15 @@ class Supplier extends CActiveRecord
 			'entry_date' => 'Entry Date',
 		);
 	}
+	
+	public function scopes()
+	{
+		return array(
+			'sortByName'=> array(
+				'order'=>'sup_name'
+			)
+		);	
+	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
@@ -102,5 +111,16 @@ class Supplier extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	
+	public static function getAllOptions()
+	{
+		$model = self::model()->sortByName()->findAll();
+		$option=array();
+		foreach ($model as $row)
+		{
+			$option[$row->sup_code]=ucwords($row->sup_name);
+		}
+		return $option;
 	}
 }

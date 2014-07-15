@@ -12,6 +12,7 @@ $this->menu=array(
 	array('label'=>'Create ItemHistory', 'url'=>array('create')),
 );
 
+$this->widget('ext.EChosen.EChosen');
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -112,7 +113,11 @@ if(isset($itemHist))
 			
 		</tr>
 		</thead>
-		<?php echo $row_data ?>		
+		<?php if(!empty($row_data)) {
+					echo $row_data;
+				} else {
+					echo '<tr><td colspan="9"><i>Tidak ada hasil</i></td></tr>';
+				} ?>		
 	</table>
 		
 	&nbsp;<br />	

@@ -14,11 +14,16 @@
 	<table>
 		<tr>
 			<td class="label-column"><?php echo $form->label($model,'sup_code'); ?></td>
-			<td class="value-column"><?php echo $form->textField($model,'sup_code',array('class'=>'span-5','maxlength'=>15)); ?></td>
+			<td class="value-column">
+				<?php echo $form->dropDownList($model,'sup_code',Supplier::getAllOptions(),array('class'=>'span-5 chzn-select','prompt'=>'Pilih Supplier')); ?>
+			</td>
 		</tr>	
 		<tr>
 			<td class="label-column"><?php echo $form->label($model,'month'); ?></td>
-			<td class="value-column"><?php echo $form->textField($model,'month',array('class'=>'span-5','maxlength'=>15)); ?></td>
+			<td class="value-column">
+				<?php echo $form->dropDownList($model,'month',ItemHistoryJakarta::getAllMonthOptions(),array('prompt'=>'Pilih Bulan')); ?> - 
+				<?php echo $form->dropDownList($model,'year',ItemHistoryJakarta::getAllYearOptions(),array('prompt'=>'Pilih Tahun')); ?>
+			</td>
 		</tr>	
 		<tr>
 			<td class="label-column"><?php echo $form->label($model,'item_code'); ?></td>
