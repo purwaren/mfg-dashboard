@@ -48,7 +48,7 @@ $this->menu=array(
 			<td style="text-align:center"><?php echo $model->qty_stock?></td>
 		</tr>
 		<?php 
-			$tmp = '';$i=1;$total=$moel->qty_stock;
+			$tmp = '';$i=1;$total=$model->qty_stock;
 			foreach ($dist as $row)
 			{
 				$temp = Store::model()->findByAttributes(array('code'=>$row->shop_code));

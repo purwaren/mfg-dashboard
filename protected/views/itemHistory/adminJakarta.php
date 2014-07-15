@@ -71,21 +71,6 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 <?php
 if(isset($itemHist))
 { 	
-	//processing header
-	$h1='';$h2='';$t=0;
-	foreach($store as $row)
-	{		
-		$h1 .= '<th colspan="2" style="width:100px;">'.$row->alias.'</th>';
-		$h2 .= '<th style="width:50px;">M</th><th style="width:50px;">S</th>';
-	}
-	$header_store = '<tr>
-						'.$h1.'						
-						<th rowspan="2">Stok Gudang</th>
-						<th rowspan="2">Periode</th>
-					</tr>
-					<tr>'.$h2.'</tr>';	
-	
-	
 	$i = $model->size*($page-1)+1;
 	$row_data = '';	$row_dist='';
 	foreach($data as $row)
@@ -98,42 +83,27 @@ if(isset($itemHist))
 						<td>'.number_format($row['offer_price']).'</td>
 						<td>'.ucwords($row['supplier']).'</td>
 						<td style="text-align:center">'.$row['qty_in'].'</td>
+						<td style="text-align:center">'.(!isset($row['stok_toko'])?'-':$row['stok_toko']).'</td>
+						<td style="text-align:center">'.$row['stok_gudang'].'</td>
+						<td style="text-align:center">'.$row['periode'].'</td>
 					</tr>';
-		$dist = ItemDistribution::model()->shop_desc()->findAllByAttributes(array(
-			'item_code'=>$row['item_code']
-		));
-		$tmp = '';
-		foreach($store as $shop)
-		{
-			$itemshop = ItemHistory::model()->findByAttributes(array(
-				'item_code'=>$row['item_code'],
-				'store_code'=>$shop->code,
-			));
-			if(!empty($itemshop))
-				$tmp .= '<td style="text-align:center">'.$itemshop->qty_in.'</td>
-						<td style="text-align:center">'.$itemshop->qty_stock.'</td>';
-			else 
-				$tmp .= '<td style="text-align:center">-</td>
-						<td style="text-align:center">-</td>';
-		}		
-		$row_dist .= '<tr>
-						'.$tmp.'						
-						<td style="text-align:center">'.$row['qty_stock'].'</td>
-						<td style="text-align:center">'.$row['periode'].'</td></tr>';
+		
 	}	
 	
 ?>
 
 <div class="grid-view">
-	<p style="text-align:right">Menampilkan <?php echo $summary ?> hasil</p>
-	<div class="left">
+	<p style="text-align:right">Menampilkan <?php echo $summary ?> hasil</p>	
 	<table class="items">
 		<thead>
 		<tr>
 			<th rowspan="2">No</th>
 			<th colspan="3">Info Barang</th>
 			<th rowspan="2">Supplier</th>
-			<th rowspan="2" style="width: 60px;">Qty Masuk Gudang</th>			
+			<th rowspan="2" style="width: 60px;">Qty Masuk Gudang</th>	
+			<th rowspan="2">Stok Toko</th>
+			<th rowspan="2">Stok Gudang</th>
+			<th rowspan="2">Periode</th>		
 		</tr>
 		<tr>
 			<th>Kode</th>			
@@ -144,16 +114,7 @@ if(isset($itemHist))
 		</thead>
 		<?php echo $row_data ?>		
 	</table>
-	</div>
-	
-	<div class="right">
-	<table class="items">
-		<thead>
-		<?php echo $header_store?>
-		</thead>	
-		<?php echo $row_dist ?>	
-	</table>	
-	</div>
+		
 	&nbsp;<br />	
 	<div>
 	<?php $this->widget('CLinkPager', array(
