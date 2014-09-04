@@ -32,7 +32,7 @@ class ItemHistoryController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','adminJakarta','viewJakarta'),
+				'actions'=>array('create','update','admin','adminJakarta','viewJakarta','adminJakartaSales'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -271,6 +271,57 @@ class ItemHistoryController extends Controller
 				'summary'=>$summary,
 				'total'=>$total,
 				'itemHist'=>$itemHist
+		));
+	}
+	
+	public function actionAdminJakartaSales($page=1)
+	{
+		$this->layout='//layouts/column1';
+	
+		Yii::app()->user->setReturnUrl(Yii::app()->request->requestUri);
+		$model=new ItemJakartaSales('search');
+		$model->unsetAttributes();  // clear any default values
+	
+		if(isset($_POST['ItemJakartaSales']))
+		{
+			Yii::app()->user->setState('ItemJakartaSales',$_POST['ItemJakartaSales']);
+		}
+			
+		$itemHist=Yii::app()->user->getState('ItemJakartaSales');
+		$data='';$store='';$pages='';$summary='';$total='';
+		if(isset($itemHist))
+		{
+			$model->attributes=$itemHist;
+			//setting page size
+			$model->size = Yii::app()->params['pagination']['size'];
+			$model->start = $model->size*($page-1);
+			$start = $model->size*($page-1)+1;
+			$end=$model->size*$page;
+	
+			
+	
+			//get all item
+			$data=$model->searchUniqueItem();
+	
+			//set pagination
+			$count = $model->countUniqueItem();
+	
+			$pages = new CPagination($count);
+			$pages->pageSize = $model->size;
+			if($count==0)
+				$summary='0';
+			else if($count-$start < 10)
+				$summary=$start.'-'.$count.' dari '.$count;
+			else $summary=$start.'-'.$end.' dari '.$count;			
+		}
+		//var_dump($pages);exit;
+		$this->render('adminJakartaSales',array(
+			'model'=>$model,
+			'data'=>$data,				
+			'pages'=>$pages,
+			'page'=>$page,
+			'summary'=>$summary,			
+			'itemHist'=>$itemHist
 		));
 	}
 

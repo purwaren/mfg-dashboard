@@ -51,6 +51,13 @@ class Store extends CActiveRecord
 			array('id, code, alias, name, addres, phone, supervisor, cat, deleted', 'safe', 'on'=>'search'),
 		);
 	}
+	
+	public function scopes()
+	{
+		return array(
+			'sortByName'=>array('order'=>'name ASC')
+		);
+	}
 
 	/**
 	 * @return array relational rules.
@@ -105,5 +112,19 @@ class Store extends CActiveRecord
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria'=>$criteria,
 		));
-	}	
+	}
+
+	public static function getAllStoreOptions()
+	{
+		$model = self::model()->sortByName()->findAll();
+		$options=array();
+		if($model)
+		{			
+			foreach($model as $row)
+			{
+				$options[$row->code]=$row->name;
+			}
+		}
+		return $options;
+	}
 }
