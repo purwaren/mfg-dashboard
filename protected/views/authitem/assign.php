@@ -49,7 +49,7 @@ $this->menu=array(
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Simpan',array('name'=>'Save')); ?>
 	</div>
-
+	<p style="color: green"><?php if(isset($message)) echo $message?></p>
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

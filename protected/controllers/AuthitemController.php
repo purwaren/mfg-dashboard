@@ -220,16 +220,19 @@ class AuthitemController extends Controller
 		if(isset($_POST['Save']))
 		{
 			Authassignment::model()->deleteAll('userid = :id',array(':id'=>$model->id));
-			$items = $_POST['roles'];
-			$added = '';
-			foreach($items as $row)
+			if(isset($_POST['roles']))
 			{
-				if($auth->assign($row, $model->id))
+				$items = $_POST['roles'];
+				$added = '';
+				foreach($items as $row)
 				{
-					$added .= $row.', ';
+					if($auth->assign($row, $model->id))
+					{
+						$added .= $row.', ';
+					}
 				}
+				$message = 'Peran '.$added.' sudah diberikan kepada pengguna';
 			}
-			$message = 'Peran '.$added.' sudah diberikan kepada pengguna';
 		}
 		$this->render('assign',array(
 			'roles'=>$roles,
