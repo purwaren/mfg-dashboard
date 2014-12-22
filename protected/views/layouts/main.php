@@ -38,7 +38,7 @@
 				),				
 				array('label'=>'Daftar Sikasir', 'url'=>array('/storeIp/admin'),'visible'=>$this->checkIfHasAccess('storeIp','admin')),
 				array('label'=>'Daftar Omset', 'url'=>array('/storeRevenue/admin'),'visible'=>$this->checkIfHasAccess('storeRevenue','admin')),
-				array('label'=>'Daftar Item', 'url'=>array('/soldItem/admin'),'visible'=>$this->checkIfHasAccess('soldItem','admin')),
+				array('label'=>'Daftar Item', 'url'=>array('/soldItem/admin')),
 				array('label'=>'Riwayat Barang', 'url'=>array('/itemHistory/admin'),'visible'=>$this->checkIfHasAccess('itemHistory','admin')),
 				array('label'=>'Riwayat Barang Gudang', 'url'=>array('/itemHistoryGudang/admin'),'visible'=>$this->checkIfHasAccess('itemHistoryGudang','admin')),
 				array('label'=>'Riwayat Barang Jakarta', 'url'=>array('/itemHistory/adminJakarta'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakarta')),
