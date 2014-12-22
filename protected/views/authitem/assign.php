@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Pengaturan Akses', 'url'=>array('index')),
-	array('label'=>'Pengaturan Peran', 'url'=>array('admin')),
+	array('label'=>'Pengaturan Akses', 'url'=>array('admin','type'=>CAuthItem::TYPE_OPERATION)),
+	array('label'=>'Pengaturan Peran', 'url'=>array('admin','type'=>CAuthItem::TYPE_ROLE)),
 );
 ?>
 

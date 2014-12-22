@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Pengaturan Peran', 'url'=>array('index')),
-	array('label'=>'Kelola Pengguna', 'url'=>array('create')),
+	array('label'=>'Pengaturan Peran', 'url'=>array('admin','type'=>CAuthItem::TYPE_ROLE)),
+	array('label'=>'Kelola Pengguna', 'url'=>array('users/admin')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

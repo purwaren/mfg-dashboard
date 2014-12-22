@@ -43,6 +43,23 @@ class Controller extends CController
 
 	public function beforeAction()
 	{
+		$this->pageTitle=Yii::app()->name;
+		$methods = get_class_methods(ucfirst($this->getId()).'Controller');
+		$tes = AllController::model()->findByAttributes(array('name'=>strtolower($this->getId())));
+		
+		if(empty($tes))
+		{
+			foreach($methods as $row)
+			{
+				if(substr($row, 0, 6)=='action' && substr($row, 0, 7) != 'actions')
+				{
+					$myaction = new AllController();
+					$myaction->name=$this->getId();
+					$myaction->method=strtolower(substr($row,6));
+					$myaction->save();
+				}
+			}
+		}
 		//set date default timezone
 		date_default_timezone_set(Yii::app()->params['timezone']);	
 		
@@ -154,6 +171,11 @@ class Controller extends CController
 		return $action;
 	}
 	
+	protected function checkIfHasAccess($controller, $action)
+	{
+		$access=$controller.'_'.$action;
+		return Yii::app()->user->checkAccess($access);
+	}
 	
 	/**
 	 * authenticate the users, if has access, return true
