@@ -29,7 +29,7 @@
 	<div id="top_menu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Beranda', 'url'=>array('/site/index'),
+				array('label'=>'Beranda',
 					'items'=>array(
 						array('label'=>'Ganti Password','url'=>array('/users/password'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
