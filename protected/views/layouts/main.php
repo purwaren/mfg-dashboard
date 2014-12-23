@@ -29,7 +29,12 @@
 	<div id="top_menu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Beranda', 'url'=>array('/site/index')),
+				array('label'=>'Beranda', 'url'=>array('/site/index'),
+					'items'=>array(
+						array('label'=>'Ganti Password','url'=>array('/users/password'),'visible'=>!Yii::app()->user->isGuest),
+						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					),
+				),
 				array('label'=>'Manajemen Pengguna',
 					'items'=>array(
 							array('label'=>'Tambah Pengguna','url'=>array('/users/create'),'visible'=>$this->checkIfHasAccess('users','create')),
@@ -42,10 +47,8 @@
 				array('label'=>'Riwayat Barang', 'url'=>array('/itemHistory/admin'),'visible'=>$this->checkIfHasAccess('itemHistory','admin')),
 				array('label'=>'Riwayat Barang Gudang', 'url'=>array('/itemHistoryGudang/admin'),'visible'=>$this->checkIfHasAccess('itemHistoryGudang','admin')),
 				array('label'=>'Riwayat Barang Jakarta', 'url'=>array('/itemHistory/adminJakarta'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakarta')),
-				array('label'=>'Rekap Penjualan', 'url'=>array('/itemHistory/adminJakartaSales'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakartaSales')),
-				array('label'=>'Ganti Password','url'=>array('/users/password'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Rekap Penjualan', 'url'=>array('/itemHistory/adminJakartaSales'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakartaSales')),				
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),				
 			),
 		)); ?>
 	</div><!-- mainmenu -->
