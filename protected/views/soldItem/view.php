@@ -23,6 +23,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'category',
+		'date_in',
 		'date_sold',
 		'qty',
 		'shop_code',

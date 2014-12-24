@@ -13,6 +13,10 @@
 	<?php echo CHtml::encode($data->category); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('date_in')); ?>:</b>
+	<?php echo CHtml::encode($data->date_in); ?>
+	<br />
+
 	<b><?php echo CHtml::encode($data->getAttributeLabel('date_sold')); ?>:</b>
 	<?php echo CHtml::encode($data->date_sold); ?>
 	<br />

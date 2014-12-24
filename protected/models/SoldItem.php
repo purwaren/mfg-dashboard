@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'sold_item':
  * @property integer $id
  * @property string $category
+ * @property string $date_in
  * @property string $date_sold
  * @property integer $qty
  * @property string $shop_code
@@ -28,12 +29,12 @@ class SoldItem extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('category, date_sold, qty, shop_code', 'required'),
+			array('category, date_in, date_sold, qty, shop_code', 'required'),
 			array('qty', 'numerical', 'integerOnly'=>true),
 			array('category, shop_code', 'length', 'max'=>8),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, category, date_sold, qty, shop_code', 'safe', 'on'=>'search'),
+			array('id, category, date_in, date_sold, qty, shop_code', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -56,6 +57,7 @@ class SoldItem extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'category' => 'Category',
+			'date_in' => 'Date In',
 			'date_sold' => 'Date Sold',
 			'qty' => 'Qty',
 			'shop_code' => 'Shop Code',
@@ -82,6 +84,7 @@ class SoldItem extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('category',$this->category,true);
+		$criteria->compare('date_in',$this->date_in,true);
 		$criteria->compare('date_sold',$this->date_sold,true);
 		$criteria->compare('qty',$this->qty);
 		$criteria->compare('shop_code',$this->shop_code,true);

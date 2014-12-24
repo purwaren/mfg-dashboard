@@ -127,4 +127,21 @@ class Store extends CActiveRecord
 		}
 		return $options;
 	}
+	
+	public function getAllStoreByGroup()
+	{
+		$sql='SELECT DISTINCT koalisi FROM store';
+		$sql2='SELECT * FROM store WHERE koalisi = :group ORDER BY urutan';
+		$cmd = Yii::app()->db->createCommand($sql);
+		$cmd2 = Yii::app()->db->createCommand($sql2);
+		$group = $cmd->queryAll(true);
+		$data=array();
+		foreach($group as $g)
+		{
+			$data[$g['koalisi']]=$cmd2->queryAll(true,array(
+				':group'=>$g['koalisi']
+			));		
+		}
+		return $data;
+	}
 }

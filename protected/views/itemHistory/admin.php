@@ -80,15 +80,21 @@ if(isset($itemHist))
 		$width = 'width: '.$width.'px;';
 	}
 	//processing header
-	$h1='';$h2='';$t=0;
-	foreach($store as $row)
-	{		
-		$t++;
-		if($t%2==1)
-			$h2 .= '<td style="color:#555;background-color:#ddd;text-align:bold;font-weight:bold;text-align:center;">'.$row->alias.'</td>';
-		else $h2 .= '<td style="color:#555;background-color:#fff;text-align:bold;font-weight:bold;text-align:center;">'.$row->alias.'</td>';
+	$h1='';$h2='';$k=0;
+	foreach($group as $key=>$g)
+	{
+		$t=0;
+		foreach($g as $row)
+		{
+			$t++;$k++;
+			if($k%2==1)
+				$h2 .= '<td style="color:#555;background-color:#ddd;text-align:bold;font-weight:bold;text-align:center;">'.$row['alias'].'</td>';
+			else $h2 .= '<td style="color:#555;background-color:#fff;text-align:bold;font-weight:bold;text-align:center;">'.$row['alias'].'</td>';
+		}
+		
+		$h1 .='<th colspan="'.$t.'">'.$key.'</th>';
 	}
-	$header_store = '<tr><th colspan="'.$t.'">STOCK READY</th></tr><tr>'.$h2.'</tr>';
+	$header_store = '<tr>'.$h1.'</tr><tr>'.$h2.'</tr>';
 	
 	//processing row data
 	$row_data='';

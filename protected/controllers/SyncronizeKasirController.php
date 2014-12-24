@@ -277,6 +277,15 @@ class SyncronizeKasirController extends Controller
 			}				
 		}
 	}
+	
+	/**
+	 * Receiving and saving item sold by shop
+	 */
+	public function actionSyncSoldItem()
+	{
+		
+	}
+	
 	/**
 	 * 
 	 * Receiving and saving item retur

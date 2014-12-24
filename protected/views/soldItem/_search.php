@@ -22,6 +22,11 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->label($model,'date_in'); ?>
+		<?php echo $form->textField($model,'date_in'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->label($model,'date_sold'); ?>
 		<?php echo $form->textField($model,'date_sold'); ?>
 	</div>

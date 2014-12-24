@@ -244,8 +244,8 @@ class ItemHistoryController extends Controller
 			$end=$model->size*$page;
 				
 			//get all store
-			$store=Store::model()->findAllBySql('SELECT * FROM store ORDER BY code');
-				
+			$group=Store::model()->getAllStoreByGroup();
+			$store=Store::model()->findAllBySql('SELECT * FROM store ORDER BY koalisi, urutan');
 			//get all item
 			$data=$model->searchUniqueItem();
 				
@@ -263,14 +263,15 @@ class ItemHistoryController extends Controller
 		}
 		//var_dump($pages);exit;
 		$this->render('admin',array(
-				'model'=>$model,
-				'data'=>$data,
-				'store'=>$store,
-				'pages'=>$pages,
-				'page'=>$page,
-				'summary'=>$summary,
-				'total'=>$total,
-				'itemHist'=>$itemHist
+			'model'=>$model,
+			'data'=>$data,
+			'store'=>$store,
+			'pages'=>$pages,
+			'page'=>$page,
+			'summary'=>$summary,
+			'total'=>$total,
+			'itemHist'=>$itemHist,
+			'group'=>$group
 		));
 	}
 	

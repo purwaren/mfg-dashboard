@@ -26,6 +26,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'date_in'); ?>
+		<?php echo $form->textField($model,'date_in'); ?>
+		<?php echo $form->error($model,'date_in'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'date_sold'); ?>
 		<?php echo $form->textField($model,'date_sold'); ?>
 		<?php echo $form->error($model,'date_sold'); ?>
