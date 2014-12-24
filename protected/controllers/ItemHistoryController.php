@@ -233,7 +233,7 @@ class ItemHistoryController extends Controller
 		}
 			
 		$itemHist=Yii::app()->user->getState('ItemHistory');
-		$data='';$store='';$pages='';$summary='';$total='';
+		$data='';$store='';$pages='';$summary='';$total='';$group='';
 		if(isset($itemHist))
 		{
 			$model->attributes=$itemHist;
