@@ -237,6 +237,7 @@ class ItemHistoryController extends Controller
 		if(isset($itemHist))
 		{
 			$model->attributes=$itemHist;
+			
 			//setting page size
 			$model->size = Yii::app()->params['pagination']['size'];
 			$model->start = $model->size*($page-1);
@@ -259,6 +260,7 @@ class ItemHistoryController extends Controller
 			else if($count-$start < 10)
 				$summary=$start.'-'.$count.' dari '.$count;
 			else $summary=$start.'-'.$end.' dari '.$count;
+			
 			$total=$model->summaryAllItem();
 		}
 		//var_dump($pages);exit;

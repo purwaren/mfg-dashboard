@@ -23,9 +23,9 @@ $this->menu=array(
 	'attributes'=>array(
 		'id',
 		'category',
-		'date_in',
-		'date_sold',
-		'qty',
+		'trx_date',
+		'qty_in',
+		'qty_sold',
 		'shop_code',
 	),
 )); ?>

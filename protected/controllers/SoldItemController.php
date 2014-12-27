@@ -6,7 +6,7 @@ class SoldItemController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/column1';
 
 	/**
 	 * @return array action filters
@@ -32,7 +32,7 @@ class SoldItemController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','admin','delete'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -131,15 +131,58 @@ class SoldItemController extends Controller
 	/**
 	 * Manages all models.
 	 */
-	public function actionAdmin()
+	public function actionAdmin($page=1)
 	{
+		Yii::app()->user->setReturnUrl(Yii::app()->request->requestUri);
 		$model=new SoldItem('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['SoldItem']))
-			$model->attributes=$_GET['SoldItem'];
+		
+		if(isset($_POST['SoldItem']))
+		{			
+			Yii::app()->user->setState('SoldItem',$_POST['SoldItem']);
+		}
+		$soldItem = Yii::app()->user->getState('SoldItem');
+		$data='';$store='';$pages='';$summary='';$total='';$group='';
+		if(isset($soldItem))
+		{
+			//var_dump($soldItem);
+			$model->attributes=$soldItem;
+			
+			//setting page size
+			$model->size = Yii::app()->params['pagination']['size'];
+			$model->start = $model->size*($page-1);
+			$start = $model->size*($page-1)+1;
+			$end=$model->size*$page;
+			
+			//get all store
+			$group=Store::model()->getAllStoreByGroup();
+			$store=Store::model()->findAllBySql('SELECT * FROM store ORDER BY koalisi, urutan');
+			
+			//get all unique category
+			$data = $model->findAllUniqueItemCategory();
+			
+			//set pagination
+			$count = $model->countAllUniqueItemCategory();
+			
+			$pages = new CPagination($count);
+			$pages->pageSize = $model->size;
+			if($count==0)
+				$summary='0';
+			else if($count-$start < 10)
+				$summary=$start.'-'.$count.' dari '.$count;
+			else $summary=$start.'-'.$end.' dari '.$count;
+			
+		}
 
 		$this->render('admin',array(
 			'model'=>$model,
+			'data'=>$data,
+			'store'=>$store,
+			'pages'=>$pages,
+			'page'=>$page,
+			'summary'=>$summary,
+			'soldItem'=>$soldItem,
+			'group'=>$group
 		));
 	}
 

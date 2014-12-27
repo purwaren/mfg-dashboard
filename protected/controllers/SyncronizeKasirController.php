@@ -283,7 +283,72 @@ class SyncronizeKasirController extends Controller
 	 */
 	public function actionSyncSoldItem()
 	{
-		
+		if(Yii::app()->request->isPostRequest)
+		{
+			//jika sudah ada data, tinggal insert atau update saja
+			if(isset($_POST['data']))
+			{
+				$data = CJSON::decode($_POST['data']);
+				$status=true; $saved=0; $error=array();$update=0;
+				foreach($data as $row)
+				{
+					$sold=SoldItem::model()->findByAttributes(array(
+						'shop_code'=>$_POST['store_code'],
+						'category'=>$row['kelompok_barang'],
+						'trx_date'=>$row['tanggal']
+					));
+					if(empty($sold))
+					{
+						$sold=new SoldItem();
+					}
+					else 
+						$update++;
+					
+					$sold->category=$row['kelompok_barang'];
+					$sold->trx_date=$row['tanggal'];
+					$sold->qty_in=$row['qty_masuk'];
+					$sold->qty_sold=$row['qty_jual'];
+					$sold->shop_code=$_POST['store_code'];
+					if($sold->save())
+						$saved++;
+					else 
+					{
+						$status=false;
+						$error[]=$sold->getErrors();
+					}
+				}
+				
+				Yii::log('part: '.$_POST['part'].', saved: '.$saved.', updated: '.$update.', status: '.print_r($status,true));
+				
+				if($status)
+					echo CJSON::encode(array(
+						'status'=>'ok'
+					));
+				else echo CJSON::encode(array(
+					'status'=>'error',
+					'message'=>$error
+				));
+			}
+			//jika belum, kasih tahu dari tanggal berapa data yang belum masuk, kasih spare 1 minggu
+			else 
+			{
+				$last = SoldItem::model()->findLastSyncDate(array(
+					':shop'=>$_POST['store_code']
+				));
+				if($last)
+				{
+					echo CJSON::encode(array(
+						'last_sync'=>$last->trx_date,
+						'status'=>'ok'
+					));
+				}
+				else 
+					echo CJSON::encode(array(
+						'last_sync'=>0,
+						'status'=>'ok'
+					));
+			}
+		}
 	}
 	
 	/**

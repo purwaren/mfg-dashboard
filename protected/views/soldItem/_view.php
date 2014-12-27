@@ -13,16 +13,16 @@
 	<?php echo CHtml::encode($data->category); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_in')); ?>:</b>
-	<?php echo CHtml::encode($data->date_in); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('trx_date')); ?>:</b>
+	<?php echo CHtml::encode($data->trx_date); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_sold')); ?>:</b>
-	<?php echo CHtml::encode($data->date_sold); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('qty_in')); ?>:</b>
+	<?php echo CHtml::encode($data->qty_in); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('qty')); ?>:</b>
-	<?php echo CHtml::encode($data->qty); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('qty_sold')); ?>:</b>
+	<?php echo CHtml::encode($data->qty_sold); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('shop_code')); ?>:</b>

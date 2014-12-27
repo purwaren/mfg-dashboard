@@ -8,41 +8,57 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'action'=>Yii::app()->createUrl($this->route),
-	'method'=>'get',
+	'method'=>'post',
 )); ?>
 
-	<div class="row">
-		<?php echo $form->label($model,'id'); ?>
-		<?php echo $form->textField($model,'id'); ?>
-	</div>
+	<table>
+		<tr>
+			<td class="label-column"><?php echo $form->label($model,'category'); ?></td>
+			<td class="value-column"><?php echo $form->textField($model,'category'); ?></td>
+		</tr>
+		<tr>
+			<td class="label-column"><?php echo $form->label($model,'trx_date'); ?></td>
+			<td class="value-column">
+			<?php $this->widget('zii.widgets.jui.CJuiDatePicker',array(
+				    'name'=>'SoldItem[start_date]',
+					'value'=>$model->start_date,					
+				    // additional javascript options for the date picker plugin
+				    'options'=>array(
+				        'showAnim'=>'fold',
+						'dateFormat'=>'yy-mm-dd'
+				    ),
+					
+				    
+				));?> s.d.
+				<?php $this->widget('zii.widgets.jui.CJuiDatePicker',array(
+				    'name'=>'SoldItem[end_date]',
+					'value'=>$model->end_date,					
+				    // additional javascript options for the date picker plugin
+				    'options'=>array(
+				        'showAnim'=>'fold',
+						'dateFormat'=>'yy-mm-dd'
+				    ),
+					
+				    
+				));?>
+			</td>
+		</tr>
+		<tr>
+			<td class="label-column"><?php echo $form->label($model,'sortBy'); ?></td>
+			<td class="value-column"><?php echo $form->dropDownList($model,'sortBy',SoldItem::getAllSortOptions(),
+				array('class'=>'span-5')); ?></td>
+		</tr>
+		<tr>
+			<td class="label-column"><?php echo $form->label($model,'sortType'); ?></td>
+			<td class="value-column"><?php echo $form->dropDownList($model,'sortType',SoldItem::getAllSortTypeOptions(),
+				array('class'=>'span-5')); ?></td>
+		</tr>
+	</table>
 
-	<div class="row">
-		<?php echo $form->label($model,'category'); ?>
-		<?php echo $form->textField($model,'category',array('size'=>8,'maxlength'=>8)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'date_in'); ?>
-		<?php echo $form->textField($model,'date_in'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'date_sold'); ?>
-		<?php echo $form->textField($model,'date_sold'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'qty'); ?>
-		<?php echo $form->textField($model,'qty'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'shop_code'); ?>
-		<?php echo $form->textField($model,'shop_code',array('size'=>8,'maxlength'=>8)); ?>
-	</div>
+	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
+		<?php echo CHtml::submitButton('Tampil'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

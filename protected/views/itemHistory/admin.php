@@ -118,7 +118,7 @@ if(isset($itemHist))
 		foreach($store as $st)
 		{
 			$t++;
-			$dhist = ItemHistory::model()->hist()->findByAttributes(array(
+			$dhist = ItemHistory::model()->findByAttributes(array(
 				'item_code'=>$row->item_code,
 				'store_code'=>$st->code
 			));

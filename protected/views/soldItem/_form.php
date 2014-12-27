@@ -26,21 +26,21 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date_in'); ?>
-		<?php echo $form->textField($model,'date_in'); ?>
-		<?php echo $form->error($model,'date_in'); ?>
+		<?php echo $form->labelEx($model,'trx_date'); ?>
+		<?php echo $form->textField($model,'trx_date'); ?>
+		<?php echo $form->error($model,'trx_date'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date_sold'); ?>
-		<?php echo $form->textField($model,'date_sold'); ?>
-		<?php echo $form->error($model,'date_sold'); ?>
+		<?php echo $form->labelEx($model,'qty_in'); ?>
+		<?php echo $form->textField($model,'qty_in'); ?>
+		<?php echo $form->error($model,'qty_in'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'qty'); ?>
-		<?php echo $form->textField($model,'qty'); ?>
-		<?php echo $form->error($model,'qty'); ?>
+		<?php echo $form->labelEx($model,'qty_sold'); ?>
+		<?php echo $form->textField($model,'qty_sold'); ?>
+		<?php echo $form->error($model,'qty_sold'); ?>
 	</div>
 
 	<div class="row">
