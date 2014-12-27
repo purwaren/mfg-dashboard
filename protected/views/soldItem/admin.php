@@ -103,7 +103,7 @@ if(isset($soldItem)) {
 		$row_data .='<tr>
 					<td>'.$i.'</td>
 					<td>'.$row->category.'</td>
-					<td style="text-align: right">'.number_format($row->total).'</td>
+					<td style="text-align: right">'.number_format($row->qty_sold).'</td>
 					'.$row_store.'
 			</tr>';
 		

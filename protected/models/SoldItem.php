@@ -144,7 +144,7 @@ class SoldItem extends CActiveRecord
 	
 	public function findAllUniqueItemCategory()
 	{
-		$sql='SELECT category, SUM(qty_sold) AS total FROM sold_item';
+		$sql='SELECT category, SUM(qty_sold) AS qty_sold FROM sold_item';
 		$condition=array();
 		$param=array();
 		
