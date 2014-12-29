@@ -56,11 +56,11 @@ or <b>=</b>) untuk menentukan perbandingan pada awal setiap kata kunci pencarian
 		),
 		array(
 			'name'=>'created_time',
-			'value'=>'date("d M Y h:i:s",$data->created_time)'
+			'value'=>'date("d M Y H:i:s",$data->created_time)'
 		),
 		array(
 			'name'=>'last_login_time',
-			'value'=>'($data->last_login_time>0)?date("d M Y h:i:s",$data->last_login_time):"Belum Pernah"'
+			'value'=>'($data->last_login_time>0)?date("d M Y H:i:s",$data->last_login_time):"Belum Pernah"'
 		),
 		
 		array(
