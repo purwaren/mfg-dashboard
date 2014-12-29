@@ -5468,3 +5468,36 @@ Stack trace:
 REQUEST_URI=/yii/app/dashboard/index.php/soldItem/admin
 HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/soldItem/admin?page=5
 ---
+2014/12/27 17:39:19 [info] [application] part: 1, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:20 [info] [application] part: 2, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:20 [info] [application] part: 3, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:20 [info] [application] part: 4, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:20 [info] [application] part: 5, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:21 [info] [application] part: 6, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:21 [info] [application] part: 7, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:21 [info] [application] part: 8, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:22 [info] [application] part: 9, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:22 [info] [application] part: 10, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2014/12/27 17:39:23 [info] [application] part: 11, saved: 50, updated: 0, status: 1
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/SyncronizeKasirController.php (321)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)

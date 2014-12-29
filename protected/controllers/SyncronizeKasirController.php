@@ -318,7 +318,7 @@ class SyncronizeKasirController extends Controller
 					}
 				}
 				
-				Yii::log('part: '.$_POST['part'].', saved: '.$saved.', updated: '.$update.', status: '.print_r($status,true));
+				//Yii::log('part: '.$_POST['part'].', saved: '.$saved.', updated: '.$update.', status: '.print_r($status,true));
 				
 				if($status)
 					echo CJSON::encode(array(

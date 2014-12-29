@@ -42,40 +42,62 @@ class SyncronizeGudangController extends Controller
 	{
 		if(Yii::app()->request->isPostRequest)
 		{
-			$data=CJSON::decode($_POST['data']);
-			$status=true;$saved=0;$error=array();
-			foreach($data as $row)
+			//jika sudah ada data, tinggal insert atau update saja
+			if(isset($_POST['data']))
 			{
-				$item = ItemDistribution::model()->findByAttributes(array(
-					'item_code'=>$row['item_code'],
-					'shop_code'=>$row['shop_code'],
+				$data=CJSON::decode($_POST['data']);
+				$status=true;$saved=0;$error=array();
+				foreach($data as $row)
+				{
+					$item = ItemDistribution::model()->findByAttributes(array(
+							'item_code'=>$row['item_code'],
+							'shop_code'=>$row['shop_code'],
+					));
+					if(empty($item))
+					{
+						$item = new ItemDistribution();
+					}
+				
+					$item->item_code = $row['item_code'];
+					$item->shop_code = $row['shop_code'];
+					$item->qty_total = $row['qty'];
+					$item->date_dist = $row['dist_out'];
+				
+					if($item->save())
+						$saved++;
+					else
+					{
+						$status=false;
+						$error[]=$item->getErrors();
+						$error[]=$item->attributes;
+					}
+				}
+				if($status)
+					echo CJSON::encode(array(
+							'status'=>'ok'
+					));
+				else echo CJSON::encode(array(
+						'status'=>'error',
+						'message'=>$error
 				));
-				if(empty($item))
-				{
-					$item = new ItemDistribution();
-				}
-				
-				$item->item_code = $row['item_code'];
-				$item->shop_code = $row['shop_code'];
-				$item->qty_total = $row['qty_total'];
-				
-				if($item->save())
-					$saved++;
-				else
-				{
-					$status=false;
-					$error[]=$item->getErrors();
-					$error[]=$item->attributes;
-				}
 			}
-			if($status)
-				echo CJSON::encode(array(
-						'status'=>'ok'
+			//jika belum, kasih tahu dari tanggal berapa data yang belum masuk, kasih spare 1 minggu
+			else 
+			{
+				$last=ItemDistribution::model()->findLastSyncDate(array(
+					':shop'=>$_POST['store_code']
 				));
-			else echo CJSON::encode(array(
-					'status'=>'error',
-					'message'=>$error
-			));
+				if(empty($last))
+					echo CJSON::encode(array(
+						'last_sync'=>0,
+						'status'=>'ok'
+					));
+				else 
+					echo CJSON::encode(array(
+							'last_sync'=>$last->date_dist,
+							'status'=>'ok'
+					));
+			}			
 		}
 	}
 	
