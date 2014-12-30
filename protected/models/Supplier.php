@@ -123,4 +123,10 @@ class Supplier extends CActiveRecord
 		}
 		return $option;
 	}
+	
+	public function findLastSyncDate()
+	{
+		$sql='SELECT * FROM supplier ORDER BY entry_date DESC, id DESC';
+		return self::model()->findBySql($sql);
+	}
 }
