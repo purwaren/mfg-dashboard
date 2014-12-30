@@ -103,9 +103,9 @@ class ItemDistribution extends CActiveRecord
 		return parent::model($className);
 	}
 	
-	public function findLastSyncDate($param)
+	public function findLastSyncDate()
 	{
-		$sql='SELECT * FROM item_distribution WHERE shop_code = :shop ORDER BY date_dist DESC, id DESC';
-		return self::model()->findBySql($sql,$param);
+		$sql='SELECT * FROM item_distribution ORDER BY date_dist DESC, id DESC';
+		return self::model()->findBySql($sql);
 	}
 }

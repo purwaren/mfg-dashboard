@@ -197,6 +197,7 @@ if(isset($itemHist))
 	<div>
 	<?php $this->widget('CLinkPager', array(
 	    'pages' => $pages,
+		'firstPageCssClass'=>'page'
 	)) ?></div>
 </div>
 <?php }?>

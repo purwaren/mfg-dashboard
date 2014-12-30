@@ -84,9 +84,7 @@ class SyncronizeGudangController extends Controller
 			//jika belum, kasih tahu dari tanggal berapa data yang belum masuk, kasih spare 1 minggu
 			else 
 			{
-				$last=ItemDistribution::model()->findLastSyncDate(array(
-					':shop'=>$_POST['store_code']
-				));
+				$last=ItemDistribution::model()->findLastSyncDate();
 				if(empty($last))
 					echo CJSON::encode(array(
 						'last_sync'=>0,
