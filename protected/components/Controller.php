@@ -41,7 +41,7 @@ class Controller extends CController
 		echo '</pre>';
 	}
 
-	public function beforeAction()
+	public function beforeAction($action)
 	{
 		$this->pageTitle=Yii::app()->name;
 		$methods = get_class_methods(ucfirst($this->getId()).'Controller');

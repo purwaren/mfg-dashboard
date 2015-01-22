@@ -40,7 +40,9 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+
+$this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'store-revenue-grid',
 	'dataProvider'=>$model->search(),
 	//'filter'=>$model,
@@ -51,7 +53,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		),
 		'store_code',
 		array(
-			'header'=>'Name',
+			'header'=>'Nama Toko',
 			'value'=>'$data->getStoreName()'
 		),
 		array(
@@ -60,10 +62,17 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 			'footer'=>'TOTAL'
 		),
 		array(
+			'visible'=>Yii::app()->user->checkAccess('owner'),
 			'name'=>'current_revenue',
 			'value'=>'number_format($data->current_revenue)',
 			'htmlOptions'=>array('style'=>'text-align:right;font-weight:bold'),
 			'footer'=>number_format($model->getTotalRevenue()),
+			'footerHtmlOptions'=>array('style'=>'text-align:right;font-style:normal;font-weight:bold'),
+		),
+		array(
+			'name'=>'point',			
+			'footer'=>'100',
+			'htmlOptions'=>array('style'=>'text-align:right;font-weight:bold'),
 			'footerHtmlOptions'=>array('style'=>'text-align:right;font-style:normal;font-weight:bold'),
 		),
 		array(

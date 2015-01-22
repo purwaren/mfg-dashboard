@@ -12,11 +12,7 @@
 )); ?>
 
 	<table>
-		<tr>
-			<td class="label-column"><?php echo $form->label($model,'store_code'); ?></td>
-			<td class="value-column"><?php echo $form->dropDownList($model,'store_code',StoreIp::getAllStoreCode(),
-					array('prompt'=>'Pilih Toko')); ?></td>
-		</tr>
+		
 		<tr>
 			<td class="label-column"><?php echo $form->label($model,'date'); ?></td>
 			<td class="value-column">
@@ -35,10 +31,7 @@
 			)); ?>
 			</td>
 		</tr>
-		<tr>
-			<td class="label-column"><?php echo $form->label($model,'current_revenue'); ?></td>
-			<td class="value-column"><?php echo $form->textField($model,'current_revenue'); ?></td>
-		</tr>
+		
 	</table>	
 
 	<div class="row buttons">

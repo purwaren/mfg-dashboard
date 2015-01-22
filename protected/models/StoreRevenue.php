@@ -14,6 +14,8 @@ class StoreRevenue extends CActiveRecord
 {
 	public $total;
 	public $date_to;
+	public $point;
+	public $i=0;
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -68,10 +70,11 @@ class StoreRevenue extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'store_code' => 'Store Code',
-			'date' => 'Date',
-			'current_revenue' => 'Current Revenue',
-			'last_updated' => 'Last Updated',
+			'store_code' => 'Kode Toko',
+			'date' => 'Tanggal',
+			'current_revenue' => 'Omset',
+			'last_updated' => 'Terakhir Update',
+			'point' => 'Poin'
 		);
 	}
 
@@ -114,6 +117,23 @@ class StoreRevenue extends CActiveRecord
 		));
 	}
 	
+	public function afterFind()
+	{
+		$total_omset = Yii::app()->user->getState('total_omset');
+		if(empty($total_omset))
+		{
+			$total_omset = $this->getTotalRevenue();
+			Yii::app()->user->setState('total_omset',$total_omset);
+		}	
+		
+		$this->point = round(($this->total/$total_omset)*100,2);
+	}
+	
+	public function getBolo()
+	{
+		return 'bolo bolo bolo';
+	}
+	
 	/**
 	 * Get formatted date with string
 	 */
@@ -141,36 +161,39 @@ class StoreRevenue extends CActiveRecord
 	 */
 	public function getTotalRevenue()
 	{
-		
+		$param=array();
 		if(!empty($this->date) && !empty($this->store_code))
 		{
 			if(!empty($this->date_to))
 			{
 				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue 
-						WHERE date >= :date AND date <= :date_to  AND store_code = :code';
-				$query = self::model()->findBySql($sql,array(
+						WHERE date >= :date AND date <= :date_to  AND store_code = :code';	
+				$param = array(
 					':date'=>$this->date,
 					':date_to'=>$this->date_to,
 					':code'=>$this->store_code
-				));
+				);
 			}
 			else
 			{
 				if(!empty($this->date_to))
 				{
 					$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue 
-							WHERE date >= :date AND date <= :date_to';
-					$query = self::model()->findBySql($sql,array(
-						':date'=>$this->date,
-						':date_to'=>$this->date_to,					
-					));
+							WHERE date >= :date AND date <= :date_to';		
+					$param = array(
+							':date'=>$this->date,
+							':date_to'=>$this->date_to,
+// 							':code'=>$this->store_code
+					);
 				}
 				else
 				{
 					$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date = :date';
-					$query = self::model()->findBySql($sql,array(
-						':date'=>$this->date,					
-					));
+					$param = array(
+							':date'=>$this->date,
+// 							':date_to'=>$this->date_to,
+// 							':code'=>$this->store_code
+					);
 				}	
 			}			
 		}
@@ -179,34 +202,41 @@ class StoreRevenue extends CActiveRecord
 			if(!empty($this->date_to))
 			{
 				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date >= :date AND date <= :date_to';
-				$query = self::model()->findBySql($sql,array(
-					':date'=>$this->date,
-					':date_to'=>$this->date_to,
-				));
+				$param = array(
+						':date'=>$this->date,
+						':date_to'=>$this->date_to,
+// 						':code'=>$this->store_code
+				);
 			}
 			else
 			{
 				$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE date = :date';
-				$query = self::model()->findBySql($sql,array(
-					':date'=>$this->date
-				));
+				$param = array(
+						':date'=>$this->date,
+// 						':date_to'=>$this->date_to,
+// 						':code'=>$this->store_code
+				);
 			}
 		}
 		else if(!empty($this->store_code))
 		{
 			$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue WHERE store_code = :code';
-			$query = self::model()->findBySql($sql,array(
-				':code'=>$this->store_code
-			));
+			$param = array(
+// 					':date'=>$this->date,
+// 					':date_to'=>$this->date_to,
+					':code'=>$this->store_code
+			);
 		}
 		else 
 		{
 			$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue';
-			$query = self::model()->findBySql($sql);
-		}
+			
+		}	
+		$cmd = Yii::app()->db->createCommand($sql);
+		$total = $cmd->queryScalar($param);
 		
-		if(!empty($query))
-			return $query->total;
+		if(!empty($total))
+			return $total;
 		else return 0;
 	}
 }
