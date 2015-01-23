@@ -100,7 +100,7 @@ class StoreRevenue extends CActiveRecord
 		{
 			$criteria->compare('date',$this->date,true);
 		}
-		$criteria->select = 'id, store_code, date, sum(current_revenue) AS total,  sum(current_revenue) AS current_revenue, last_updated';
+		$criteria->select = 'id, store_code, min(date) AS date, max(date) AS date_to, sum(current_revenue) AS total,  sum(current_revenue) AS current_revenue, last_updated';
 		$criteria->group = 'store_code';
 		$criteria->order = 'total desc';
 		$criteria->compare('id',$this->id);
@@ -118,15 +118,12 @@ class StoreRevenue extends CActiveRecord
 	}
 	
 	public function afterFind()
-	{
-		$total_omset = Yii::app()->user->getState('total_omset');
-		if(empty($total_omset))
-		{
-			$total_omset = $this->getTotalRevenue();
-			Yii::app()->user->setState('total_omset',$total_omset);
-		}	
-		
-		$this->point = round(($this->total/$total_omset)*100,2);
+	{		
+		$temp = $this->store_code;
+		$this->store_code='';
+		$total_omset = $this->getTotalRevenue();
+		$this->store_code=$temp;
+		$this->point = round(($this->total/$total_omset)*100,2);		
 	}
 	
 	
@@ -270,6 +267,7 @@ class StoreRevenue extends CActiveRecord
 			$sql = 'SELECT SUM(current_revenue) as total FROM store_revenue';
 			
 		}	
+		//var_dump($sql);
 		$cmd = Yii::app()->db->createCommand($sql);
 		$total = $cmd->queryScalar($param);
 		
