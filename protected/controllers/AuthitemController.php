@@ -27,7 +27,7 @@ class AuthitemController extends Controller
 	public function accessRules()
 	{
 		//$action = $this->generateAuthRule();
-		$action=array('create','update','delete','admin','assign','role','view');
+		$action=array('create','update','delete','admin','assign','role','view','reload','refresh','getAllController');
 		//var_dump($action);
 		return array(			
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions				

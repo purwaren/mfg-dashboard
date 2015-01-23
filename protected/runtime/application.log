@@ -5702,3 +5702,54 @@ Stack trace:
 REQUEST_URI=/yii/app/dashboard/index.php/storeRevenue/omsetGroup?StoreRevenue%5Bdate%5D=2015-01-12&StoreRevenue%5Bdate_to%5D=2015-01-23&yt0=Search
 HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/storeRevenue/omsetGroup?StoreRevenue%5Bdate%5D=2015-01-12&StoreRevenue%5Bdate_to%5D=&yt0=Search
 ---
+2015/01/24 00:21:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 /Users/purwaren/Web/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/purwaren/Web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/purwaren/Web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/purwaren/Web/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/purwaren/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(282): CController->run('getAllControlle...')
+#8 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('authitem/getAll...')
+#9 /Users/purwaren/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/purwaren/Web/yii/app/dashboard/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/authitem/getAllController
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/authitem/refresh
+---
+2015/01/24 00:21:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 /Users/purwaren/Web/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/purwaren/Web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/purwaren/Web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/purwaren/Web/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/purwaren/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(282): CController->run('getAllControlle...')
+#8 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('authitem/getAll...')
+#9 /Users/purwaren/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/purwaren/Web/yii/app/dashboard/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/authitem/getAllController
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/authitem/refresh
+---
+2015/01/24 00:22:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 /Users/purwaren/Web/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/purwaren/Web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/purwaren/Web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/purwaren/Web/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/purwaren/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(282): CController->run('getAllControlle...')
+#8 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('authitem/getAll...')
+#9 /Users/purwaren/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/purwaren/Web/yii/app/dashboard/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/authitem/getAllController
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/authitem/refresh
+---

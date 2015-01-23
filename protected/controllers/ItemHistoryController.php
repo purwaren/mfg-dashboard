@@ -32,7 +32,7 @@ class ItemHistoryController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','adminJakarta','viewJakarta','adminJakartaSales'),
+				'actions'=>array('create','update','admin','adminJakarta','viewJakarta','adminJakartaSales','reload'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
