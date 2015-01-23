@@ -5592,3 +5592,113 @@ Stack trace:
 #21 {main}
 REQUEST_URI=/yii/app/dashboard/index.php/storeRevenue/admin
 ---
+2015/01/23 23:01:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 /Users/purwaren/Web/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/purwaren/Web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/purwaren/Web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/purwaren/Web/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/purwaren/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(282): CController->run('omsetGroup')
+#8 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('storeRevenue/om...')
+#9 /Users/purwaren/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/purwaren/Web/yii/app/dashboard/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/storeRevenue/omsetGroup
+---
+2015/01/23 23:01:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /Users/purwaren/Web/yii/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'Anda tidak diot...')
+#1 /Users/purwaren/Web/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /Users/purwaren/Web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /Users/purwaren/Web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /Users/purwaren/Web/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /Users/purwaren/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(282): CController->run('omsetGroup')
+#8 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('storeRevenue/om...')
+#9 /Users/purwaren/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /Users/purwaren/Web/yii/app/dashboard/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/storeRevenue/omsetGroup
+---
+2015/01/23 23:22:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() gagal: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'date >= '2015-01-23' GROUP BY koalisi' at line 2. Statement SQL yang dijalankan: SELECT koalisi, sum(current_revenue) AS omset  
+				FROM store_revenue r LEFT JOIN store s ON r.store_code = s.code WHERE koalisi IS NOT NULL date >= :from GROUP BY koalisi.
+in /Users/purwaren/Web/yii/app/dashboard/protected/models/StoreRevenue.php (182)
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/StoreRevenueController.php (158)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2015/01/23 23:22:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand gagal menjalankan statementSQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'date >= '2015-01-23' GROUP BY koalisi' at line 2. The SQL statement executed was: SELECT koalisi, sum(current_revenue) AS omset  
+				FROM store_revenue r LEFT JOIN store s ON r.store_code = s.code WHERE koalisi IS NOT NULL date >= :from GROUP BY koalisi' in /Users/purwaren/Web/yii/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /Users/purwaren/Web/yii/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Users/purwaren/Web/yii/app/dashboard/protected/models/StoreRevenue.php(182): CDbCommand->queryAll(true, Array)
+#2 /Users/purwaren/Web/yii/app/dashboard/protected/controllers/StoreRevenueController.php(158): StoreRevenue->getOmsetByGroup()
+#3 /Users/purwaren/Web/yii/framework/web/actions/CInlineAction.php(49): StoreRevenueController->actionOmsetGroup()
+#4 /Users/purwaren/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/purwaren/Web/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/purwaren/Web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/purwaren/Web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/purwaren/Web/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/purwaren/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(282): CController->run('omsetGroup')
+#13 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('storeRevenue/om...')
+#14 /Users/purwaren/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/purwaren/Web/yii/app/dashboard/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/storeRevenue/omsetGroup
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/site/login
+---
+2015/01/23 23:32:25 [error] [php] Illegal string offset 'omset' (/Users/purwaren/Web/yii/app/dashboard/protected/views/storeRevenue/omsetGroup.php:54)
+Stack trace:
+#0 /Users/purwaren/Web/yii/framework/web/CController.php(869): StoreRevenueController->renderFile()
+#1 /Users/purwaren/Web/yii/framework/web/CController.php(782): StoreRevenueController->renderPartial()
+#2 /Users/purwaren/Web/yii/app/dashboard/protected/controllers/StoreRevenueController.php(163): StoreRevenueController->render()
+#3 /Users/purwaren/Web/yii/framework/web/actions/CInlineAction.php(49): StoreRevenueController->actionOmsetGroup()
+#4 /Users/purwaren/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(133): StoreRevenueController->runAction()
+#6 /Users/purwaren/Web/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/purwaren/Web/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/purwaren/Web/yii/framework/web/filters/CInlineFilter.php(58): StoreRevenueController->filterAccessControl()
+#9 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/purwaren/Web/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/purwaren/Web/yii/framework/web/CController.php(265): StoreRevenueController->runActionWithFilters()
+#12 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(282): StoreRevenueController->run()
+#13 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/purwaren/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/purwaren/Web/yii/app/dashboard/index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/app/dashboard/index.php/storeRevenue/omsetGroup?StoreRevenue%5Bdate%5D=2015-01-12&StoreRevenue%5Bdate_to%5D=&yt0=Search
+in /Users/purwaren/Web/yii/app/dashboard/protected/views/storeRevenue/omsetGroup.php (54)
+in /Users/purwaren/Web/yii/app/dashboard/protected/controllers/StoreRevenueController.php (163)
+in /Users/purwaren/Web/yii/app/dashboard/index.php (13)
+2015/01/23 23:48:11 [error] [exception.CException] exception 'CException' with message 'Properti "ChBars.showTooltips" tidak didefinisikan.' in /Users/purwaren/Web/yii/framework/base/CComponent.php:173
+Stack trace:
+#0 /Users/purwaren/Web/yii/framework/web/CWidgetFactory.php(161): CComponent->__set('showTooltips', true)
+#1 /Users/purwaren/Web/yii/framework/web/CBaseController.php(146): CWidgetFactory->createWidget(Object(StoreRevenueController), 'chartjs.widgets...', Array)
+#2 /Users/purwaren/Web/yii/framework/web/CBaseController.php(172): CBaseController->createWidget('chartjs.widgets...', Array)
+#3 /Users/purwaren/Web/yii/app/dashboard/protected/views/storeRevenue/omsetGroup.php(76): CBaseController->widget('chartjs.widgets...', Array)
+#4 /Users/purwaren/Web/yii/framework/web/CBaseController.php(126): require('/Users/purwaren...')
+#5 /Users/purwaren/Web/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/purwaren...', Array, true)
+#6 /Users/purwaren/Web/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/purwaren...', Array, true)
+#7 /Users/purwaren/Web/yii/framework/web/CController.php(782): CController->renderPartial('omsetGroup', Array, true)
+#8 /Users/purwaren/Web/yii/app/dashboard/protected/controllers/StoreRevenueController.php(164): CController->render('omsetGroup', Array)
+#9 /Users/purwaren/Web/yii/framework/web/actions/CInlineAction.php(49): StoreRevenueController->actionOmsetGroup()
+#10 /Users/purwaren/Web/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/purwaren/Web/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/purwaren/Web/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/purwaren/Web/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/purwaren/Web/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/purwaren/Web/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/purwaren/Web/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(282): CController->run('omsetGroup')
+#19 /Users/purwaren/Web/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('storeRevenue/om...')
+#20 /Users/purwaren/Web/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/purwaren/Web/yii/app/dashboard/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii/app/dashboard/index.php/storeRevenue/omsetGroup?StoreRevenue%5Bdate%5D=2015-01-12&StoreRevenue%5Bdate_to%5D=2015-01-23&yt0=Search
+HTTP_REFERER=http://localhost/yii/app/dashboard/index.php/storeRevenue/omsetGroup?StoreRevenue%5Bdate%5D=2015-01-12&StoreRevenue%5Bdate_to%5D=&yt0=Search
+---

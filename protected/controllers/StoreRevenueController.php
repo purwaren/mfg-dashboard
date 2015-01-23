@@ -32,7 +32,7 @@ class StoreRevenueController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin'),
+				'actions'=>array('create','update','admin', 'omsetGroup'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -141,6 +141,26 @@ class StoreRevenueController extends Controller
 
 		$this->render('admin',array(
 			'model'=>$model,
+		));
+	}
+	
+	/**
+	 * Manages all models.
+	 */
+	public function actionOmsetGroup()
+	{
+		$this->layout='//layouts/column1';
+		$model=new StoreRevenue('search');
+		$model->unsetAttributes();  // clear any default values
+		$model->date = date('Y-m-d');
+		if(isset($_GET['StoreRevenue']))
+			$model->attributes=$_GET['StoreRevenue'];
+		
+		$omset = $model->getOmsetByGroup();
+	
+		$this->render('omsetGroup',array(
+				'model'=>$model,
+				'omset'=>$omset
 		));
 	}
 

@@ -129,10 +129,7 @@ class StoreRevenue extends CActiveRecord
 		$this->point = round(($this->total/$total_omset)*100,2);
 	}
 	
-	public function getBolo()
-	{
-		return 'bolo bolo bolo';
-	}
+	
 	
 	/**
 	 * Get formatted date with string
@@ -140,8 +137,21 @@ class StoreRevenue extends CActiveRecord
 	public function getDate()
 	{
 		$tmp = explode('-',$this->date);
-		return date('F j, Y',mktime(0,0,0,$tmp[1],$tmp[2],$tmp[0]));
+		return date('j F Y',mktime(0,0,0,$tmp[1],$tmp[2],$tmp[0]));
 	}	
+	
+	/**
+	 * Get formatted date with string
+	 */
+	public function getDateTo()
+	{
+		if(!empty($this->date_to))
+		{
+			$tmp = explode('-',$this->date_to);
+			return ' s.d. '.date('j F Y',mktime(0,0,0,$tmp[1],$tmp[2],$tmp[0]));
+		}
+		else return '';
+	}
 	
 	/**
 	 * Get store name
@@ -155,6 +165,34 @@ class StoreRevenue extends CActiveRecord
 			return $model->name;
 		else return 'Unknown';
 	}
+	
+	public function getOmsetByGroup()
+	{
+		$sql = 'SELECT koalisi, sum(current_revenue) AS omset  
+				FROM store_revenue r LEFT JOIN store s ON r.store_code = s.code';
+		$condition[]='koalisi IS NOT NULL'; 
+		$params=array();
+		if(!empty($this->date))
+		{
+			$condition[] = 'date >= :from';
+			$params[':from'] = $this->date;
+		}
+		
+		if(!empty($this->date_to))
+		{
+			$condition[] = 'date <= :to';
+			$params[':to'] = $this->date_to;
+		}
+		
+		if(!empty($condition))
+			$sql .= ' WHERE '.implode(' AND ', $condition);
+		$sql .= ' GROUP BY koalisi';
+		
+		$cmd = $this->getDbConnection()->createCommand($sql);
+		
+		return $cmd->queryAll(true, $params);
+	}
+	
 	
 	/**
 	 * Get total store revenue
