@@ -53,9 +53,10 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 		foreach($omset as $row)
 		{
 			$poin = round(($row['omset']/$total)*100,2);
-			$label[] = $row['koalisi'].' ('.$poin.')';
+			$label[] = $row['koalisi'];
 			$data[] = $poin;
 		}
+		
        	$this->widget(
             'chartjs.widgets.ChBars', 
             array(
@@ -67,12 +68,13 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
                         "fillColor" => "#599fd7",
 						"highlightFill" => "#58D3F7",
                         "strokeColor" => "#ffffff",
-                        "data" => $data
+                        "data" => $data,
                     )       
                 ),
                 'options' => array(
-					'showTooltips'=>true
-				)
+					'scaleBeginAtZero'=>true,
+					'scaleShowHorizontalLines'=>false
+				)		
             )
         ); 
     ?>
