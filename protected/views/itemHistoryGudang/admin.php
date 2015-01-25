@@ -51,7 +51,9 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 				<th rowspan="2">Kode Barang</th>
 				<th rowspan="2">Nama</th>
 				<th rowspan="2">Supplier</th>
+				<?php if(!Yii::app()->user->checkAccess('gudang')) {?>
 				<th rowspan="2">Harga Modal</th>
+				<?php } ?>
 				<th rowspan="2">Harga Jual</th>
 				<th colspan="3">Qty</th>
 			</tr>
@@ -66,17 +68,30 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 			$i=($page-1)*Yii::app()->params['pagination']['size'];
 			foreach ($data as $row)
 			{
-				$tmp .= '<tr>
-					<td style="text-align:center">'.++$i.'</td>
-					<td>'.CHtml::link($row->item_code,Yii::app()->createUrl('itemHistoryGudang/view',array('kode'=>$row->item_code))).'</td>
-					<td>'.$row->name.'</td>
-					<td>'.CHtml::link($row->supplier,Yii::app()->createUrl('supplier/view',array('kode'=>$row->supplier))).'</td>
-					<td style="text-align:right">'.number_format($row->capital_price).'</td>
-					<td style="text-align:right">'.(is_numeric($row->offer_price)?number_format(trim($row->offer_price)):$row->offer_price).'</td>
-					<td>'.$row->qty_in.'</td>
-					<td>'.$row->qty_stock.'</td>
-					<td>'.$row->qty_dist.'</td>
-				</tr>';
+				if(Yii::app()->user->checkAccess('gudang'))
+					$tmp .= '<tr>
+						<td style="text-align:center">'.++$i.'</td>
+						<td>'.CHtml::link($row->item_code,Yii::app()->createUrl('itemHistoryGudang/view',array('kode'=>$row->item_code))).'</td>
+						<td>'.$row->name.'</td>
+						<td>'.CHtml::link($row->supplier,Yii::app()->createUrl('supplier/view',array('kode'=>$row->supplier))).'</td>
+						
+						<td style="text-align:right">'.(is_numeric($row->offer_price)?number_format(trim($row->offer_price)):$row->offer_price).'</td>
+						<td>'.$row->qty_in.'</td>
+						<td>'.$row->qty_stock.'</td>
+						<td>'.$row->qty_dist.'</td>
+					</tr>';
+				else 
+					$tmp .= '<tr>
+						<td style="text-align:center">'.++$i.'</td>
+						<td>'.CHtml::link($row->item_code,Yii::app()->createUrl('itemHistoryGudang/view',array('kode'=>$row->item_code))).'</td>
+						<td>'.$row->name.'</td>
+						<td>'.CHtml::link($row->supplier,Yii::app()->createUrl('supplier/view',array('kode'=>$row->supplier))).'</td>
+						<td style="text-align:right">'.number_format($row->capital_price).'</td>
+						<td style="text-align:right">'.(is_numeric($row->offer_price)?number_format(trim($row->offer_price)):$row->offer_price).'</td>
+						<td>'.$row->qty_in.'</td>
+						<td>'.$row->qty_stock.'</td>
+						<td>'.$row->qty_dist.'</td>
+					</tr>';
 			} 
 			echo $tmp;
 		?>

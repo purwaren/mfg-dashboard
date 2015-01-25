@@ -73,7 +73,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
                 ),
                 'options' => array(
 					'scaleBeginAtZero'=>true,
-					'scaleShowHorizontalLines'=>false
+					'scaleShowHorizontalLines'=>true
 				)		
             )
         ); 

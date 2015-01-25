@@ -29,7 +29,7 @@
 	<div id="top_menu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Beranda',
+				array('label'=>'Beranda', 'url'=>array('site/index'),
 					'items'=>array(
 						array('label'=>'Ganti Password','url'=>array('/users/password'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
@@ -42,13 +42,17 @@
 					),
 				),				
 				array('label'=>'Daftar Sikasir', 'url'=>array('/storeIp/admin'),'visible'=>$this->checkIfHasAccess('storeIp','admin')),
-				array('label'=>'Daftar Omset', 'url'=>array('/storeRevenue/admin'),'visible'=>$this->checkIfHasAccess('storeRevenue','admin')),
-				array('label'=>'Daftar Omset Koalisi', 'url'=>array('/storeRevenue/omsetGroup'),'visible'=>$this->checkIfHasAccess('storeRevenue','omsetGroup')),
+				//array('label'=>'Daftar Omset', 'url'=>array('/storeRevenue/admin'),'visible'=>$this->checkIfHasAccess('storeRevenue','admin')),
+				//array('label'=>'Daftar Omset Koalisi', 'url'=>array('/storeRevenue/omsetGroup'),'visible'=>$this->checkIfHasAccess('storeRevenue','omsetGroup')),
 				array('label'=>'Daftar Item', 'url'=>array('/soldItem/admin'),'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Riwayat Barang', 'url'=>array('/itemHistory/admin'),'visible'=>$this->checkIfHasAccess('itemHistory','admin')),
-				array('label'=>'Riwayat Barang Gudang', 'url'=>array('/itemHistoryGudang/admin'),'visible'=>$this->checkIfHasAccess('itemHistoryGudang','admin')),
-				array('label'=>'Riwayat Barang Jakarta', 'url'=>array('/itemHistory/adminJakarta'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakarta')),
-				array('label'=>'Rekap Penjualan', 'url'=>array('/itemHistory/adminJakartaSales'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakartaSales')),				
+				array('label'=>'Riwayat', 'visible'=>!Yii::app()->user->isGuest,
+					'items'=>array(
+						array('label'=>'Riwayat Barang Toko', 'url'=>array('/itemHistory/admin'),'visible'=>$this->checkIfHasAccess('itemHistory','admin')),
+						array('label'=>'Riwayat Barang Gudang', 'url'=>array('/itemHistoryGudang/admin'),'visible'=>$this->checkIfHasAccess('itemHistoryGudang','admin')),
+						array('label'=>'Riwayat Barang Jakarta', 'url'=>array('/itemHistory/adminJakarta'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakarta')), 						
+					),
+				),	
+				array('label'=>'Rekap Penjualan', 'url'=>array('/itemHistory/adminJakartaSales'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakartaSales')),							
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),				
 			),
 		)); ?>

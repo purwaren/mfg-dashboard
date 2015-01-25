@@ -79,10 +79,10 @@ if(isset($itemHist))
 		//processing row barang
 		$row_data .= '<tr>
 						<td>'.$i++.'</td>
+						<td>'.ucwords($row['supplier']).'</td>
 						<td>'.CHtml::link($row['item_code'],Yii::app()->createUrl('itemHistory/viewJakarta',array('id'=>$row['item_code']))).'</td>
 						<td style="width: 100px;">'.substr($row['name'],0,13).'</td>
-						<td>'.number_format($row['offer_price']).'</td>
-						<td>'.ucwords($row['supplier']).'</td>
+						<td>'.number_format($row['offer_price']).'</td>						
 						<td style="text-align:center">'.$row['qty_in'].'</td>
 						<td style="text-align:center">'.(!isset($row['stok_toko'])?'-':$row['stok_toko']).'</td>
 						<td style="text-align:center">'.$row['stok_gudang'].'</td>
@@ -99,8 +99,8 @@ if(isset($itemHist))
 		<thead>
 		<tr>
 			<th rowspan="2">No</th>
-			<th colspan="3">Info Barang</th>
 			<th rowspan="2">Supplier</th>
+			<th colspan="3">Info Barang</th>			
 			<th rowspan="2" style="width: 60px;">Qty Masuk Gudang</th>	
 			<th rowspan="2">Stok Toko</th>
 			<th rowspan="2">Stok Gudang</th>

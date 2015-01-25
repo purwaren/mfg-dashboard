@@ -40,8 +40,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 )); ?>
 </div><!-- search-form -->
 
-<?php 
-
+<?php
 $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'store-revenue-grid',
 	'dataProvider'=>$model->search(),

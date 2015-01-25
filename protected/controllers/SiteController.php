@@ -29,7 +29,19 @@ class SiteController extends Controller
 	{
 		if(Yii::app()->user->isGuest)
 			Yii::app()->user->loginRequired();
-		$this->render('index');
+		
+		$model=new StoreRevenue('search');
+		$model->unsetAttributes();  // clear any default values
+		$model->date = date('Y-m-d');
+		if(isset($_GET['StoreRevenue']))
+			$model->attributes=$_GET['StoreRevenue'];
+		
+		$omset = $model->getOmsetByGroup();
+		
+		$this->render('index',array(
+			'model'=>$model,
+			'omset'=>$omset
+		));
 	}
 
 	/**

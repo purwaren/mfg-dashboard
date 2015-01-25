@@ -53,7 +53,7 @@ Yii::app()->clientScript->registerCss('grid',"
 ");
 ?>
 
-<h1>Riwayat Barang</h1>
+<h1>Riwayat Barang Toko</h1>
 
 <p>
 Anda bisa menggunakan operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
