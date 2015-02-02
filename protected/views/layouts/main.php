@@ -31,6 +31,7 @@
 			'items'=>array(
 				array('label'=>'Beranda', 'url'=>array('site/index'),
 					'items'=>array(
+						array('label'=>'Tulis Berita','url'=>array('/comment/create'),'visible'=>Yii::app()->user->checkAccess('owner')||Yii::app()->user->checkAccess('manajer1')||Yii::app()->user->checkAccess('manajer2')||Yii::app()->user->checkAccess('superadmin')),
 						array('label'=>'Ganti Password','url'=>array('/users/password'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),

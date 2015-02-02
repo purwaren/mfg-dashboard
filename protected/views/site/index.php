@@ -39,6 +39,9 @@ Yii::app()->clientScript->registerCss('beranda',"
 		width: 98%;
 	}
 ");
+
+$news = Comment::model()->orderByIdDesc()->find();
+
 ?>
 
 <h1>Selamat Datang di <i><?php echo Yii::app()->name ?></i></h1>
@@ -59,7 +62,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 <div class="form beranda" id="omset">
 <div class="news">
 	<fieldset><legend>Berita Terkini</legend>
-	<p>Tes satu dua tiga</p>
+	<?php if(!empty($news)) { echo $news->content;}?>
 	</fieldset>
 </div>
 <div class="left">
