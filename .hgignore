@@ -1,6 +1,5 @@
 
 syntax: glob
-assets/
 protected/runtime/
 .settings
 
