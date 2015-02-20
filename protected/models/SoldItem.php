@@ -13,6 +13,7 @@
  */
 class SoldItem extends CActiveRecord
 {	
+	public $cat_name;
 	public $start=0;
 	public $size=10;
 	public $total;
@@ -39,6 +40,7 @@ class SoldItem extends CActiveRecord
 		return array(
 			array('category, trx_date, qty_in, qty_sold, shop_code', 'required'),
 			array('qty_in, qty_sold', 'numerical', 'integerOnly'=>true),
+			array('cat_name','length','max'=>128),
 			array('category, shop_code', 'length', 'max'=>8),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -65,6 +67,7 @@ class SoldItem extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'category' => 'Kelompok Barang',
+			'cat_name'=>'Nama',
 			'trx_date' => 'Periode',
 			'qty_in' => 'Qty In',
 			'qty_sold' => 'Qty Sold',
@@ -144,31 +147,31 @@ class SoldItem extends CActiveRecord
 	
 	public function findAllUniqueItemCategory()
 	{
-		$sql='SELECT category, SUM(qty_sold) AS qty_sold FROM sold_item';
+		$sql='SELECT category, cat_name, SUM(qty_sold) AS qty_sold FROM sold_item s LEFT JOIN category c ON s.category=c.cat_code';
 		$condition=array();
 		$param=array();
 		
 		if(!empty($this->category))
 		{
-			$condition[]='category = :cat';
+			$condition[]='s.category = :cat';
 			$param[':cat']=$this->category;
 		}
 		
 		if(!empty($this->start_date))
 		{
-			$condition[]='trx_date >= :start';
+			$condition[]='s.trx_date >= :start';
 			$param[':start']=$this->start_date;
 		}
 		
 		if(!empty($this->end_date))
 		{
-			$condition[] = 'trx_date <= :end';
+			$condition[] = 's.trx_date <= :end';
 			$param[':end']=$this->end_date;
 		}
 		
 		if(!empty($condition))
 			$sql .= ' WHERE '.implode(' AND ', $condition);
-		$sql .= ' GROUP BY category ORDER BY '.$this->sortBy.' '.$this->sortType;
+		$sql .= ' GROUP BY s.category ORDER BY '.$this->sortBy.' '.$this->sortType;
 		$sql .= ' LIMIT '.$this->start.','.$this->size;		
 		
 				

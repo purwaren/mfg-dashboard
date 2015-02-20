@@ -103,6 +103,7 @@ if(isset($soldItem)) {
 		$row_data .='<tr>
 					<td>'.$i.'</td>
 					<td>'.$row->category.'</td>
+					<td>'.$row->cat_name.'</td>
 					<td style="text-align: right">'.number_format($row->qty_sold).'</td>
 					'.$row_store.'
 			</tr>';
@@ -142,7 +143,8 @@ if(isset($soldItem)) {
 		<thead>
 		<tr>
 			<th rowspan="2">No</th>
-			<th rowspan="2">Kel. Barang</th>
+			<th rowspan="2">Kelompok</th>
+			<th rowspan="2">Nama</th>
 			<th rowspan="2">QTY</th>
 			<?php echo $h1?>			
 		</tr>
@@ -150,7 +152,7 @@ if(isset($soldItem)) {
 		</thead>
 		<?php echo $row_data ?>
 		<tr>
-			<td colspan="2">TOTAL</td>
+			<td colspan="3">TOTAL</td>
 			<td style="text-align: right; font-weight: bold"><?php echo number_format($total_q->total)?></td>
 			<?php echo $row_total?>
 		</tr>
