@@ -90,7 +90,7 @@ class StoreRevenue extends CActiveRecord
 		$criteria=new CDbCriteria;
 		if(!empty($this->date_to))
 		{			
-			$criteria->condition='date >= :date AND date <= :date_to';
+			$criteria->condition='date >= :date AND date <= :date_to AND code IS NOT NULL';
 			$criteria->params = array(
 				':date'=>$this->date,
 				':date_to'=>$this->date_to
@@ -100,8 +100,10 @@ class StoreRevenue extends CActiveRecord
 		{
 			$criteria->compare('date',$this->date,true);
 		}
-		$criteria->select = 'id, store_code, min(date) AS date, max(date) AS date_to, sum(current_revenue) AS total,  sum(current_revenue) AS current_revenue, last_updated';
+		$criteria->select = 't.id, t.store_code, s.code, min(t.date) AS date, "'.$this->date_to.'" AS date_to, 
+				sum(t.current_revenue) AS total,  sum(t.current_revenue) AS current_revenue, max(t.last_updated) AS last_updated';
 		$criteria->group = 'store_code';
+		$criteria->join = 'LEFT JOIN store s ON t.store_code = s.code';
 		$criteria->order = 'total desc';
 		$criteria->compare('id',$this->id);
 		$criteria->compare('store_code',$this->store_code,true);
@@ -120,7 +122,7 @@ class StoreRevenue extends CActiveRecord
 	public function afterFind()
 	{		
 		$temp = $this->store_code;
-		$this->store_code='';
+		$this->store_code='';		
 		$total_omset = $this->getTotalRevenue();
 		$this->store_code=$temp;
 		$this->point = round(($this->total/$total_omset)*100,2);		
