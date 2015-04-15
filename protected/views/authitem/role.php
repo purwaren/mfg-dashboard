@@ -29,7 +29,7 @@ $this->menu=array(
 	foreach($class as $row){
 		$sql = 'SELECT * FROM authitem WHERE name like :name ORDER BY name ASC';
 		$items = Authitem::model()->findAllBySql($sql,array(
-			':name'=>$row['name'].'_%'
+			':name'=>$row['name'].'\_%'
 		));
 		$i=0;
 		

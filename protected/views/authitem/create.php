@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Pengaturan Akses', 'url'=>array('admin')),
-	array('label'=>'Pengaturan Peran', 'url'=>array('admin',array('type'=>CAuthItem::TYPE_ROLE))),
+	array('label'=>'Pengaturan Peran', 'url'=>array('admin','type'=>CAuthItem::TYPE_ROLE)),
 );
 ?>
 

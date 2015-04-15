@@ -61,8 +61,9 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 
 <div class="form beranda" id="omset">
 <div class="news">
-	<fieldset><legend>Berita Terkini</legend>
-	<?php if(!empty($news)) { echo $news->content;}?>
+	<fieldset><legend>Berita Terkini: <?php echo $news->title ?></legend>
+	<?php echo $news->content ?>
+	<p class="right"><?php echo date('d/m/Y H:i:s').' - '.$news->creator->name ?></p>
 	</fieldset>
 </div>
 <div class="left">
