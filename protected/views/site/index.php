@@ -63,7 +63,7 @@ atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 <div class="news">
 	<fieldset><legend>Berita Terkini: <?php echo $news->title ?></legend>
 	<?php echo $news->content ?>
-	<p class="right"><?php echo date('d/m/Y H:i:s').' - '.$news->creator->name ?></p>
+	<p class="right"><?php echo date('d/m/Y H:i:s', $news->timestamp).' - '.$news->creator->name ?></p>
 	</fieldset>
 </div>
 <div class="left">
