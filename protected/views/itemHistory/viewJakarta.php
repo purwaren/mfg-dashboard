@@ -34,7 +34,8 @@ $this->menu=array(
 		),
 		array(
 			'label'=>'HJ',
-			'value'=>number_format($model->offer_price)
+			'value'=>number_format($model->offer_price),
+			'visible'=>!Yii::app()->user->checkAccess('anggotapb'),
 		),
 		array(
 			'label'=>'Qty Masuk',

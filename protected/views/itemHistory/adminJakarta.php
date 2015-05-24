@@ -82,7 +82,7 @@ if(isset($itemHist))
 						<td>'.ucwords($row['supplier']).'</td>
 						<td>'.CHtml::link($row['item_code'],Yii::app()->createUrl('itemHistory/viewJakarta',array('id'=>$row['item_code']))).'</td>
 						<td style="width: 100px;">'.substr($row['name'],0,13).'</td>
-						<td>'.number_format($row['offer_price']).'</td>						
+						<td style="text-align:right">'.number_format($row['capital_price']).'</td>						
 						<td style="text-align:center">'.$row['qty_in'].'</td>
 						<td style="text-align:center">'.(!isset($row['stok_toko'])?'-':$row['stok_toko']).'</td>
 						<td style="text-align:center">'.$row['stok_gudang'].'</td>
@@ -109,7 +109,7 @@ if(isset($itemHist))
 		<tr>
 			<th>Kode</th>			
 			<th>Nama</th>
-			<th>Harga</th>
+			<th>HM</th>
 			
 		</tr>
 		</thead>
