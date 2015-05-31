@@ -36,7 +36,7 @@
 						array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 					),
 				),
-				array('label'=>'Manajemen Pengguna',
+				array('label'=>'Manajemen Pengguna','url'=>array(''),'visible'=>Yii::app()->user->checkAccess('superadmin'),
 					'items'=>array(
 							array('label'=>'Tambah Pengguna','url'=>array('/users/create'),'visible'=>$this->checkIfHasAccess('users','create')),
 							array('label'=>'Pendaftaran Akses','url'=>array('/authitem/create'),'visible'=>$this->checkIfHasAccess('authitem','create'))
@@ -45,13 +45,13 @@
 				array('label'=>'Daftar Sikasir', 'url'=>array('/storeIp/admin'),'visible'=>$this->checkIfHasAccess('storeIp','admin')),
 				//array('label'=>'Daftar Omset', 'url'=>array('/storeRevenue/admin'),'visible'=>$this->checkIfHasAccess('storeRevenue','admin')),
 				//array('label'=>'Daftar Omset Koalisi', 'url'=>array('/storeRevenue/omsetGroup'),'visible'=>$this->checkIfHasAccess('storeRevenue','omsetGroup')),
-				array('label'=>'Toko','url'=>array(''),'visible'=>!Yii::app()->user->isGuest,
+				array('label'=>'Toko','url'=>array(''),'visible'=>!Yii::app()->user->isGuest,'url'=>array(''),
 					'items'=> array(
 						array('label'=>'Daftar Item Terjual', 'url'=>array('/soldItem/admin'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Rekap Stok Per Kelompok', 'url'=>array('/storeItemHistory/admin'),'visible'=>$this->checkIfHasAccess('storeItemHistory','admin')),
 					)
 				),					
-				array('label'=>'Riwayat', 'visible'=>!Yii::app()->user->isGuest,
+				array('label'=>'Riwayat', 'visible'=>!Yii::app()->user->isGuest,'url'=>array(''),
 					'items'=>array(
 						array('label'=>'Riwayat Barang Toko', 'url'=>array('/itemHistory/admin'),'visible'=>$this->checkIfHasAccess('itemHistory','admin')),						
 						array('label'=>'Riwayat Barang Gudang', 'url'=>array('/itemHistoryGudang/admin'),'visible'=>$this->checkIfHasAccess('itemHistoryGudang','admin')),
