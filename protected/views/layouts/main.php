@@ -48,7 +48,7 @@
 				array('label'=>'Toko','url'=>array(''),'visible'=>!Yii::app()->user->isGuest,'url'=>array(''),
 					'items'=> array(
 						array('label'=>'Daftar Item Terjual', 'url'=>array('/soldItem/admin'),'visible'=>!Yii::app()->user->isGuest),
-						array('label'=>'Rekap Penjualan Per Toko', 'url'=>array('/soldItem/rekap'),'visible'=>$this->checkIfHasAccess('storeItemHistory','admin')),
+						array('label'=>'Rekap Penjualan Per Toko', 'url'=>array('/soldItem/rekap'),'visible'=>$this->checkIfHasAccess('soldItem','rekap')),
 					)
 				),					
 				array('label'=>'Riwayat', 'visible'=>!Yii::app()->user->isGuest,'url'=>array(''),
