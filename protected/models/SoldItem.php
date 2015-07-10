@@ -14,6 +14,7 @@
 class SoldItem extends CActiveRecord
 {	
 	public $cat_name;
+	public $qty_stock;
 	public $start=0;
 	public $size=10;
 	public $total;
@@ -71,7 +72,7 @@ class SoldItem extends CActiveRecord
 			'trx_date' => 'Periode',
 			'qty_in' => 'Qty In',
 			'qty_sold' => 'Qty Sold',
-			'shop_code' => 'Shop Code',
+			'shop_code' => 'Toko Cabang',
 			'sortType' => 'Urutkan Dari',
 			'sortBy' => 'Urut Berdasarkan'
 		);
@@ -189,6 +190,12 @@ class SoldItem extends CActiveRecord
 			$param[':cat']=$this->category;
 		}
 		
+		if(!empty($this->shop_code))
+		{
+			$condition[]='shop_code = :shop';
+			$param[':shop'] = $this->shop_code;
+		}
+		
 		if(!empty($this->start_date))
 		{
 			$condition[]='trx_date >= :start';
@@ -251,6 +258,49 @@ class SoldItem extends CActiveRecord
 		$sql .= ' GROUP BY shop_code';
 		
 		return self::model()->findBySql($sql,$param);
+	}
+	
+	public function findAllQtyRekap()
+	{	
+		$sql_cat='SELECT * FROM item_cat_stock t3';
+		
+		$condition=array();$cat_condition=array();
+		$params=array();$cat_params=array();
+		if(!empty($this->shop_code)) 
+		{
+			$condition[] = 't1.shop_code = :shop';
+			$params[':shop'] = $this->shop_code;
+			$cat_condition[]='t3.store_code = :shop';
+			
+		}
+		
+		if(!empty($this->start_date))
+		{
+			$condition[]='t1.trx_date >= :start';
+			$params[':start']=$this->start_date;
+		}
+		
+		if(!empty($this->end_date))
+		{
+			$condition[] = 't1.trx_date <= :end';
+			$params[':end']=$this->end_date;
+		}
+		if(!empty($cat_condition))
+			$sql_cat .= ' WHERE '.implode(' AND ', $cat_condition);
+		
+		$sql='SELECT shop_code, SUM(qty_sold) AS qty_sold, SUM(qty_in) AS qty_in, t2.stock AS qty_stock, category
+				FROM sold_item t1 LEFT JOIN ('.$sql_cat.') t2
+				ON t1.category=t2.cat';
+		
+		if(!empty($condition))
+			$sql .= ' WHERE '.implode(' AND ', $condition);
+		$sql .= ' GROUP BY category,shop_code ORDER BY '.$this->sortBy.' '.$this->sortType;
+		if(isset($this->start))
+			$sql .= ' LIMIT '.$this->start.','.$this->size;
+		
+		$sql = 'SELECT t4.*,t5.cat_name FROM('.$sql.') t4 LEFT JOIN category t5 ON t4.category = t5.cat_code';
+		
+		return self::model()->findAllBySql($sql,$params);
 	}
 
 	public function sumAllQ()
@@ -335,5 +385,12 @@ class SoldItem extends CActiveRecord
 		if(!empty($condition))
 			$sql .= ' WHERE '.implode(' AND ', $condition);
 		
-		return self::model()->findBySql($sql,$param);	}
+		return self::model()->findBySql($sql,$param);	
+	}
+	public function getShopName() 
+	{
+		$model = Store::model()->findByAttributes(array('code'=>$this->shop_code));
+		if($model)
+			return $model->name;	
+	}
 }

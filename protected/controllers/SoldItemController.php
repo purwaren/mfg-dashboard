@@ -32,7 +32,7 @@ class SoldItemController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete','reload'),
+				'actions'=>array('create','update','admin','delete','reload','rekap'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -126,6 +126,75 @@ class SoldItemController extends Controller
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
+	}
+	
+	public function actionRekap($page=1,$print="no")
+	{
+		Yii::app()->user->setReturnUrl(Yii::app()->request->requestUri);
+		$model=new SoldItem('search');
+		$model->unsetAttributes();  // clear any default values
+		
+		if(isset($_POST['SoldItem']))
+		{			
+			Yii::app()->user->setState('SoldItem',$_POST['SoldItem']);
+		}
+		$soldItem = Yii::app()->user->getState('SoldItem');
+		$data='';$store='';$pages='';$summary='';$total='';$group='';
+		
+		if(isset($soldItem))
+		{
+			$model->attributes=$soldItem;
+				
+			//setting page size
+			$model->size = Yii::app()->params['pagination']['size'];
+			$model->start = $model->size*($page-1);
+			$start = $model->size*($page-1)+1;
+			$end=$model->size*$page;
+			if($print=='yes') {
+				$model->start=null;$model->size=null;
+			}
+			//data
+			$data = $model->findAllQtyRekap();
+			
+			//pagination
+			//set pagination
+			$count = $model->countAllUniqueItemCategory();
+				
+			$pages = new CPagination($count);
+			$pages->pageSize = $model->size;
+			if($count==0)
+				$summary='0';
+			else if($count-$start < 10)
+				$summary=$start.'-'.$count.' dari '.$count;
+			else $summary=$start.'-'.$end.' dari '.$count;
+		}
+		if($print=='yes')
+		{
+			$this->layout='//layouts/print';
+			
+			$this->render('print-rekap',array(
+					'model'=>$model,
+					'data'=>$data,
+					'store'=>$store,
+					'pages'=>$pages,
+					'page'=>$page,
+					'summary'=>$summary,
+					'soldItem'=>$soldItem,
+					'group'=>$group
+			));
+		}
+		else
+			$this->render('rekap',array(
+				'model'=>$model,
+				'data'=>$data,
+				'store'=>$store,
+				'pages'=>$pages,
+				'page'=>$page,
+				'summary'=>$summary,
+				'soldItem'=>$soldItem,
+				'group'=>$group
+			));
+			
 	}
 
 	/**
