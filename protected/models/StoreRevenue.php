@@ -71,7 +71,8 @@ class StoreRevenue extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'store_code' => 'Kode Toko',
-			'date' => 'Tanggal',
+			'date' => 'Tanggal Mulai',
+			'date_to'=>'Tanggal Akhir',
 			'current_revenue' => 'Omset',
 			'last_updated' => 'Terakhir Update',
 			'point' => 'Poin'
@@ -114,7 +115,7 @@ class StoreRevenue extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 			'pagination'=>array(
-				'pageSize'=>20
+				'pageSize'=>10
 			),
 		));
 	}

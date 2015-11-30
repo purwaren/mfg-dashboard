@@ -83,6 +83,9 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+		if(isset(Yii::app()->theme))
+			$this->layout="//layouts/login";
+		
 		$model=new LoginForm;
 
 		// if it is ajax validation request

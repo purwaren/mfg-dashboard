@@ -62,6 +62,7 @@ class StoreRevenueController extends Controller
 	 */
 	public function actionCreate()
 	{
+		
 		$model=new StoreRevenue;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -133,6 +134,7 @@ class StoreRevenueController extends Controller
 	 */
 	public function actionAdmin()
 	{
+		$this->layout='//layouts/column1';
 		$model=new StoreRevenue('search');
 		$model->unsetAttributes();  // clear any default values
 		$model->date = date('Y-m-d');

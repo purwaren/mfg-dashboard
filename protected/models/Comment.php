@@ -57,7 +57,8 @@ class Comment extends CActiveRecord
 	{
 		return array(
 			'orderByIdDesc'=>array(
-				'order'=>'id DESC'
+				'order'=>'id DESC',
+				'limit'=>'0,3'
 			),
 		);
 	}

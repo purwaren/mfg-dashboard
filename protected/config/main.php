@@ -8,8 +8,9 @@ Yii::setPathOfAlias('chartjs', dirname(__FILE__).'/../extensions/yii-chartjs');
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Mode Fashion Group - Dashboard',
+	'name'=>'Dashboard v2',
 	'language'=>'id',
+	'theme'=> 'ace',
 
 	// preloading 'log' component
 	'preload'=>array('log','chartjs'),
@@ -92,6 +93,9 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
+		'company'=>array(
+			'name'=>'Mode Fashion Group'
+		),
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 		'salt' => 'phubeThAspADReDRuRatreprEwUba2Hu',
