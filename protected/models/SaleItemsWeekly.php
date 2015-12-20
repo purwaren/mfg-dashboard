@@ -19,8 +19,17 @@ class SaleItemsWeekly extends CFormModel
     public function rules()
     {
         return array(
-            array('start_date, end_date','required')
+            array('start_date, end_date','required'),
+            array('end_date','validWeek')
         );
+    }
+
+    public function validWeek($attr, $param) {
+        if(!$this->hasErrors()) {
+            $diff = strtotime($this->end_date) - strtotime($this->start_date);
+            if(!(intval($diff/86400) <= 7))
+                $this->addError('end_date','Periode harus satu minggu (7 hari)');
+        }
     }
 
     public function attributeLabels() {

@@ -21,11 +21,17 @@ $('.search-form form').submit(function(){
 ?>
 
 <h1 class="no-print">Rekap Penjualan Per Minggu</h1>
+<div class="form">
+<?php if(isset($_POST['SaleItemsWeekly'])) {
+    echo CHtml::errorSummary($model);
+}?>
+</div>
 
 <p class="no-print">
     Anda bisa menggunakan operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
     atau <b>=</b>) pada nilai awal pencarian sebagai parameter pembanding.
 </p>
+
 
 <?php echo CHtml::link('Kriteria Pencarian','#',array('class'=>'search-button no-print')); ?>
 <div class="search-form no-print" style="display:none">
@@ -88,7 +94,7 @@ $('.search-form form').submit(function(){
             <th rowspan="2">No</th>
             <th rowspan="2">Kelompok</th>
             <th rowspan="2">Nama</th>
-            <th colspan="7">Qty Terjual/Tanggal</th>
+            <th colspan="<?php echo count($period)?>">Qty Terjual/Tanggal</th>
             <th rowspan="2">Total</th>
         </tr>
         <?php echo $header;?>
