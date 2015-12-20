@@ -32,7 +32,7 @@ class SoldItemController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','delete','reload','rekap'),
+				'actions'=>array('create','update','admin','delete','reload','rekap','weekly'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -252,6 +252,35 @@ class SoldItemController extends Controller
 			'summary'=>$summary,
 			'soldItem'=>$soldItem,
 			'group'=>$group
+		));
+	}
+
+	/**
+	 * Sales report weekly
+	 * search criteria: start date, end date, store
+	 */
+	public function actionWeekly()
+	{
+		$model = new SaleItemsWeekly();
+		if(isset($_POST['SaleItemsWeekly'])) {
+			Yii::app()->user->setState('weeklyCriteria', $_POST['SaleItemsWeekly']);
+		}
+		$weeklyCriteria = Yii::app()->user->getState('weeklyCriteria');
+		$model->attributes = $weeklyCriteria;
+
+		$report = array();
+		$pages = array();
+		if($model->validate())
+		{
+			$report = $model->getAllCategoryWithReport();
+			$pages = $model->getPagination();
+		}
+
+
+		$this->render('weekly',array(
+			'model'=>$model,
+			'pages'=>$pages,
+			'report'=>$report
 		));
 	}
 

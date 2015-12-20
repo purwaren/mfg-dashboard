@@ -154,6 +154,7 @@ class Controller extends CController
 					}
 				}
 			}
+
 		}
 		else
 			echo CJSON::encode(array(

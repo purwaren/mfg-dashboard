@@ -49,6 +49,7 @@
 					'items'=> array(
 						array('label'=>'Daftar Item Terjual', 'url'=>array('/soldItem/admin'),'visible'=>!Yii::app()->user->isGuest),
 						array('label'=>'Rekap Penjualan Per Toko', 'url'=>array('/soldItem/rekap'),'visible'=>$this->checkIfHasAccess('soldItem','rekap')),
+						array('label'=>'Rekap Penjualan Per Minggu', 'url'=>array('soldItem/weekly'),'visible'=>$this->checkIfHasAccess('soldItem','weekly')),
 					)
 				),					
 				array('label'=>'Riwayat', 'visible'=>!Yii::app()->user->isGuest,'url'=>array(''),

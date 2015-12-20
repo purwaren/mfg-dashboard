@@ -10,7 +10,7 @@ return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Dashboard v2',
 	'language'=>'id',
-	'theme'=> 'ace',
+//	'theme'=> 'ace',
 
 	// preloading 'log' component
 	'preload'=>array('log','chartjs'),
@@ -64,7 +64,10 @@ return array(
 		),
 		'authManager'=>array(
 			'class'=>'CDbAuthManager',
-			'connectionID'=>'db'
+			'connectionID'=>'db',
+			'itemTable'=>'authitem',
+			'itemChildTable'=>'authitemchild',
+			'assignmentTable'=>'authassignment'
 		),
 		
 		'errorHandler'=>array(
@@ -79,11 +82,11 @@ return array(
 					'levels'=>'error, warning, info',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
+
 				array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+
 			),
 		),
 		//component for creating chart

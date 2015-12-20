@@ -25,7 +25,7 @@ $this->menu=array(
 	<p class="note">Tekan tombol di bawah ini untuk memperbarui daftar akses yang ada di dalam sistem.</p>
 	<?php
 		$this->widget('zii.widgets.jui.CJuiProgressBar',array(
-			'themeUrl'=>Yii::app()->request->baseUrl.'/css',
+			//'themeUrl'=>Yii::app()->request->baseUrl.'/css',
 		    'value'=>0,
 			// additional javascript options for the progress bar plugin
 		    'options'=>array(
@@ -63,12 +63,12 @@ Yii::app()->clientScript->registerScript('refresh',"
 ");
 Yii::app()->clientScript->registerScript('func',"
 	function updateByAjax(data, idx) {
+		console.log('update idx= '+idx);
 		if(idx<data.length) {
 			var url='".Yii::app()->request->baseUrl."/index.php/'+data[idx].name+'/reload';
 			".CHtml::ajax(array(
 				'url'=>'js:url',
 				'type'=>'POST',
-				'dataType'=>'JSON',
 				'success'=>"function(resp){
 					var percent = ((idx+1)/data.length)*100;
 					$('#ajax_progress').progressbar('value',percent);
