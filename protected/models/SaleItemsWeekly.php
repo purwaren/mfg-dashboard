@@ -36,13 +36,14 @@ class SaleItemsWeekly extends CFormModel
         $data = array();
         if(!empty($category)) {
             foreach($category as $cat) {
-                $data = array(
+                $data[] = array(
                     'cat_code'=>$cat->cat_code,
                     'cat_name'=>$cat->cat_name,
                     'data'=> $this->getReportDataByCategory($cat->cat_code)
                 );
             }
         }
+
         return $data;
     }
 
@@ -66,9 +67,31 @@ class SaleItemsWeekly extends CFormModel
         return $pagination;
     }
 
+    public function getItemCount() {
+        return Category::model()->count();
+    }
+
+    public function getSummaryText() {
+        return 'Menampilkan '.($this->page_size*($this->current_page-1) + 1).' - '.($this->page_size*$this->current_page).
+            ' dari '.$this->getItemCount().' hasil';
+    }
+
+    public function getWeeklyHeader() {
+        $tmp = explode('-',$this->start_date);
+        $start = mktime(0,0,0,intval($tmp[1]),$tmp[2],$tmp[0]);
+        $tmp = explode('-',$this->end_date);
+        $end = mktime(0,0,0,intval($tmp[1]),$tmp[2],$tmp[0]);
+        $header = array();
+        while($start <= $end) {
+            $header[] = date('d/m',$start);
+            $start += 86400;
+        }
+        return $header;
+    }
+
     private function getReportDataByCategory($cat) {
         $criteria = new CDbCriteria();
-        $criteria->select='trx_date, SUM(qty_sold) AS qty_sold';
+        $criteria->select='DATE_FORMAT(trx_date,\'%d/%m\') AS trx_date, SUM(qty_sold) AS qty_sold';
         $criteria->addCondition('trx_date >= :start AND trx_date <= :end');
         $criteria->params = array(
             ':start' => $this->start_date,
@@ -78,7 +101,19 @@ class SaleItemsWeekly extends CFormModel
         $criteria->group = 'category, trx_date';
         $criteria->order = 'trx_date';
 
-        return SoldItem::model()->findAll($criteria);
+        $model = SoldItem::model()->findAll($criteria);
+        $header = $this->getWeeklyHeader();
+        //initialize data
+        $data=array();
+        foreach($header as $row) {
+            $data[$row] = 0;
+        }
+        if(!empty($model)) {
+            foreach($model as $row) {
+                $data[$row->trx_date] = $row->qty_sold;
+            }
+        }
+        return $data;
     }
 
     public function getStartDate() {
@@ -93,7 +128,7 @@ class SaleItemsWeekly extends CFormModel
     public function getEndDate() {
         $str = 'Akhir';
         if(!empty($this->end_date)) {
-            $tmp = explode('-',$this->start_date);
+            $tmp = explode('-',$this->end_date);
             $str = $tmp[2].' '.$this->month[intval($tmp[1])].' '.$tmp[0];
         }
         return $str;
