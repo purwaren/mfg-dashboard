@@ -246,7 +246,8 @@ class ItemHistoryController extends Controller
 				
 			//get all store
 			$group=Store::model()->getAllStoreByGroup();
-			$store=Store::model()->findAllBySql('SELECT * FROM store ORDER BY koalisi, urutan');
+			$store=Store::model()->findAllBySql('SELECT * FROM store WHERE deleted=0 ORDER BY koalisi, urutan');
+//            echo '<pre>'.print_r($store,true).'</pre>';die();
 			//get all item
 			$data=$model->searchUniqueItem();
 				

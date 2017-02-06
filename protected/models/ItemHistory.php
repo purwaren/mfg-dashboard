@@ -132,8 +132,8 @@ class ItemHistory extends CActiveRecord
 	public function searchUniqueItem()
 	{
 		$criteria=new CDbCriteria;		
-		$sql = 'SELECT  item_code, name, date_in, price, sum(qty_stock) AS total FROM item_history';
-		$condition=array();
+		$sql = 'SELECT  t1.item_code, t1.name, date_in, price, sum(qty_stock) AS total FROM item_history t1 LEFT JOIN store t2 ON t1.store_code=t2.code';
+		$condition[] ='t2.deleted = 0';
 		$param=array();
 		if(!empty($this->item_code))
 		{

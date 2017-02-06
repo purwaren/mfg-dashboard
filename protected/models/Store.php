@@ -130,8 +130,8 @@ class Store extends CActiveRecord
 	
 	public function getAllStoreByGroup()
 	{
-		$sql='SELECT DISTINCT koalisi FROM store';
-		$sql2='SELECT * FROM store WHERE koalisi = :group ORDER BY urutan';
+		$sql='SELECT DISTINCT koalisi FROM store ORDER BY koalisi';
+		$sql2='SELECT * FROM store WHERE koalisi = :group AND deleted=0 ORDER BY urutan';
 		$cmd = Yii::app()->db->createCommand($sql);
 		$cmd2 = Yii::app()->db->createCommand($sql2);
 		$group = $cmd->queryAll(true);
