@@ -69,6 +69,7 @@
 		font-weight:bold;
 		margin-bottom: 10px;
 	}
+	.no-print {display:none;}
 ");
 Yii::app()->clientScript->registerScript('print',"
 	window.print();

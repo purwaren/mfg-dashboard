@@ -259,7 +259,7 @@ class SoldItemController extends Controller
 	 * Sales report weekly
 	 * search criteria: start date, end date, store
 	 */
-	public function actionWeekly()
+	public function actionWeekly($page=1,$print='')
 	{
 		$model = new SaleItemsWeekly();
 		if(isset($_POST['SaleItemsWeekly'])) {
@@ -267,20 +267,28 @@ class SoldItemController extends Controller
 		}
 		$weeklyCriteria = Yii::app()->user->getState('weeklyCriteria');
 		$model->attributes = $weeklyCriteria;
-
+		$model->current_page = $page;
+		if($print == 'yes') {
+			$model->page_size = $model->getItemCount();
+			$this->layout = '//layouts/print';
+		}
 		$report = array();
 		$pages = array();
+		$period = array();
 		if($model->validate())
 		{
+
 			$report = $model->getAllCategoryWithReport();
 			$pages = $model->getPagination();
+			$period = $model->getWeeklyHeader();
 		}
 
 
 		$this->render('weekly',array(
 			'model'=>$model,
 			'pages'=>$pages,
-			'report'=>$report
+			'report'=>$report,
+			'period'=>$period
 		));
 	}
 

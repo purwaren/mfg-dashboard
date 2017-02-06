@@ -13,7 +13,7 @@
 
 	<table>
 		<tr>
-			<td class="label-column"><?php echo $form->label($model,'start_date'); ?></td>
+			<td class="label-column"><?php echo $form->labelEx($model,'start_date'); ?></td>
 			<td class="value-column">
 			<?php $this->widget('zii.widgets.jui.CJuiDatePicker',array(
 				    'name'=>'SaleItemsWeekly[start_date]',
@@ -29,7 +29,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="label-column"><?php echo $form->label($model,'end_date'); ?></td>
+			<td class="label-column"><?php echo $form->labelEx($model,'end_date'); ?></td>
 			<td class="value-column">
 				<?php $this->widget('zii.widgets.jui.CJuiDatePicker',array(
 						'name'=>'SaleItemsWeekly[end_date]',
