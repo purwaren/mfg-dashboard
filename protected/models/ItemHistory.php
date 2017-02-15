@@ -48,7 +48,7 @@ class ItemHistory extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('item_code, name, price, date_in, qty_in, qty_sold, qty_stock, period, store_code', 'required'),
+			array('item_code, name, price, date_in, qty_in, qty_sold, qty_stock, store_code', 'required'),
 			array('qty_in, qty_sold, qty_stock, period', 'numerical', 'integerOnly'=>true),
 			array('price', 'numerical'),
 			array('item_code', 'length', 'max'=>15),
