@@ -119,7 +119,7 @@ class Supplier extends CActiveRecord
 		$option=array();
 		foreach ($model as $row)
 		{
-			$option[$row->sup_code]=ucwords($row->sup_name);
+			$option[$row->sup_code]=$row->sup_code.' - '.ucwords($row->sup_name);
 		}
 		return $option;
 	}
