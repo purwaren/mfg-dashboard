@@ -60,7 +60,8 @@
 					),
 				),	
 				array('label'=>'Rekap Penjualan', 'url'=>array('/itemHistory/adminJakartaSales'),'visible'=>$this->checkIfHasAccess('itemHistory','adminJakartaSales')),							
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),				
+				array('label'=>'Rekap Global', 'url'=>array('/itemHistory/adminGlobal'),'visible'=>$this->checkIfHasAccess('itemHistory','adminGlobal')),
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 			),
 		)); ?>
 	</div><!-- mainmenu -->

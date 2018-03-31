@@ -32,7 +32,7 @@ class ItemHistoryController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','adminJakarta','viewJakarta','adminJakartaSales','reload'),
+				'actions'=>array('create','update','admin','adminJakarta','viewJakarta','adminJakartaSales','adminGlobal','reload'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -329,11 +329,74 @@ class ItemHistoryController extends Controller
 		));
 	}
 
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer the ID of the model to be loaded
-	 */
+	public function actionAdminGlobal($page=1)
+    {
+        $this->layout = '//layouts/column1';
+
+        Yii::app()->user->setReturnUrl(Yii::app()->request->requestUri);
+        $model = new ItemHistoryGlobal();
+        $model->unsetAttributes();  // clear any default values
+
+        if(isset($_POST['ItemHistoryGlobal']))
+        {
+            Yii::app()->user->setState('ItemHistoryGlobal',$_POST['ItemHistoryGlobal']);
+        }
+
+        $itemHist=Yii::app()->user->getState('ItemHistoryGlobal');
+
+        $data='';$store='';$pages='';$summary='';$total='';$group='';
+
+        if (isset($itemHist))
+        {
+            $model->attributes=$itemHist;
+
+            //setting page size
+            $model->size = Yii::app()->params['pagination']['size'];
+            $model->start = $model->size*($page-1);
+            $start = $model->size*($page-1)+1;
+            $end=$model->size*$page;
+
+            //get all store
+            $group=Store::model()->getAllStoreByGroup();
+            $store=Store::model()->findAllBySql('SELECT * FROM store WHERE deleted=0 ORDER BY koalisi, urutan');
+
+            $data=$model->searchUniqueItem();
+
+            //set pagination
+            $count = $model->countUniqueItem();
+
+            $pages = new CPagination($count);
+            $pages->pageSize = $model->size;
+            if($count==0)
+                $summary='0';
+            else if($count-$start < 10)
+                $summary=$start.'-'.$count.' dari '.$count;
+            else $summary=$start.'-'.$end.' dari '.$count;
+
+            $total=$model->summaryAllItem();
+        }
+
+
+        $this->render('adminGlobal',array(
+            'model'=>$model,
+            'store'=>$store,
+            'group'=>$group,
+            'pages'=>$pages,
+            'page'=>$page,
+            'summary'=>$summary,
+            'total'=>$total,
+            'itemHist'=>$itemHist,
+            'data'=>$data
+        ));
+    }
+
+    /**
+     * Returns the data model based on the primary key given in the GET variable.
+     * If the data model is not found, an HTTP exception will be raised.
+     * @param $id
+     * @return ItemHistory
+     * @throws CHttpException
+     */
 	public function loadModel($id)
 	{
 		$model=ItemHistory::model()->findByPk($id);

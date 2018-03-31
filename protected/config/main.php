@@ -56,7 +56,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dashboard',
+			'connectionString' => 'mysql:host=localhost;dbname=mode_dashboard',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'bolo',
