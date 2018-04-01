@@ -36,7 +36,7 @@ class ItemHistoryGlobal extends CFormModel
         $param = array();
         if (!empty($this->cat_code))
         {
-            $sql .= ' WHERE substr(item_code, 1, 3) = :cat';
+            $sql .= ' WHERE substr(item_code, 1, 3) = :cat AND length(item_code) = 10';
             $param[':cat'] = $this->cat_code;
         }
         $sql .= ' GROUP BY substr(item_code,1,3), substr(item_code,4,2)';
@@ -55,7 +55,7 @@ class ItemHistoryGlobal extends CFormModel
         $param = array();
         if (!empty($this->cat_code))
         {
-            $sql .= ' WHERE substr(item_code, 1, 3) = :cat AND substr(item_code,4,2) = :year';
+            $sql .= ' WHERE substr(item_code, 1, 3) = :cat AND substr(item_code,4,2) = :year AND length(item_code) = 10';
             $param[':cat'] = $this->cat_code;
             $param[':year'] = $year;
         }
@@ -79,7 +79,7 @@ class ItemHistoryGlobal extends CFormModel
         $param = array();
         if (!empty($this->cat_code))
         {
-            $sql .= ' WHERE substr(item_code, 1, 3) = :cat';
+            $sql .= ' WHERE substr(item_code, 1, 3) = :cat AND length(item_code) = 10';
             $param[':cat'] = $this->cat_code;
         }
         $sql .= ' GROUP BY substr(item_code, 1, 5)';
@@ -95,7 +95,7 @@ class ItemHistoryGlobal extends CFormModel
         $param = array();
         if (!empty($this->cat_code))
         {
-            $sql .= ' WHERE substr(i.item_code, 1, 3) = :cat';
+            $sql .= ' WHERE substr(i.item_code, 1, 3) = :cat AND length(item_code) = 10';
             $param[':cat'] = $this->cat_code;
         }
         $sql .= ' GROUP BY store_code';
@@ -116,7 +116,7 @@ class ItemHistoryGlobal extends CFormModel
 
     public function countAllQ()
     {
-        $sql = 'SELECT SUM(qty_stock) FROM item_history WHERE substr(item_code,1,3) = :cat';
+        $sql = 'SELECT SUM(qty_stock) FROM item_history WHERE substr(item_code,1,3) = :cat AND length(item_code) = 10';
         $cmd = Yii::app()->db->createCommand($sql);
         return $cmd->queryScalar(array(':cat'=>$this->cat_code));
     }
