@@ -80,9 +80,7 @@
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
 	</div><!-- footer -->
-
-</div><!-- page -->
-<!-- my-add-1 -->
+	<!-- my-add-1 -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-6718804203786731"
@@ -92,6 +90,8 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+</div><!-- page -->
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163132098-2"></script>
 <script>
